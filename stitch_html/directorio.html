@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Member Directory | ELITE CURATOR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#494741",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-error": "#690005",
+                        "primary": "#e6c364",
+                        "on-surface-variant": "#d0c5b2",
+                        "secondary-container": "#474747",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "error": "#ffb4ab",
+                        "outline": "#99907e",
+                        "secondary": "#c8c6c5",
+                        "on-primary-fixed-variant": "#584400",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#b6b5b4",
+                        "on-tertiary": "#32302b",
+                        "surface-container-highest": "#353534",
+                        "on-primary-fixed": "#241a00",
+                        "on-error-container": "#ffdad6",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "primary-fixed-dim": "#e6c364",
+                        "primary-container": "#c9a84c",
+                        "on-tertiary-container": "#41403a",
+                        "on-background": "#e5e2e1",
+                        "surface-tint": "#e6c364",
+                        "outline-variant": "#4d4637",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-primary": "#755b00",
+                        "surface-bright": "#3a3939",
+                        "on-primary-container": "#503d00",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffe08f",
+                        "tertiary-fixed-dim": "#cac6be",
+                        "surface-variant": "#353534",
+                        "on-primary": "#3d2e00",
+                        "tertiary-fixed": "#e7e2da",
+                        "on-tertiary-fixed": "#1d1c17",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-secondary": "#303030",
+                        "tertiary-container": "#afaba4",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary": "#cbc6bf",
+                        "secondary-fixed": "#e4e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full h-20 px-8 flex justify-between items-center bg-[#131313] shadow-[0_40px_40px_-15px_rgba(201,168,76,0.04)] font-['Noto_Serif'] antialiased tracking-tight">
+<div class="text-xl font-bold tracking-[0.2em] text-[#C9A84C] uppercase">ELITE CURATOR</div>
+<nav class="hidden md:flex items-center space-x-12">
+<a class="text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors duration-300 text-sm uppercase tracking-widest" href="#">Dashboard</a>
+<a class="text-[#C9A84C] font-semibold text-sm uppercase tracking-widest" href="#">Directory</a>
+<a class="text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors duration-300 text-sm uppercase tracking-widest" href="#">Messaging</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/20">
+<img alt="Executive Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a high-level female executive with professional styling and soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG4tMJpHXCtamhIhyOHiawrDAojJU3G2fNNWkLXm0M51zHjkMbiO7FtpDNyS7gZNudh2B6sTZ5tKVUYsjREq-_K-FVQ5adX4K6WLOrj02wenii75umzer90gC4zQeEF8I1gJKZJ0RO_VftNv8rE_wIQQYebmkUqVg_lA1QKPa1G5XMhBQ8zsEWtOUgnzM_R1jnrIE2MxwXHXJ5bheu6w6E9w1fpih5cwrSnMpaa9uwE4m63HW2j_0GAQKKadlXhjOeOitErwQeVEcC"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="fixed left-0 top-0 hidden lg:flex flex-col h-full w-64 py-8 bg-[#0E0E0E] border-r border-[#4D4637]/15 z-40">
+<div class="px-8 mb-12">
+<h2 class="font-['Noto_Serif'] text-lg text-[#C9A84C] mb-1 uppercase tracking-tighter">The Atelier</h2>
+<p class="font-['Manrope'] uppercase tracking-[0.1rem] text-[0.6rem] text-[#F5F0E8]/40">Premium Member Portal</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center py-4 text-[#F5F0E8]/40 hover:text-[#F5F0E8] hover:bg-[#2A2A2A] transition-all duration-300 pl-4 font-['Manrope'] uppercase tracking-[0.1rem] text-[0.75rem]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center py-4 text-[#C9A84C] border-l-2 border-[#C9A84C] bg-[#C9A84C]/5 pl-4 font-['Manrope'] uppercase tracking-[0.1rem] text-[0.75rem]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="group">group</span>
+                Directory
+            </a>
+<a class="flex items-center py-4 text-[#F5F0E8]/40 hover:text-[#F5F0E8] hover:bg-[#2A2A2A] transition-all duration-300 pl-4 font-['Manrope'] uppercase tracking-[0.1rem] text-[0.75rem]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="chat_bubble">chat_bubble</span>
+                Messaging
+            </a>
+<a class="flex items-center py-4 text-[#F5F0E8]/40 hover:text-[#F5F0E8] hover:bg-[#2A2A2A] transition-all duration-300 pl-4 font-['Manrope'] uppercase tracking-[0.1rem] text-[0.75rem]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="layers">layers</span>
+                Applications
+            </a>
+<a class="flex items-center py-4 text-[#F5F0E8]/40 hover:text-[#F5F0E8] hover:bg-[#2A2A2A] transition-all duration-300 pl-4 font-['Manrope'] uppercase tracking-[0.1rem] text-[0.75rem]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="account_circle">account_circle</span>
+                Profile
+            </a>
+</nav>
+<div class="px-6 py-6 border-t border-outline-variant/10">
+<button class="w-full py-3 bg-primary text-on-primary text-[0.7rem] font-bold uppercase tracking-widest rounded-sm hover:bg-primary-fixed-dim transition-colors duration-300">
+                New Message
+            </button>
+</div>
+<footer class="mt-auto px-4 space-y-1">
+<a class="flex items-center py-3 text-[#F5F0E8]/40 hover:text-[#F5F0E8] pl-4 font-['Manrope'] uppercase tracking-[0.1rem] text-[0.7rem]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="help_outline">help_outline</span>
+                Support
+            </a>
+<a class="flex items-center py-3 text-[#F5F0E8]/40 hover:text-[#F5F0E8] pl-4 font-['Manrope'] uppercase tracking-[0.1rem] text-[0.7rem]" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="logout">logout</span>
+                Sign Out
+            </a>
+</footer>
+</aside>
+<!-- Main Content -->
+<main class="pt-24 lg:pl-64 pb-20 min-h-screen transition-all duration-300">
+<div class="max-w-7xl mx-auto px-8 md:px-12 py-12">
+<!-- Page Header & Filters -->
+<section class="mb-16">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+<div class="max-w-2xl">
+<span class="font-label uppercase tracking-[0.2rem] text-primary text-xs mb-4 block">The Global Collective</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-on-surface leading-[1.1] mb-6 tracking-tight">Executive <br/><span class="italic font-normal">Directory</span></h1>
+<p class="text-on-surface-variant max-w-md text-lg leading-relaxed font-light">
+                            Discover and connect with the world's most influential executive women across premium industries.
+                        </p>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap gap-4">
+<div class="relative group">
+<select class="bg-surface-container-low border-b-2 border-outline-variant/20 text-on-surface py-3 px-6 pr-10 focus:outline-none focus:border-primary appearance-none font-label text-xs uppercase tracking-widest cursor-pointer transition-all duration-300">
+<option>City: All Locations</option>
+<option>Santiago</option>
+<option>NYC</option>
+<option>Miami</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-sm" data-icon="expand_more">expand_more</span>
+</div>
+<div class="relative group">
+<select class="bg-surface-container-low border-b-2 border-outline-variant/20 text-on-surface py-3 px-6 pr-10 focus:outline-none focus:border-primary appearance-none font-label text-xs uppercase tracking-widest cursor-pointer transition-all duration-300">
+<option>Industry: All Sectors</option>
+<option>Fintech</option>
+<option>Luxury</option>
+<option>Media</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-sm" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Grid -->
+<div class="editorial-grid">
+<!-- Profile Card 1 -->
+<article class="group relative bg-surface-container-lowest overflow-hidden border border-outline-variant/5 hover:border-primary/20 transition-all duration-500">
+<div class="relative h-[480px] overflow-hidden">
+<img alt="Valentina Ross" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="high-fashion editorial portrait of a woman in a sharp blazer with dramatic lighting in a modern architectural office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeMKqU1w5q_bCLzjVwZOfIK031sjRfRDcwQla1fsRnAJ14Qjv1bgWpPthAEQINUD7XVJuYj6cEmInH4uG51TJRLzCZaAKcHgfAlvyJFZqYUm8WdCvyawRay5MomvARo3d004SozO8SxOXGfmsYEInkNmmIvrPW7GtdF1ZKBURW6kcXB8hhCIV6pZ4sO9uHmzFvhkSaql5YoT9I-Iq8PNR4mcjD6PsI5If5XVg5j30r2uibsSrOPXb36yf1c61NpCtHQ6XVkFRmJtGy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="w-8 h-1 bg-primary mb-4"></div>
+<p class="font-label uppercase tracking-[0.15rem] text-[0.65rem] text-primary/80 mb-1">NYC • Fintech</p>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-2">Valentina Ross</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">SVP Strategy at Goldman Sachs</p>
+<button class="flex items-center space-x-2 text-primary font-label text-[0.7rem] uppercase tracking-[0.2rem] group/btn">
+<span>Connect</span>
+<span class="w-8 h-px bg-primary/30 group-hover/btn:w-12 transition-all duration-300"></span>
+</button>
+</div>
+</div>
+</article>
+<!-- Profile Card 2 -->
+<article class="group relative bg-surface-container-lowest overflow-hidden border border-outline-variant/5 hover:border-primary/20 transition-all duration-500 mt-12 lg:mt-24">
+<div class="relative h-[480px] overflow-hidden">
+<img alt="Isabella Montalva" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="professional woman with elegant styling sitting in a luxury lounge, warm ambient lighting and soft bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS5NlCl5L2wrqXo8FwIEpAlcCRioThLPlxjpO1vI-j_8EtF5WgdiZEC-8mZtDyK9yCk2G8gE-N4K44d5ryXutZhhcC-HqV5rZhIHfArIaDgSuwiBhkiW5v6wCcKewal0hbmdHsm75es3mq17kPoHvJkE8ZbXvQUmFVBkQlmGtTysASJpCPyXVzlm6p49bXgpQTOcXndyxKvshy2YGlDz7RcozsNyoNjA2bTX12Z0tfiF2vQeC-8dbHPuglwMQ_L7aFp5hHZvJLJtZ5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="w-8 h-1 bg-primary mb-4"></div>
+<p class="font-label uppercase tracking-[0.15rem] text-[0.65rem] text-primary/80 mb-1">Santiago • Luxury</p>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-2">Isabella Montalva</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Creative Director, LVMH Chile</p>
+<button class="flex items-center space-x-2 text-primary font-label text-[0.7rem] uppercase tracking-[0.2rem] group/btn">
+<span>Connect</span>
+<span class="w-8 h-px bg-primary/30 group-hover/btn:w-12 transition-all duration-300"></span>
+</button>
+</div>
+</div>
+</article>
+<!-- Profile Card 3 -->
+<article class="group relative bg-surface-container-lowest overflow-hidden border border-outline-variant/5 hover:border-primary/20 transition-all duration-500">
+<div class="relative h-[480px] overflow-hidden">
+<img alt="Camille Dubois" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="confident female leader standing on a terrace overlooking a city at night, sophisticated aesthetic with cold blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6KMSTnOY4e_eDzZswj2rZhXcQTIiUqrRHEMHcp6b3yeFivUBCXUxuTj_ER3nf90ZQK1pYwz5rpiKxCmHB0Az9KqXGoDg4lDIqZYPNYBiYustWnSUlkUlBtN3N4rV0CZWOMFG0v3vxCw1nfuIRq1Pxq4i6rRcoyKf4rnqyCrYKF9pzgf9l82nMw57XKcKrnlm0dlnLTGIz71OsA0Ff4Hniu7fdlP9WJisJ1LjG0AmW_P9ENvcgOhrJ5F2liDMuZAt45FZIThLc3dH0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="w-8 h-1 bg-primary mb-4"></div>
+<p class="font-label uppercase tracking-[0.15rem] text-[0.65rem] text-primary/80 mb-1">Miami • Media</p>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-2">Camille Dubois</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">VP of Brand Partnerships, Condé Nast</p>
+<button class="flex items-center space-x-2 text-primary font-label text-[0.7rem] uppercase tracking-[0.2rem] group/btn">
+<span>Connect</span>
+<span class="w-8 h-px bg-primary/30 group-hover/btn:w-12 transition-all duration-300"></span>
+</button>
+</div>
+</div>
+</article>
+<!-- Profile Card 4 -->
+<article class="group relative bg-surface-container-lowest overflow-hidden border border-outline-variant/5 hover:border-primary/20 transition-all duration-500 lg:-mt-12">
+<div class="relative h-[480px] overflow-hidden">
+<img alt="Sofia Herrera" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="portrait of a professional woman in a minimalist studio setting, soft side lighting highlighting features and fabric texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGlIEYlOSEoa6jN7frcs5KRDW_3Y1Qut7TzCNnBGnaS-5gP5sKNQQ9DKoLBUpFqVXIbY0MIg3p3c_DUd76LtNp-aI2jEyHtmw6u140jYBL15SPT5Vi9ZlHwR9uGreVaHAz9FGROw6mh--yxXI4UJv0_8UYsjLAR-ruRuSUQ1i-5layzQU1mecZvDZTkEnXbrA4htq9L8WYNw68_Ex8OuU7bvbnVqstFA6UQzMjngHVZZsamM6XzgWEy69YbJmEXXTYat5sWI2IylqQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="w-8 h-1 bg-primary mb-4"></div>
+<p class="font-label uppercase tracking-[0.15rem] text-[0.65rem] text-primary/80 mb-1">Santiago • Fintech</p>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-2">Sofia Herrera</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Managing Partner, Andes Ventures</p>
+<button class="flex items-center space-x-2 text-primary font-label text-[0.7rem] uppercase tracking-[0.2rem] group/btn">
+<span>Connect</span>
+<span class="w-8 h-px bg-primary/30 group-hover/btn:w-12 transition-all duration-300"></span>
+</button>
+</div>
+</div>
+</article>
+<!-- Profile Card 5 -->
+<article class="group relative bg-surface-container-lowest overflow-hidden border border-outline-variant/5 hover:border-primary/20 transition-all duration-500 mt-12 lg:mt-0">
+<div class="relative h-[480px] overflow-hidden">
+<img alt="Elena Varma" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="executive woman looking through a large glass window in a skyscraper, reflection of city lights and sophisticated attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoPw9rzv33b4BR_TdYANmYGO4Bi4vSn0UYSKVZAtoHLvmEqoUnLJ6tqjtD50NPb8uXH6m2m7Q95KFB22nmAYWjfmp9hDZCn74VFnSN9sB7eaFiMrUpA9UogarM2wczp8at11Z7g_lM8_SSJxHHcO2D6pRghCC_xWFhzTMA2toSGcPM2TI-ymO56rovKfBIqjsh0i0R5NigpoaTGJJmliaDJkbLC6RlSn2YxHSiVuUnJ6Zl6M9x6eEiNqToYXCOdEf0SWL_ZCugSNpt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="w-8 h-1 bg-primary mb-4"></div>
+<p class="font-label uppercase tracking-[0.15rem] text-[0.65rem] text-primary/80 mb-1">NYC • Media</p>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-2">Elena Varma</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Head of Digital, Hearst Media</p>
+<button class="flex items-center space-x-2 text-primary font-label text-[0.7rem] uppercase tracking-[0.2rem] group/btn">
+<span>Connect</span>
+<span class="w-8 h-px bg-primary/30 group-hover/btn:w-12 transition-all duration-300"></span>
+</button>
+</div>
+</div>
+</article>
+<!-- Profile Card 6 -->
+<article class="group relative bg-surface-container-lowest overflow-hidden border border-outline-variant/5 hover:border-primary/20 transition-all duration-500 mt-12 lg:mt-32">
+<div class="relative h-[480px] overflow-hidden">
+<img alt="Lucia Mendez" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="close up of a stylish woman in high-end eyewear and fashion accessories, editorial studio lighting with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL0svC7WgwlNZD2oYr4Eoj1Yp8SOtpJM4274gV_7TRKJ0FhHXJs_853QrTG58sf_ZSO6hLR_Z1LYr9o5vIpdzqQ2sTYnknhZfhjKpeikyYwjlFFssdeeJF_f6f0sl4WwJ6xqdX9bxmX2ZaZB8f7gvyMW4LngBJO2I7cQUnvFr64L5OQDXngGnbWllh_PjcNJA4ItctFRUgnNJafAT-JlpxQH80nuuDrsRCcyyq2iqRekwwJvtoHLBeJzo2_DpZyIoT12B4oS3WsbNu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<div class="w-8 h-1 bg-primary mb-4"></div>
+<p class="font-label uppercase tracking-[0.15rem] text-[0.65rem] text-primary/80 mb-1">Miami • Luxury</p>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-2">Lucia Mendez</h3>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Global Retail Lead, Richemont</p>
+<button class="flex items-center space-x-2 text-primary font-label text-[0.7rem] uppercase tracking-[0.2rem] group/btn">
+<span>Connect</span>
+<span class="w-8 h-px bg-primary/30 group-hover/btn:w-12 transition-all duration-300"></span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination/Footer Actions -->
+<div class="mt-32 flex flex-col items-center">
+<p class="font-label text-xs uppercase tracking-[0.3rem] text-on-surface-variant/40 mb-8">End of Directory</p>
+<div class="h-24 w-px bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+</div>
+</main>
+<!-- FAB (Suppressed on this deep-dive directory screen per rules, but showing contextually for 'New Nomination' if desired) -->
+<!-- suppressed -->
+<!-- Mobile Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 right-0 h-16 bg-[#131313] md:hidden flex justify-around items-center z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+<button class="flex flex-col items-center text-[#F5F0E8]/40">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+</button>
+<button class="flex flex-col items-center text-[#C9A84C]">
+<span class="material-symbols-outlined" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+</button>
+<button class="flex flex-col items-center text-[#F5F0E8]/40">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</button>
+<button class="flex flex-col items-center text-[#F5F0E8]/40">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</nav>
+</body></html>

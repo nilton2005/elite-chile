@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@400;700&amp;family=Manrope:wght@400;500;700;800&amp;family=Cormorant+Garamond:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#755b00",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-secondary-container": "#b6b5b4",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353534",
+                        "secondary-container": "#474747",
+                        "primary-fixed-dim": "#e6c364",
+                        "secondary-fixed": "#e4e2e1",
+                        "background": "#131313",
+                        "primary-fixed": "#ffe08f",
+                        "primary-container": "#c9a84c",
+                        "tertiary": "#cbc6bf",
+                        "on-tertiary-container": "#41403a",
+                        "secondary": "#c8c6c5",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary": "#303030",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-container": "#503d00",
+                        "tertiary-fixed": "#e7e2da",
+                        "surface-tint": "#e6c364",
+                        "on-tertiary-fixed": "#1d1c17",
+                        "on-primary-fixed": "#241a00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline-variant": "#4d4637",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-low": "#1c1b1b",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary": "#32302b",
+                        "inverse-surface": "#e5e2e1",
+                        "primary": "#e6c364",
+                        "tertiary-fixed-dim": "#cac6be",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed-variant": "#584400",
+                        "outline": "#99907e",
+                        "tertiary-container": "#afaba4",
+                        "on-primary": "#3d2e00",
+                        "on-surface-variant": "#d0c5b2",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#474747",
+                        "surface-bright": "#3a3939",
+                        "surface-variant": "#353534",
+                        "on-tertiary-fixed-variant": "#494741"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"],
+                        "serif": ["Cormorant Garamond", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 1.25rem;
+        }
+        .glass-panel {
+            background: rgba(201, 168, 76, 0.05);
+            backdrop-filter: blur(24px);
+        }
+        .blackspace-y {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        input:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-[#131313]/90 dark:bg-zinc-950/90 backdrop-blur-2xl docked full-width top-0 z-50 sticky shadow-[0_40px_40px_-15px_rgba(201,168,76,0.04)]">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-[1920px] mx-auto">
+<span class="text-2xl font-serif italic text-amber-500 dark:text-amber-500">ÉLITEmanu</span>
+<div class="hidden md:flex gap-12 items-center">
+<a class="text-zinc-400 hover:text-amber-200 transition-colors font-label text-[0.75rem] tracking-[0.1rem] uppercase" href="#">Comunidad</a>
+<a class="text-zinc-400 hover:text-amber-200 transition-colors font-label text-[0.75rem] tracking-[0.1rem] uppercase" href="#">Beneficios</a>
+<a class="text-amber-500 font-bold border-b border-amber-500/50 pb-1 font-label text-[0.75rem] tracking-[0.1rem] uppercase" href="#">Membresía</a>
+<a class="text-zinc-400 hover:text-amber-200 transition-colors font-label text-[0.75rem] tracking-[0.1rem] uppercase" href="#">Sobre nosotras</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 font-label text-[0.75rem] tracking-[0.1rem] uppercase font-bold hover:bg-primary-container transition-all active:scale-[0.99] duration-300">
+                Solicitar membresía
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Header -->
+<section class="relative min-h-[614px] flex items-end px-12 pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-40" data-alt="Luxurious dark boardroom with golden lighting reflections on a polished black marble table and high-end minimalist furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAou0QYcpe8r3GOI3fs7bK99TdS2VpXCJ_AJB78qoRZomFO0kSvEpZpFFSrG_jb2N7dfist7H8-sg0bKKIjqV0FvidPt4MO-3ixRjzpXnY0HP-xV4qWkfjbfDeaGQW5ILgVksf8k5esSvWZ_H-xdC1Ppeae28O8-Dd7TEmzBJSIu92mCfT66Pgc6bAsaJLBqZIPN-VIkvuqnofJZQ6ZrhoK4mMggDq_6mUrAdDtABj0aNECjnWKRYa8If-FJqgg4IRfapfPXLBt4Lqu"/>
+</div>
+<div class="relative z-20 max-w-5xl">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="font-label uppercase tracking-[0.2rem] text-primary text-sm">Exclusividad Curada</span>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl text-on-surface leading-[1.1] tracking-tight mb-6">
+                    Membresía: <br/>
+<span class="italic font-serif text-primary">Tu lugar en el círculo.</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                    Un ecosistema diseñado para líderes que buscan trascender. Acceso a red global, beneficios exclusivos y experiencias de alto impacto.
+                </p>
+</div>
+</section>
+<!-- Comparison Table Section -->
+<section class="blackspace-y px-12 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-outline-variant/15">
+<div class="py-12 pr-12 hidden md:block">
+<h3 class="font-headline text-2xl mb-4">Planes de Acceso</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Seleccione el nivel de integración que mejor se adapte a su trayectoria ejecutiva.</p>
+</div>
+<!-- Annual Plan -->
+<div class="p-12 border-l border-outline-variant/15 bg-surface">
+<span class="font-label uppercase tracking-widest text-xs text-on-surface-variant mb-4 block">Nivel Ejecutivo</span>
+<h4 class="font-headline text-3xl mb-2">Anual</h4>
+<div class="text-primary text-4xl font-serif mb-8 italic">€1.200 <span class="text-sm font-body not-italic text-on-surface-variant">/ año</span></div>
+<ul class="space-y-6 mb-12">
+<li class="flex items-start gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Acceso al Directorio ÉLITE
+                            </li>
+<li class="flex items-start gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Eventos Mensuales de Networking
+                            </li>
+<li class="flex items-start gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                Alianzas Comerciales Premium
+                            </li>
+</ul>
+</div>
+<!-- Founding Member -->
+<div class="p-12 border-l border-outline-variant/15 bg-surface-container-high relative overflow-hidden">
+<div class="absolute top-6 right-6 font-label text-[0.6rem] bg-primary text-on-primary px-3 py-1 rounded-full uppercase font-bold">Invitación Única</div>
+<span class="font-label uppercase tracking-widest text-xs text-primary mb-4 block">Nivel Vitalicio</span>
+<h4 class="font-headline text-3xl mb-2">Founding Member</h4>
+<div class="text-primary text-4xl font-serif mb-8 italic">€5.000 <span class="text-sm font-body not-italic text-on-surface-variant">/ pago único</span></div>
+<ul class="space-y-6 mb-12">
+<li class="flex items-start gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">stars</span>
+                                Todas las ventajas de Membresía Anual
+                            </li>
+<li class="flex items-start gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">stars</span>
+                                Acceso a la Junta Consultiva VIP
+                            </li>
+<li class="flex items-start gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">stars</span>
+                                Invitaciones a Retiros Internacionales
+                            </li>
+<li class="flex items-start gap-3 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">stars</span>
+                                Reconocimiento Permanente en el Muro de Honor
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Application Form & Payment Preview Asymmetric Layout -->
+<section class="blackspace-y px-12 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+<!-- Left: Application Form -->
+<div class="lg:col-span-7">
+<div class="mb-16">
+<h2 class="font-headline text-4xl mb-4">Postulación al Círculo</h2>
+<p class="text-on-surface-variant max-w-md">Nuestra comunidad se basa en la curación de perfiles. Complete los detalles para iniciar su proceso de admisión.</p>
+</div>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="flex flex-col gap-2">
+<label class="font-label uppercase text-xs tracking-widest text-on-surface-variant">Nombre Completo</label>
+<input class="bg-surface-container-highest border-b border-outline-variant/30 py-4 px-0 text-on-surface placeholder:text-outline focus:border-primary transition-colors" placeholder="Ej. Alexandra Valdés" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label uppercase text-xs tracking-widest text-on-surface-variant">Cargo / Título</label>
+<input class="bg-surface-container-highest border-b border-outline-variant/30 py-4 px-0 text-on-surface placeholder:text-outline focus:border-primary transition-colors" placeholder="Directora Ejecutiva" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="flex flex-col gap-2">
+<label class="font-label uppercase text-xs tracking-widest text-on-surface-variant">Empresa</label>
+<input class="bg-surface-container-highest border-b border-outline-variant/30 py-4 px-0 text-on-surface placeholder:text-outline focus:border-primary transition-colors" placeholder="Compañía S.A." type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label uppercase text-xs tracking-widest text-on-surface-variant">Ciudad de Residencia</label>
+<input class="bg-surface-container-highest border-b border-outline-variant/30 py-4 px-0 text-on-surface placeholder:text-outline focus:border-primary transition-colors" placeholder="Madrid, España" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label uppercase text-xs tracking-widest text-on-surface-variant">Perfil LinkedIn (URL)</label>
+<input class="bg-surface-container-highest border-b border-outline-variant/30 py-4 px-0 text-on-surface placeholder:text-outline focus:border-primary transition-colors" placeholder="linkedin.com/in/usuario" type="url"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label uppercase text-xs tracking-widest text-on-surface-variant">Motivación para unirse</label>
+<textarea class="bg-surface-container-highest border-b border-outline-variant/30 py-4 px-0 text-on-surface placeholder:text-outline focus:border-primary transition-colors resize-none" placeholder="¿Qué espera aportar a la comunidad?" rows="4"></textarea>
+</div>
+</form>
+</div>
+<!-- Right: Payment Preview -->
+<div class="lg:col-span-5 relative">
+<div class="sticky top-32 glass-panel p-10 border border-primary/10 rounded-lg">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline text-xl">Resumen de Reserva</h3>
+<span class="text-primary material-symbols-outlined">lock</span>
+</div>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between py-2 border-b border-outline-variant/10">
+<span class="text-on-surface-variant text-sm">Membresía Seleccionada</span>
+<span class="font-bold text-sm">Anual</span>
+</div>
+<div class="flex justify-between py-2 border-b border-outline-variant/10">
+<span class="text-on-surface-variant text-sm">Cuota de Inscripción</span>
+<span class="font-bold text-sm">€0.00</span>
+</div>
+<div class="flex justify-between pt-4">
+<span class="text-on-surface font-bold">Total a Pagar</span>
+<span class="text-primary font-headline text-2xl italic">€1.200</span>
+</div>
+</div>
+<!-- Stripe Integration Preview Mockup -->
+<div class="space-y-4">
+<div class="bg-[#1a1a1a] p-4 border border-outline-variant/20 rounded">
+<label class="font-label text-[0.6rem] uppercase text-zinc-500 block mb-2">Información de Tarjeta</label>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-zinc-500">credit_card</span>
+<span class="text-sm text-zinc-400">4242 4242 4242 4242</span>
+<span class="ml-auto text-[0.6rem] text-zinc-500">12/26 • CVC</span>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 font-label uppercase tracking-widest font-bold hover:shadow-[0_0_20px_rgba(230,195,100,0.2)] transition-all">
+                                Confirmar y Postular
+                            </button>
+<p class="text-[0.65rem] text-center text-zinc-500 leading-relaxed mt-4">
+                                Su tarjeta solo será procesada una vez que su perfil haya sido validado por nuestro comité de admisiones.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQs Section -->
+<section class="blackspace-y px-12 bg-surface">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl mb-4 italic">Preguntas Frecuentes</h2>
+<div class="h-1 w-12 bg-primary mx-auto"></div>
+</div>
+<div class="space-y-2">
+<!-- FAQ Item 1 -->
+<div class="group border-b border-outline-variant/10 py-8">
+<button class="w-full flex justify-between items-center text-left">
+<span class="font-headline text-lg group-hover:text-primary transition-colors">¿Cuál es el criterio de selección para nuevas miembros?</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-all">expand_more</span>
+</button>
+<div class="mt-4 text-on-surface-variant text-sm leading-relaxed max-w-2xl">
+                            Buscamos mujeres en posiciones de liderazgo C-level, fundadoras de startups con tracción comprobada y líderes de pensamiento en sus industrias. Valoramos la capacidad de aporte a la comunidad tanto como la trayectoria profesional.
+                        </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="group border-b border-outline-variant/10 py-8">
+<button class="w-full flex justify-between items-center text-left">
+<span class="font-headline text-lg group-hover:text-primary transition-colors">¿Puedo cambiar mi plan de Anual a Founding Member?</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-all">expand_more</span>
+</button>
+<div class="mt-4 text-on-surface-variant text-sm leading-relaxed max-w-2xl">
+                            Sí, las miembros anuales pueden solicitar el upgrade a Founding Member sujeto a disponibilidad de plazas limitadas en dicha categoría.
+                        </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="group border-b border-outline-variant/10 py-8">
+<button class="w-full flex justify-between items-center text-left">
+<span class="font-headline text-lg group-hover:text-primary transition-colors">¿Qué incluye el acceso a la red internacional?</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-all">expand_more</span>
+</button>
+<div class="mt-4 text-on-surface-variant text-sm leading-relaxed max-w-2xl">
+                            Nuestra red se extiende por las principales capitales financieras. Como miembro, tendrá acceso a espacios de coworking aliados, eventos privados en ciudades clave y un conserje digital para presentaciones directas con otras miembros globales.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#131313] dark:bg-black w-full border-t border-zinc-900/50 pt-24 pb-12">
+<div class="flex flex-col items-center justify-center max-w-7xl mx-auto px-8 text-center">
+<div class="text-4xl font-serif text-amber-500 mb-8 italic">ÉLITEmanu</div>
+<div class="flex flex-wrap justify-center gap-12 mb-12">
+<a class="text-zinc-600 hover:text-amber-200 transition-colors duration-300 font-label text-xs uppercase tracking-[0.1rem]" href="#">Privacidad</a>
+<a class="text-zinc-600 hover:text-amber-200 transition-colors duration-300 font-label text-xs uppercase tracking-[0.1rem]" href="#">Términos</a>
+<a class="text-zinc-600 hover:text-amber-200 transition-colors duration-300 font-label text-xs uppercase tracking-[0.1rem]" href="#">Contacto</a>
+<a class="text-zinc-600 hover:text-amber-200 transition-colors duration-300 font-label text-xs uppercase tracking-[0.1rem]" href="#">Prensa</a>
+</div>
+<p class="text-zinc-600 font-body text-sm mb-4">© 2024 ÉLITEmanu. The Digital Atelier.</p>
+<div class="flex gap-6 mt-8">
+<div class="w-10 h-10 flex items-center justify-center border border-zinc-800 hover:border-amber-500 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-zinc-500 text-sm">public</span>
+</div>
+<div class="w-10 h-10 flex items-center justify-center border border-zinc-800 hover:border-amber-500 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-zinc-500 text-sm">share</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ELITE CURATOR | Messaging</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#494741",
+              "inverse-on-surface": "#313030",
+              "on-secondary-fixed": "#1b1c1c",
+              "on-error": "#690005",
+              "primary": "#e6c364",
+              "on-surface-variant": "#d0c5b2",
+              "secondary-container": "#474747",
+              "secondary-fixed-dim": "#c8c6c5",
+              "error": "#ffb4ab",
+              "outline": "#99907e",
+              "secondary": "#c8c6c5",
+              "on-primary-fixed-variant": "#584400",
+              "surface-container-high": "#2a2a2a",
+              "on-surface": "#e5e2e1",
+              "on-secondary-container": "#b6b5b4",
+              "on-tertiary": "#32302b",
+              "surface-container-highest": "#353534",
+              "on-primary-fixed": "#241a00",
+              "on-error-container": "#ffdad6",
+              "background": "#131313",
+              "surface": "#131313",
+              "surface-container": "#201f1f",
+              "primary-fixed-dim": "#e6c364",
+              "primary-container": "#c9a84c",
+              "on-tertiary-container": "#41403a",
+              "on-background": "#e5e2e1",
+              "surface-tint": "#e6c364",
+              "outline-variant": "#4d4637",
+              "surface-container-lowest": "#0e0e0e",
+              "inverse-surface": "#e5e2e1",
+              "inverse-primary": "#755b00",
+              "surface-bright": "#3a3939",
+              "on-primary-container": "#503d00",
+              "error-container": "#93000a",
+              "surface-dim": "#131313",
+              "primary-fixed": "#ffe08f",
+              "tertiary-fixed-dim": "#cac6be",
+              "surface-variant": "#353534",
+              "on-primary": "#3d2e00",
+              "tertiary-fixed": "#e7e2da",
+              "on-tertiary-fixed": "#1d1c17",
+              "on-secondary-fixed-variant": "#474747",
+              "on-secondary": "#303030",
+              "tertiary-container": "#afaba4",
+              "surface-container-low": "#1c1b1b",
+              "tertiary": "#cbc6bf",
+              "secondary-fixed": "#e4e2e1"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 3px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #4d4637;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 selection:text-primary min-h-screen overflow-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#131313] dark:bg-[#131313] text-[#C9A84C] font-['Noto_Serif'] antialiased tracking-tight docked full-width top-0 z-50 bg-[#0E0E0E] shadow-[0_40px_40px_-15px_rgba(201,168,76,0.04)] flex justify-between items-center px-8 h-20 w-full fixed">
+<div class="text-xl font-bold tracking-[0.2em] text-[#C9A84C] uppercase">
+            ELITE CURATOR
+        </div>
+<div class="flex items-center gap-8">
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors duration-300" href="#">Dashboard</a>
+<a class="text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors duration-300" href="#">Directory</a>
+<a class="text-[#C9A84C] font-semibold" href="#">Messaging</a>
+<a class="text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors duration-300" href="#">Applications</a>
+</div>
+<div class="flex items-center gap-4 border-l border-outline-variant/20 pl-6">
+<button class="material-symbols-outlined text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors">notifications</button>
+<button class="material-symbols-outlined text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors">settings</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-primary/20">
+<img alt="Executive Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a sophisticated executive man in a high-end black suit with cinematic soft lighting on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNo7ALMUPcKnrx8FuR8wsRCJpLI4zBjWC1iiMD-2G6B75GCHwTiR8B5KHg3RqAaU8hnspI0ktsvkBapQb8yZk8y8sTp5borGWUKKV3pfZahWJonk_QLizLaP5wEN55VTIKt23iY6h6EuG6LnKwY4iZZygxmSiA9wpXdCB0qjlVc9SafkOP_xBzLvejaiNtKNEGRQH8tKfrK3iFlRq42JDtn2fSGFKjbrkp8IbujBwWV3CaVTHrSZuMM6pILdOg5Yf_UVNs5hLdeb-h"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex h-screen pt-20">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-20 flex flex-col h-[calc(100vh-5rem)] py-8 bg-[#0E0E0E] dark:bg-[#0E0E0E] text-[#C9A84C] font-['Manrope'] uppercase tracking-[0.1rem] text-[0.75rem] docked left-0 w-64 border-r border-[#4D4637]/15 z-40">
+<div class="px-8 mb-12">
+<div class="font-['Noto_Serif'] text-lg text-[#C9A84C] mb-1">The Atelier</div>
+<div class="text-[0.65rem] tracking-[0.15rem] text-[#F5F0E8]/40">Premium Member Portal</div>
+</div>
+<nav class="flex-1 space-y-4">
+<div class="flex items-center text-[#F5F0E8]/40 hover:text-[#F5F0E8] pl-4 hover:bg-[#2A2A2A] transition-all duration-300 cursor-pointer h-12">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="flex items-center text-[#F5F0E8]/40 hover:text-[#F5F0E8] pl-4 hover:bg-[#2A2A2A] transition-all duration-300 cursor-pointer h-12">
+<span class="material-symbols-outlined mr-3" data-icon="group">group</span>
+<span>Directory</span>
+</div>
+<div class="flex items-center text-[#C9A84C] border-l-2 border-[#C9A84C] bg-[#C9A84C]/5 pl-4 cursor-pointer h-12">
+<span class="material-symbols-outlined mr-3" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span>Messaging</span>
+</div>
+<div class="flex items-center text-[#F5F0E8]/40 hover:text-[#F5F0E8] pl-4 hover:bg-[#2A2A2A] transition-all duration-300 cursor-pointer h-12">
+<span class="material-symbols-outlined mr-3" data-icon="layers">layers</span>
+<span>Applications</span>
+</div>
+<div class="flex items-center text-[#F5F0E8]/40 hover:text-[#F5F0E8] pl-4 hover:bg-[#2A2A2A] transition-all duration-300 cursor-pointer h-12">
+<span class="material-symbols-outlined mr-3" data-icon="account_circle">account_circle</span>
+<span>Profile</span>
+</div>
+</nav>
+<div class="px-6 mb-8">
+<button class="w-full py-3 bg-primary text-on-primary text-[0.7rem] font-bold rounded hover:shadow-[0_0_15px_rgba(230,195,100,0.3)] transition-all">
+                    New Message
+                </button>
+</div>
+<div class="border-t border-[#4D4637]/15 pt-8 space-y-4">
+<div class="flex items-center text-[#F5F0E8]/40 hover:text-[#F5F0E8] pl-4 hover:bg-[#2A2A2A] transition-all duration-300 cursor-pointer h-10">
+<span class="material-symbols-outlined mr-3" data-icon="help_outline">help_outline</span>
+<span>Support</span>
+</div>
+<div class="flex items-center text-[#F5F0E8]/40 hover:text-[#F5F0E8] pl-4 hover:bg-[#2A2A2A] transition-all duration-300 cursor-pointer h-10">
+<span class="material-symbols-outlined mr-3" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area: Chat Interface -->
+<main class="ml-64 flex-1 flex flex-row overflow-hidden bg-surface relative">
+<!-- Conversation List (Left Column) -->
+<section class="w-[380px] flex flex-col border-r border-outline-variant/10 bg-surface-container-lowest">
+<div class="p-8 pb-4">
+<h2 class="font-headline text-3xl font-bold text-on-surface mb-2">Concierge</h2>
+<p class="text-[0.65rem] tracking-[0.2em] text-primary/60 uppercase">Active Curations</p>
+</div>
+<div class="flex-1 overflow-y-auto custom-scrollbar px-4 space-y-2 pb-8">
+<!-- Active Conversation -->
+<div class="group flex items-center gap-4 p-4 bg-surface-container-high rounded-lg cursor-pointer transition-all duration-300 border-l-2 border-primary">
+<div class="relative">
+<div class="w-12 h-12 rounded overflow-hidden">
+<img alt="Julianne S." class="w-full h-full object-cover" data-alt="Elegant close-up portrait of a woman with sophisticated styling, soft natural lighting, and a minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUW0XJX3ycOARn9eoBIrlRk-TIOTw3Z7WOTKPQc04LwDOIkXbr-0buUTZ_Ca4oOej7Oe_QsSq8pydYLgQbRbq0jfWbh1sMKlLixDxhuAltdMiMa-0fdn-CalO72q5oHpYOscBTEfMRJjL0pzAo6-ynymVleHiSGHcFxvE8Qs_0lN36zZIP0s8VK1gK5jSQu6zqQEJJ7RaeuuHFRUGhOywNPfPVabwd3bDlHMrEMXBz8ZavDFX7SvGs32DlO1vDoR5n5EtosdUQa7k0"/>
+</div>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 bg-primary rounded-full border-2 border-surface-container-high"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h4 class="font-semibold text-on-surface text-sm">Julianne S.</h4>
+<span class="text-[10px] text-on-surface-variant/50">14:05</span>
+</div>
+<p class="text-xs text-on-surface-variant/80 truncate font-medium">The itinerary for the Milan gala is...</p>
+</div>
+</div>
+<!-- Conversation 2 -->
+<div class="group flex items-center gap-4 p-4 hover:bg-surface-container-high/50 rounded-lg cursor-pointer transition-all duration-300">
+<div class="relative">
+<div class="w-12 h-12 rounded overflow-hidden grayscale hover:grayscale-0 transition-all">
+<img alt="Alexander V." class="w-full h-full object-cover" data-alt="Professional man in a tailored dark grey suit looking thoughtful in a modern high-end office setting with architectural shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF3KZ57PeonSEEfteqRG21CGlba-J99IsrVOFPAcjK6j4Ph1VY7viNYmf5xzTOcCbH5gfToLNbirRP2KRYR_fmnlV3zFGTHTh6o6BPrUdLvAviI45cHrxkOcmKHBczg7GXCJP7aHyPbmdTsHAxPYKjDyqnNZbPeUuR29cR2y1ywYeVg4eFQZqav8ukfrq2JGYYhz0n_jdlyLWbm2Dy5ZTAQiRHAn6R7SCCofD4yKpQuDdFo_NpqTbQ3Df9SDOX-MouGZn_Lv1uaKtT"/>
+</div>
+<div class="absolute -bottom-1 -right-1 w-3 h-3 bg-surface-variant rounded-full border-2 border-surface-container-lowest"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h4 class="font-semibold text-on-surface/80 text-sm group-hover:text-on-surface">Alexander V.</h4>
+<span class="text-[10px] text-on-surface-variant/50">YESTERDAY</span>
+</div>
+<p class="text-xs text-on-surface-variant/40 truncate">Confirming the private charter flight...</p>
+</div>
+</div>
+<!-- Conversation 3 -->
+<div class="group flex items-center gap-4 p-4 hover:bg-surface-container-high/50 rounded-lg cursor-pointer transition-all duration-300">
+<div class="relative">
+<div class="w-12 h-12 rounded overflow-hidden grayscale hover:grayscale-0 transition-all">
+<img alt="Sophia L." class="w-full h-full object-cover" data-alt="Close up of a woman with striking features wearing luxury eyewear, moody dramatic lighting with deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEx0XOCiQWHSb83o6N5KjcDqj0AeKNeiPumxvVNV-YI4OaIH5zK2m1quMmgW6tcCuvn-oJqQqokIYLnWG8kanY7wD1WCmLay587e_LOJ0S-oxQSs-hfW0HCYZhxqgrRniPsH1Y5W80r6Nz_SyBDyACiiyZdtc4J_Gw8LEpwyidoIrX2325eOIaz0eCDxm8ZSQDbcF9akbMgEozvWSnF1CtzaxCDXu0QAObrPU0bAaBVvSsZ0ZOR8uH9Ip8szOL0q05QhvuB07CrOLN"/>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h4 class="font-semibold text-on-surface/80 text-sm group-hover:text-on-surface">Sophia L.</h4>
+<span class="text-[10px] text-on-surface-variant/50">MON</span>
+</div>
+<p class="text-xs text-on-surface-variant/40 truncate">The Bordeaux collection has arrived...</p>
+</div>
+</div>
+<!-- Conversation 4 -->
+<div class="group flex items-center gap-4 p-4 hover:bg-surface-container-high/50 rounded-lg cursor-pointer transition-all duration-300">
+<div class="relative">
+<div class="w-12 h-12 rounded overflow-hidden grayscale hover:grayscale-0 transition-all">
+<img alt="Marcus K." class="w-full h-full object-cover" data-alt="Distinguished mature man with silver hair in a navy blazer, confident expression, outdoor soft sunset lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOYePYmw0PK7oh1cqJG9p3IhAtbPkElzvwgbNzGZYrTiruztUI2Y27pRD7FmvszUD1Ztiyher5WWb0ua8tdloz_66aeKTiEBH8-Cg3_Y0kspcE2VePAFR8pJIjB5Bk5NGXeES974kpMZb0uKeMH1-5EiaEqAGz2gm8DISSRo5nY9IP0dpg6VbOMjJz0404bGwpI1aKEtgk_TbAtplQaLr7-bcPZxV-w73KuBMGZugjqo35XfcbAVBrriDMpZ8lRfM8lostQlJd1Tt0"/>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-0.5">
+<h4 class="font-semibold text-on-surface/80 text-sm group-hover:text-on-surface">Marcus K.</h4>
+<span class="text-[10px] text-on-surface-variant/50">OCT 12</span>
+</div>
+<p class="text-xs text-on-surface-variant/40 truncate">Table reserved at Guy Savoy for 8 PM.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Active Chat Window (Right Column) -->
+<section class="flex-1 flex flex-col bg-surface overflow-hidden">
+<!-- Chat Header -->
+<div class="h-20 px-8 flex items-center justify-between border-b border-outline-variant/5 bg-surface-container-low/30 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded overflow-hidden">
+<img alt="Julianne S." class="w-full h-full object-cover" data-alt="Elegant close-up portrait of a woman with sophisticated styling, soft natural lighting, and a minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyr6VVPgQmrLDq-Ni39D5sZ7zsf3gRRemJVMu5JgdRW_qq5FKIflWfYspIZ06fJ-Sla6JOd1JziF2xeU4u2ffIYBEeVd-MY5GfLwReHjdPP1RdRLAaZi9Um-Fi0LjhEkqAp7TPaVDcRp9xY8wEEJmMSh5mBaDdfDpuvPW9LWYdr7IM_t-DfIzeKHOgTgsRYZ1uTYLjxROPxvuRFm2h703TL2ZM-6lXolWGY054xnHyN4GawlQ6NTjy60ICr0LVdRfPmm4F_IGJTdnd"/>
+</div>
+<div>
+<h3 class="font-headline font-bold text-on-surface text-lg leading-tight">Julianne S.</h3>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+<span class="text-[10px] text-primary tracking-widest uppercase font-semibold">Senior Lifestyle Curator</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">videocam</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">call</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">more_vert</button>
+</div>
+</div>
+<!-- Messages Display -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-8 space-y-8 flex flex-col">
+<div class="flex justify-center">
+<span class="px-4 py-1 text-[10px] font-bold tracking-[0.2em] text-on-surface-variant/30 uppercase bg-surface-container-low rounded-full">October 14, 2023</span>
+</div>
+<!-- Incoming Message -->
+<div class="flex items-start gap-4 max-w-[80%]">
+<div class="w-8 h-8 rounded-full overflow-hidden shrink-0">
+<img alt="Julianne S." class="w-full h-full object-cover" data-alt="Elegant portrait of a woman, soft studio light, monochromatic dark tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgIKXLcj9Eh2kHCcPIT9ufoBBlSnTjWNfdl4a6qEkh50MSFzmnZg7ux3SO3cUkh7ehWXM6O1Iw9Mwe5Bh_9rXjjexJgxLLD8SDHKtGzqUtJcZnhPIJl3yKDFhDJ4XkqWdCrxX1yLVVzLBB7C_Ze6tz1NDrHm0cIGH3OVG9QsQz6gEZ230F1NfB_uQyCehq62YI4ia74Hewd4Vdq_bZUQ0VYfW0W9WtGzn7M9xtL-EB-lfBIf_dQ-KKSRr60dtkd_JeKpKtqiBUk5YR"/>
+</div>
+<div class="space-y-1">
+<div class="bg-surface-container-high p-4 rounded-xl rounded-tl-none border border-outline-variant/10 shadow-sm">
+<p class="text-sm text-on-surface-variant leading-relaxed">Good morning, Mr. Executive. I have finalized the arrangements for your visit to the Milan Atelier next week.</p>
+</div>
+<p class="text-[10px] text-on-surface-variant/40 ml-1">10:12 AM</p>
+</div>
+</div>
+<!-- Outgoing Message -->
+<div class="flex items-start gap-4 self-end max-w-[80%] flex-row-reverse">
+<div class="w-8 h-8 rounded-full overflow-hidden shrink-0">
+<img alt="Me" class="w-full h-full object-cover" data-alt="Close up portrait of a sophisticated executive man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL1OfpJFmMvcU-SwTqbZgConqUrDDp_Jc-p5TKlT4LIynrpfwRBwzaopJSgmWlGR2zd-sPZyIaCQz6cT_SWm4uhj57XTj7KGq6mDqkpHG5NkWM_3PvNBJg_P55L6jCb92rgoKW6Qb7Kl5l_14fpnjoU1fb7g_jUVbWeJcu2h3Oi25EQj4Z6SbnzjNj9uSbH4nZ2Zka0hrhosCFeTbp6ICgHozr49rW-0ZyPiepgOZeo1AyrNyJ3BvRHuT4JXE9MliF9yTpoPfTkh6j"/>
+</div>
+<div class="space-y-1 items-end flex flex-col">
+<div class="bg-primary p-4 rounded-xl rounded-tr-none shadow-[0_10px_20px_-5px_rgba(201,168,76,0.2)]">
+<p class="text-sm text-on-primary font-medium leading-relaxed">Excellent. Have you confirmed the private viewing of the Caravaggio in the Sforza collection?</p>
+</div>
+<div class="flex items-center gap-1 mt-1 mr-1">
+<p class="text-[10px] text-on-surface-variant/40">10:15 AM</p>
+<span class="material-symbols-outlined text-[12px] text-primary">done_all</span>
+</div>
+</div>
+</div>
+<!-- Incoming Message -->
+<div class="flex items-start gap-4 max-w-[80%]">
+<div class="w-8 h-8 rounded-full overflow-hidden shrink-0">
+<img alt="Julianne S." class="w-full h-full object-cover" data-alt="Elegant portrait of a woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn7xoxl3Maj50FEUkQAdmrQ04l9OT-It3TJJma10n7dCCl3bSiWowuIE9NXn9P8UeFYza8fGAqdGeC8eZuOd4JjgW7nmv8LgNmBEmxGG6IrxAEHkxWHj8Y6Dt1I57z55a9Svh2r0PmnmyZr2qJukGGVfauqLBNFcHSrdV4L7QcLZRD-0DiHeCFUPyysxmqxxYzVeXHSXOlJH2-2AhcjxCmtW8mTJQTctV2pEwvHwh_XmWJmyRXLOGrGDrGR-2f5dXLH9-QwYs636XK"/>
+</div>
+<div class="space-y-4">
+<div class="bg-surface-container-high p-4 rounded-xl rounded-tl-none border border-outline-variant/10 shadow-sm">
+<p class="text-sm text-on-surface-variant leading-relaxed">Yes, it is confirmed for Tuesday at 7 PM, strictly private. I am currently reviewing the dinner menu at *Cracco*. The itinerary for the Milan gala is now being compiled into your digital vault.</p>
+</div>
+<!-- Image Attachment -->
+<div class="w-64 rounded-xl overflow-hidden border border-outline-variant/20 shadow-xl group cursor-pointer relative">
+<img alt="Milan Duomo" class="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A cinematic, low-angle view of the Duomo di Milano at dusk with dramatic lighting and a sophisticated gold color grade" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCanOXxW_Zo_iOqxM8190bOrkDab_qSOhqyHWPqWOTfEByI1Dp_aoSFAZZQoRKeien7kF_GO5UQM7buVlVko7bvLgbrgPErSGFaavs8ESm_A5ckgHPc1u018afO8CKXJCMCu2hLYLcwcp4U7vNVfNmGcBXi6Jtcse9Xui0W5wdoPcwVjKrYupcQuT3h1gmu88Vpce8c-xqcole5wedBLeW01vjbJyqlzISpUhDvkyAepIpb9bdZjkAv1_I89g4WW5znB4w-maPXD4pG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-3 left-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-sm">attachment</span>
+<span class="text-white text-[10px] font-bold tracking-widest uppercase">Itinerary_Preview.jpg</span>
+</div>
+</div>
+<p class="text-[10px] text-on-surface-variant/40 ml-1">14:05 PM</p>
+</div>
+</div>
+<div class="flex items-center gap-4 py-4">
+<div class="flex-1 h-px bg-outline-variant/10"></div>
+<span class="text-[9px] text-on-surface-variant/30 uppercase tracking-[0.3em] font-bold">New Messages Below</span>
+<div class="flex-1 h-px bg-outline-variant/10"></div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-8 pt-4">
+<div class="bg-surface-container-highest rounded-xl p-2 border border-outline-variant/10 focus-within:border-primary/40 transition-all duration-300">
+<div class="flex items-center gap-2 px-4 py-2 border-b border-outline-variant/5">
+<button class="material-symbols-outlined text-on-surface-variant/60 hover:text-primary transition-colors text-lg">format_bold</button>
+<button class="material-symbols-outlined text-on-surface-variant/60 hover:text-primary transition-colors text-lg">format_italic</button>
+<button class="material-symbols-outlined text-on-surface-variant/60 hover:text-primary transition-colors text-lg">link</button>
+<div class="w-px h-4 bg-outline-variant/20 mx-1"></div>
+<button class="material-symbols-outlined text-on-surface-variant/60 hover:text-primary transition-colors text-lg">image</button>
+<button class="material-symbols-outlined text-on-surface-variant/60 hover:text-primary transition-colors text-lg">attach_file</button>
+</div>
+<div class="flex items-end gap-4 p-4">
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface text-sm placeholder:text-on-surface-variant/30 resize-none min-h-[40px] max-h-32 custom-scrollbar" placeholder="Message Julianne..."></textarea>
+<button class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-on-primary shadow-lg shadow-primary/10 hover:shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<div class="flex items-center gap-2 text-[10px] text-on-surface-variant/40 italic">
+<span class="w-1 h-1 bg-primary rounded-full animate-pulse"></span>
+                            Julianne is typing...
+                        </div>
+<p class="text-[10px] text-on-surface-variant/40 tracking-wider">SECURE END-TO-END ENCRYPTED ATELIER PORTAL</p>
+</div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ELITE | Admin Console</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;700&amp;family=Manrope:wght@300;400;500;700&amp;family=Cormorant+Garamond:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-bright": "#3a3939",
+                        "outline-variant": "#4d4637",
+                        "on-tertiary-container": "#41403a",
+                        "surface-dim": "#131313",
+                        "inverse-primary": "#755b00",
+                        "on-primary-fixed": "#241a00",
+                        "on-primary": "#3d2e00",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffe08f",
+                        "tertiary": "#cbc6bf",
+                        "on-background": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "on-tertiary": "#32302b",
+                        "on-primary-fixed-variant": "#584400",
+                        "error": "#ffb4ab",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#afaba4",
+                        "primary": "#e6c364",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed": "#1d1c17",
+                        "surface-container": "#201f1f",
+                        "tertiary-fixed": "#e7e2da",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-surface-variant": "#d0c5b2",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "secondary": "#c8c6c5",
+                        "on-tertiary-fixed-variant": "#494741",
+                        "secondary-container": "#474747",
+                        "on-secondary-container": "#b6b5b4",
+                        "surface-variant": "#353534",
+                        "surface-tint": "#e6c364",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed-dim": "#cac6be",
+                        "on-secondary-fixed-variant": "#474747",
+                        "primary-container": "#c9a84c",
+                        "on-primary-container": "#503d00",
+                        "primary-fixed-dim": "#e6c364",
+                        "on-surface": "#e5e2e1",
+                        "outline": "#99907e",
+                        "surface-container-highest": "#353534",
+                        "on-secondary": "#303030",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed": "#e4e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"],
+                        "serif-display": ["Cormorant Garamond"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background: rgba(201, 168, 76, 0.05);
+            backdrop-filter: blur(24px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-bottom: 2px solid #e6c364 !important;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- Sidebar Navigation Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#131313] border-r border-neutral-800/40 flex flex-col py-8 gap-2 z-40">
+<div class="px-8 mb-10">
+<h1 class="text-primary font-bold tracking-widest text-lg uppercase font-headline">ELITE</h1>
+<p class="text-neutral-500 text-[10px] tracking-[0.2em] uppercase mt-1">Admin Console</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="text-neutral-500 mx-2 px-4 py-3 flex items-center gap-3 hover:bg-neutral-800/50 transition-all duration-150 rounded-md" href="#">
+<span class="material-symbols-outlined text-lg">analytics</span>
+<span class="text-xs font-medium">Analytics</span>
+</a>
+<a class="text-neutral-500 mx-2 px-4 py-3 flex items-center gap-3 hover:bg-neutral-800/50 transition-all duration-150 rounded-md" href="#">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span class="text-xs font-medium">Membership Approvals</span>
+</a>
+<!-- Active State: Content Curation maps to current task -->
+<a class="text-neutral-100 bg-neutral-800 rounded-md mx-2 px-4 py-3 flex items-center gap-3 border-l-2 border-primary" href="#">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+<span class="text-xs font-medium">Content Curation</span>
+</a>
+<a class="text-neutral-500 mx-2 px-4 py-3 flex items-center gap-3 hover:bg-neutral-800/50 transition-all duration-150 rounded-md" href="#">
+<span class="material-symbols-outlined text-lg">payments</span>
+<span class="text-xs font-medium">Revenue</span>
+</a>
+<a class="text-neutral-500 mx-2 px-4 py-3 flex items-center gap-3 hover:bg-neutral-800/50 transition-all duration-150 rounded-md" href="#">
+<span class="material-symbols-outlined text-lg">terminal</span>
+<span class="text-xs font-medium">System Logs</span>
+</a>
+</nav>
+<div class="mt-auto px-2 flex flex-col gap-1 pt-6 border-t border-neutral-800/20">
+<a class="text-neutral-500 px-4 py-3 flex items-center gap-3 hover:bg-neutral-800/50 transition-all duration-150 rounded-md" href="#">
+<span class="material-symbols-outlined text-lg">help_outline</span>
+<span class="text-xs font-medium">Support</span>
+</a>
+<a class="text-neutral-500 px-4 py-3 flex items-center gap-3 hover:bg-neutral-800/50 transition-all duration-150 rounded-md" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span class="text-xs font-medium">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-12 min-h-screen">
+<!-- Editorial Header -->
+<header class="mb-16 max-w-6xl">
+<div class="flex items-end justify-between border-b border-outline-variant/10 pb-8">
+<div>
+<span class="text-primary font-label text-[10px] tracking-[0.3em] uppercase block mb-4">Management Dashboard</span>
+<h2 class="text-5xl font-headline font-light tracking-tight text-on-background leading-none">Benefits &amp; Events</h2>
+</div>
+<div class="text-right">
+<p class="text-on-surface-variant font-body text-xs leading-relaxed max-w-xs uppercase tracking-tighter">
+                        Curating the executive experience through strategic global touchpoints and exclusive access.
+                    </p>
+</div>
+</div>
+</header>
+<!-- Analytics Bento Grid -->
+<section class="grid grid-cols-12 gap-6 mb-16 max-w-6xl">
+<div class="col-span-8 bg-surface-container-low p-8 relative overflow-hidden group">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-6">
+<span class="w-1.5 h-6 bg-primary"></span>
+<h3 class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Benefit Engagement Trends</h3>
+</div>
+<div class="flex items-end gap-12">
+<div>
+<p class="text-4xl font-headline text-primary mb-1">12.4k</p>
+<p class="text-[10px] text-neutral-500 uppercase tracking-widest">Total Redemptions</p>
+</div>
+<div class="flex-1 h-24 flex items-end gap-1 pb-2">
+<div class="w-full bg-primary/20 h-1/2 hover:bg-primary/40 transition-all"></div>
+<div class="w-full bg-primary/20 h-2/3 hover:bg-primary/40 transition-all"></div>
+<div class="w-full bg-primary/20 h-3/4 hover:bg-primary/40 transition-all"></div>
+<div class="w-full bg-primary h-full hover:bg-primary/80 transition-all"></div>
+<div class="w-full bg-primary/20 h-4/5 hover:bg-primary/40 transition-all"></div>
+<div class="w-full bg-primary/20 h-1/2 hover:bg-primary/40 transition-all"></div>
+<div class="w-full bg-primary/20 h-2/3 hover:bg-primary/40 transition-all"></div>
+</div>
+</div>
+</div>
+<div class="absolute right-0 top-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16"></div>
+</div>
+<div class="col-span-4 bg-surface-container-low p-8">
+<div class="flex items-center gap-2 mb-6">
+<span class="w-1.5 h-6 bg-outline-variant"></span>
+<h3 class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Event RSVPs</h3>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-[10px] uppercase tracking-tighter mb-2">
+<span class="text-on-surface">Private Salon - Paris</span>
+<span class="text-primary">94% Full</span>
+</div>
+<div class="h-1 bg-surface-container-high w-full overflow-hidden">
+<div class="h-full bg-primary w-[94%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[10px] uppercase tracking-tighter mb-2">
+<span class="text-on-surface">Global Summit Tokyo</span>
+<span class="text-primary">62% Full</span>
+</div>
+<div class="h-1 bg-surface-container-high w-full overflow-hidden">
+<div class="h-full bg-primary w-[62%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-12 gap-12 max-w-6xl">
+<!-- Benefit Management Section -->
+<section class="col-span-7">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-2xl font-headline font-light tracking-tight">Active Benefits</h3>
+<button class="text-[10px] font-label uppercase tracking-widest border border-primary/30 px-4 py-2 hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">add</span>
+                        New Benefit
+                    </button>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Benefit Card 1 -->
+<div class="bg-surface-container-low p-5 flex items-center justify-between group">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 bg-surface-container-high overflow-hidden">
+<img alt="Boutique Hotel" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="luxurious boutique hotel interior with plush velvet armchairs and warm golden lighting in a historic building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5gnPVZYUZbvTJJy38VEK5gVQs-bzNZBTsbqXT_5c0tY224YMo930e28VQeTCEu-j67Toq2BsA6My3y4bN504QjqsQxvV1K-oRTzJjDRXp3JOYJB5fnCHnOhs7dDkIt8pcr3wMWroze3RsASnQPbz1_bcyZV7lThXwSfoiDJ1JLeg7o9Y4qQ1Jl6KPaYsgjXJY2wxeU7n1SDmad2isD59TsyZMQinYuBV04gWTlm92Q7lzUA3kikM-KjX01huxNU8DuuuzFXekhtOr"/>
+</div>
+<div>
+<h4 class="text-sm font-medium text-on-surface">The Carlton Collection</h4>
+<p class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Hospitality • Tier 1</p>
+</div>
+</div>
+<div class="flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit_square</span>
+</button>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Benefit Card 2 -->
+<div class="bg-surface-container-low p-5 flex items-center justify-between group">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 bg-surface-container-high overflow-hidden">
+<img alt="Private Jet" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="sleek modern private jet interior with cream leather seats and soft cabin lighting at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlkcM5Ye0YmDmJCt_rzzGDy5foN8eywbWSxzZ8gyj6Qpk4TW59DmYbnRlScv5N394sRfxfMIIQGQ-itTvTdmJIgMRizMeHI-tQ3IWgcap28TKkGRJ29fYVWHS3TcTMWj2zJzZN0c9oxLknOlwfyWRYhFiRlySybjNbRtleDub5r4-JAWSx-826LiKH4qAH22XJgkT-8RdeXacbL-FP8S_E9_9rEt0mqq8LmVU1W0bzgXxyIRhGznhaY6xnuZvNvRS5CVPYOCih9JoA"/>
+</div>
+<div>
+<h4 class="text-sm font-medium text-on-surface">Aero Private Charter</h4>
+<p class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Travel • Tier 2</p>
+</div>
+</div>
+<div class="flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit_square</span>
+</button>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<!-- Benefit Card 3 -->
+<div class="bg-surface-container-low p-5 flex items-center justify-between group">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 bg-surface-container-high overflow-hidden">
+<img alt="Concierge" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" data-alt="elegant crystal glass of amber liquid on a dark wooden bar with soft golden backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxAvzJOZyAc4rJB7jfS8QTxasT0lJiqkIkDa7kPDw3xjYq8O2A46JAunDe8ubF6ikg07r71IkuH3jW5ZS0njtGlEpXfiCSZ945jTc6OKRHl6v2bzoOr4udeFDvWVza3GX9ZN1_ACe2blcNCjBlyYOvKBadozAH5VyoJmzLprK4v0JT7bllNGQAOW3sFZ13tqIZh6OAXwIMSJYLEKJd0WYSrjkx_l5ainM_hhCwYhpNtqbQopiuwyiognuesq69HdCqylR2IIFbF0kR"/>
+</div>
+<div>
+<h4 class="text-sm font-medium text-on-surface">24/7 Lifestyle Concierge</h4>
+<p class="text-[10px] text-neutral-500 uppercase tracking-widest mt-1">Service • All Access</p>
+</div>
+</div>
+<div class="flex items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">edit_square</span>
+</button>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Event Form Section -->
+<section class="col-span-5">
+<div class="bg-surface-container-high p-10 border-l-4 border-primary shadow-2xl">
+<h3 class="text-xs font-label uppercase tracking-[0.3em] text-primary mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">event</span>
+                        Draft New Event
+                    </h3>
+<form class="space-y-8">
+<!-- Image Upload Placeholder -->
+<div class="w-full aspect-video bg-surface-container-highest border border-dashed border-outline-variant/30 flex flex-col items-center justify-center cursor-pointer group hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-3xl text-neutral-600 mb-2 group-hover:text-primary transition-colors">add_photo_alternate</span>
+<span class="text-[10px] font-label uppercase tracking-widest text-neutral-500">Upload Event Key Visual</span>
+</div>
+<div class="space-y-6">
+<div class="relative">
+<label class="text-[9px] font-label uppercase tracking-widest text-neutral-500 block mb-1">Event Title</label>
+<input class="w-full bg-surface-container-highest border-0 border-b border-outline-variant/20 py-3 text-sm text-on-surface focus:ring-0 transition-all" placeholder="e.g. Monte Carlo Yacht Summit" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="text-[9px] font-label uppercase tracking-widest text-neutral-500 block mb-1">Date</label>
+<input class="w-full bg-surface-container-highest border-0 border-b border-outline-variant/20 py-3 text-sm text-on-surface focus:ring-0 appearance-none" type="date"/>
+</div>
+<div>
+<label class="text-[9px] font-label uppercase tracking-widest text-neutral-500 block mb-1">Category</label>
+<select class="w-full bg-surface-container-highest border-0 border-b border-outline-variant/20 py-3 text-sm text-on-surface focus:ring-0">
+<option>Private Salon</option>
+<option>Global Summit</option>
+<option>Archive Preview</option>
+</select>
+</div>
+</div>
+<div>
+<label class="text-[9px] font-label uppercase tracking-widest text-neutral-500 block mb-1">Executive Summary</label>
+<textarea class="w-full bg-surface-container-highest border-0 border-b border-outline-variant/20 py-3 text-sm text-on-surface focus:ring-0 resize-none" placeholder="Draft brief details for the curated feed..." rows="3"></textarea>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary text-on-primary font-label uppercase tracking-widest py-4 text-xs font-bold hover:bg-primary-container transition-all flex items-center justify-center gap-3" type="button">
+                                Publish to Atelier
+                                <span class="material-symbols-outlined text-sm">send</span>
+</button>
+<p class="text-center text-[9px] text-neutral-600 mt-4 uppercase tracking-tighter">Event will be visible to active members immediately upon publishing.</p>
+</div>
+</form>
+</div>
+</section>
+</div>
+<!-- System Status Footer Overlay -->
+<footer class="mt-24 max-w-6xl flex justify-between items-center text-[10px] text-neutral-600 uppercase tracking-widest">
+<div class="flex items-center gap-8">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500/50"></span>
+                    Global Servers Operational
+                </span>
+<span>Version 4.2.0-Elite</span>
+</div>
+<div class="flex items-center gap-4">
+<span>© 2024 ELITE Collective</span>
+<span class="w-px h-3 bg-neutral-800"></span>
+<span class="text-primary/50">Access Level: Legacy Admin</span>
+</div>
+</footer>
+</main>
+<!-- Curator Drawer Fallback (Decorative) -->
+<div class="fixed right-0 top-0 h-full w-2 bg-primary/20 hover:w-4 transition-all cursor-pointer" title="Quick Insights Drawer"></div>
+</body></html>

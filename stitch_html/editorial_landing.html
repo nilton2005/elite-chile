@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ÉLITEmanu | Exclusive Executive Community</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;600;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+    font-size: 24px
+    }
+body {
+    background-color: #131313;
+    color: #E5E2E1;
+    font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
+    cursor: none
+    }
+.serif-display {
+    font-family: "Noto Serif", serif
+    }
+.italic-display {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic
+    }
+.editorial-shadow {
+    box-shadow: 0 40px 40px -15px rgba(201, 168, 76, 0.04)
+    }
+.glass-panel {
+    background: rgba(25, 25, 25, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(230, 195, 100, 0.08)
+    }
+.gold-gradient-text {
+    background: linear-gradient(to right, #E6C364, #FFE08F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+    }
+.dark-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(19, 19, 19, 0.2) 0%, rgba(19, 19, 19, 0.9) 100%)
+    }
+.ornamental-logo {
+    font-family: "Noto Serif", serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    opacity: 0.5;
+    transition: opacity 0.3s ease
+    }
+.reveal {
+    opacity: 0;
+    transform: translatey(40px);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1)
+    }
+.reveal.active {
+    opacity: 1;
+    transform: translatey(0)
+    }
+.shimmer-title {
+    background: linear-gradient(90deg, #E6C364 0%, #fff 50%, #E6C364 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite
+    }
+@keyframes shimmer {
+    to {
+        background-position: 200% center;
+        }
+    }
+.custom-cursor {
+    width: 8px;
+    height: 8px;
+    background: #E6C364;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    box-shadow: 0 0 10px #E6C364
+    }
+.slide-up-0 {
+    animation: slideUp 0.8s ease forwards
+    }
+.slide-up-200 {
+    animation: slideUp 0.8s ease 0.2s forwards;
+    opacity: 0
+    }
+.slide-up-400 {
+    animation: slideUp 0.8s ease 0.4s forwards;
+    opacity: 0
+    }
+.fade-up-600 {
+    animation: fadeUp 0.8s ease 0.6s forwards;
+    opacity: 0
+    }
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+        } to {
+        transform: translateY(0);
+        opacity: 1;
+        }
+    }
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        } to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+.scroll-indicator {
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, #E6C364, transparent);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    animation: pulseScroll 2s infinite
+    }
+@keyframes pulseScroll {
+    0% {
+        transform: scaleY(0.5);
+        opacity: 0.3;
+        } 50% {
+        transform: scaleY(1);
+        opacity: 1;
+        } 100% {
+        transform: scaleY(0.5);
+        opacity: 0.3;
+        }
+    }
+.testimonial-carousel {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDAjH_SCVn0CtguUpslgDXMHvUDpy4qOvOwcqW71IuLytVZqDxQ04FNELLEj9tSTIGz_XvqDhEntJqh9N-MGkYgq6pQj6JkZdmscpwJjTALbByIdFozEP8gxhopBavtQ8k8lJnWD_hbRNXMH3D5sf8_8WW3z-xlK4f8Hzhvto_g7BbScT9oF9mBykc12RZkSGJ-TNCgm0rky0niMw6yHRBJk0QHwMJ_zQY-f3ncsFdLH0pRAUPT51vqWs4RgCn_ShaE4iEh1qkmFU8h), linear-gradient(to bottom, #131313, #0a0a0a);
+    background-color: #131313
+    }
+.nav-scrolled {
+    backdrop-filter: blur(24px);
+    background: rgba(10, 10, 10, 0.8);
+    border-bottom: 1px solid rgba(230, 195, 100, 0.3)
+    }
+.nav-scrolled .logo-container {
+    transform: scale(0.9)
+    }</style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#e6c364",
+                "on-primary": "#3d2e00",
+                "background": "#131313",
+                "surface": "#131313",
+                "on-surface": "#e5e2e1",
+                "on-surface-variant": "#d0c5b2",
+                "outline-variant": "#4d4637",
+                "surface-container-low": "#1c1b1b",
+                "surface-container-highest": "#353534",
+              },
+              fontFamily: {
+                "headline": ["Noto Serif"],
+                "body": ["Manrope"],
+                "montserrat": ["Montserrat"],
+              },
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30">
+<div class="custom-cursor" id="cursor"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 z-[60] w-full flex justify-between items-center px-12 py-6 transition-all duration-500" id="mainNav">
+<div class="logo-container transition-transform duration-500">
+<span class="text-2xl italic-display text-primary tracking-tighter">ÉLITEmanu</span>
+</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-primary font-bold border-b border-primary/50 pb-1 text-[0.7rem] tracking-[0.1rem] uppercase font-montserrat" href="#">Comunidad</a>
+<a class="text-zinc-400 hover:text-primary transition-colors text-[0.7rem] tracking-[0.1rem] uppercase font-montserrat" href="#">Beneficios</a>
+<a class="text-zinc-400 hover:text-primary transition-colors text-[0.7rem] tracking-[0.1rem] uppercase font-montserrat" href="#">Membresía</a>
+<a class="text-zinc-400 hover:text-primary transition-colors text-[0.7rem] tracking-[0.1rem] uppercase font-montserrat" href="#">Sobre nosotras</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-[2px] text-[0.7rem] tracking-[0.1rem] font-bold uppercase transition-all hover:brightness-110 font-montserrat">
+        Solicitar membresía
+    </button>
+</nav>
+<main>
+<!-- Hero Section Upgrade -->
+<section class="relative h-screen w-full flex items-center overflow-hidden">
+<!-- Layered Background -->
+<div class="absolute inset-0 z-0">
+<img alt="blurred city skyline" class="w-full h-full object-cover blur-[20px] opacity-40 scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkHMelCKOA3KwJDvDiHwm5bDioqEib8JLDaLf2rFjcaDWK34W5CquAg63Sz5G0gKyIei4uSr8yDQMaMIHKxIa-lzY-BfoQlvItkf_QWgb1rL2t-OGBSjLj6iIcDzWib5JCpXBpYq5ifUMggQ5f5o_sxvx0cieiCBSyPLfkPnhx3Z-9PVtABaO3N-FS_xFhXX7p0bIKoFHHp8bQ5Ji7BfBcnMwBBsYI1psJAX0uWM1jUEAq1OqGePsIPNm74yDdOrRkUwnu3Ntr-s2j"/>
+</div>
+<div class="absolute inset-0 z-10 dark-overlay">
+<img alt="Cinematic portrait of a powerful latina executive in penthouse office" class="w-full h-full object-cover object-center md:object-right" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqrK3L8iKDTo0va3clvMfpBzRC_aM07zoFzXwkzhk913sGgmGnRdeCPsJOHhQmMWMdiwcq2bBKsybdWwC1jwCXiGcEaxQX5pmcn4n22gFLFWxX7fXlKZ0JY99LhSbxW7bVyqDqogWtifYBWSLkrn-slF1Su-TZlTwPkT17NCZZP5TEjvtFz5IzDVNUxxFzW1R0cjjWiJROsA9tA8J4n6sU5ugMIxk831T6UKjoO3qd4Zil3BSjCO5lmZ9Y5md7sVD0o3tyEEyVeIEg"/>
+</div>
+<div class="container mx-auto px-12 z-20">
+<div class="max-w-4xl flex flex-col items-start gap-4">
+<div class="flex items-center gap-4 mb-2 slide-up-0">
+<span class="ornamental-logo !opacity-80">ESTABLISHED IN SANTIAGO</span>
+<span class="w-8 h-[0.5px] bg-primary/30"></span>
+<span class="ornamental-logo !opacity-80">NYC • MIAMI</span>
+</div>
+<h1 class="italic-display text-5xl md:text-8xl leading-[1.1] text-on-surface">
+<span class="block slide-up-0">Donde el poder</span>
+<span class="gold-gradient-text block slide-up-200">se encuentra con</span>
+<span class="block slide-up-400">la excelencia.</span>
+</h1>
+<p class="font-light text-on-surface-variant max-w-xl text-lg md:text-xl leading-relaxed tracking-wide font-body slide-up-400 mt-4">
+                    La red exclusiva para mujeres líderes que definen el rumbo de la industria global. Acceso a círculos de influencia inalcanzables.
+                </p>
+<div class="flex flex-wrap gap-6 mt-8 fade-up-600">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-[2px] font-bold text-xs tracking-[0.2rem] uppercase hover:bg-white transition-all font-montserrat">
+                        Aplicar ahora
+                    </button>
+<button class="border border-primary/40 text-primary px-10 py-4 rounded-[2px] font-bold text-xs tracking-[0.2rem] uppercase hover:bg-primary/10 transition-all font-montserrat">
+                        Nuestra visión
+                    </button>
+</div>
+</div>
+</div>
+<div class="scroll-indicator"></div>
+</section>
+<!-- Stats Counter Section -->
+<section class="bg-[#0E0E0E] py-24 border-y border-outline-variant/10 reveal">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="text-center md:border-r border-primary/20 last:border-0">
+<span class="italic-display text-6xl md:text-8xl text-primary block mb-2">+340</span>
+<span class="font-montserrat font-bold text-[0.65rem] tracking-[0.3rem] uppercase text-zinc-500">Mujeres ejecutivas</span>
+</div>
+<div class="text-center md:border-r border-primary/20 last:border-0">
+<span class="italic-display text-6xl md:text-8xl text-primary block mb-2">3</span>
+<span class="font-montserrat font-bold text-[0.65rem] tracking-[0.3rem] uppercase text-zinc-500">Ciudades globales</span>
+</div>
+<div class="text-center md:border-r border-primary/20 last:border-0">
+<span class="italic-display text-6xl md:text-8xl text-primary block mb-2">60+</span>
+<span class="font-montserrat font-bold text-[0.65rem] tracking-[0.3rem] uppercase text-zinc-500">Beneficios premium</span>
+</div>
+<div class="text-center">
+<span class="italic-display text-6xl md:text-8xl text-primary block mb-2">$2M+</span>
+<span class="font-montserrat font-bold text-[0.65rem] tracking-[0.3rem] uppercase text-zinc-500">En deals conectados</span>
+</div>
+</div>
+</section>
+<!-- Community Gallery Section -->
+<section class="py-32 bg-background reveal">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-10 gap-20 items-center">
+<div class="lg:col-span-4 space-y-8">
+<span class="text-primary text-xs font-bold tracking-[0.4rem] uppercase font-montserrat">Networking de Elite</span>
+<h2 class="serif-display text-5xl md:text-6xl text-on-surface leading-tight">Tu próxima gran alianza está <span class="italic-display shimmer-title">adentro.</span></h2>
+<p class="text-on-surface-variant font-light text-lg leading-relaxed">Nuestros eventos no son simples reuniones sociales. Son centros de inteligencia estratégica donde se gestan las inversiones que mueven el mercado.</p>
+<button class="border-b-2 border-primary pb-2 text-primary font-bold text-sm tracking-widest uppercase font-montserrat hover:text-white hover:border-white transition-all">Ver calendario de eventos</button>
+</div>
+<div class="lg:col-span-6 grid grid-cols-2 gap-4">
+<div class="col-span-2 aspect-[16/10] overflow-hidden rounded-[2px] border border-primary/0 hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] cursor-pointer">
+<img alt="Executive in boardroom" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcUPlVnkovTsX4F0nq7lpChkrzovhdeGacWaxrFlLL5gTLbRpwH8ZKby9-ubJXkgQ-i576ihva2dcZ4dsspjJn_ws7xLgXdreNRrCwqj8egvpEGRJYpHVQ1v0b3wLvQ9uuX6hrEfs0v6eeihN7cabUHZeVDX337gRpH8KqBqPPpHvNmXWruQTHdegg9AzwSoPjbBhXTEtxxmUH-L4KsBftOtf3JlQXrK_XYKhJMWcLSwqSh0nE9UMItnp209E3NAHpkY3uzqnEb-Km"/>
+</div>
+<div class="aspect-square overflow-hidden rounded-[2px] border border-primary/0 hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] cursor-pointer">
+<img alt="Networking with champagne" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV-2wzk3m4h3wtEAXg2Bqe3UEf1t0fTOSLtRzXR0-th6PVweNZtnbQsEHwND6uVRX_-uUgFIoUmhb-z-V4RktpMBwA5M8OQfv2v17k6JIvPkfZXRvzzBDk77hjUD3tbPXB-XQPlnZvwcHiuBs3eZ9yIfTXhnhclFhoOB7QHW-V4VpooeU6MVd4UjtT6-cpQEv71A9UgJni-4Lef6wCKue7aRwBMPnVq2PyuWOMeFJ-pf0IdLmmXVVrYvPk2yE9r8ncJ8HHbYf1A3AE"/>
+</div>
+<div class="aspect-square overflow-hidden rounded-[2px] border border-primary/0 hover:border-primary/50 transition-all duration-500 hover:scale-[1.02] cursor-pointer">
+<img alt="Latina CEO at minimalist desk" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZJD3yppx4iCKOMVZNSmBcCf5MyAk3KTDhmqvO1GwlWYhj_woZxwZZVkL27JwO2WLC48eDq3FjnL4RwZIqAVkXgQVJnbLVJtJSNAkwLN1NixubLnAJWDj9LMN_sNsGWyK9Kvx-wWnPnvvnb9t3r5WLiyHAB4E-WQWuylDWF1zuFAcRdGL5ZEI72NFLQ3l9jlVCfOtISMbXGcJ0EIBCn_9MXL6Yfh9SlRD7Zr6l3Rbqd01wrNbkuOylLsgdFz3fKUXrbGFePzLnSJUD"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-32 bg-surface-container-low reveal">
+<div class="max-w-7xl mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="serif-display text-5xl text-on-surface mb-6">El Privilegio de <span class="italic-display shimmer-title">Ser.</span></h2>
+<p class="text-on-surface-variant text-lg font-light">Accede a una curaduría de beneficios diseñados para el estilo de vida de la mujer líder.</p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="ornamental-logo">OFFICIAL PARTNER NETWORK</span>
+<a class="text-primary font-bold text-xs tracking-widest border-b border-primary/20 pb-2 hover:border-primary transition-all uppercase font-montserrat" href="#">Ver catálogo de convenios</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group relative overflow-hidden aspect-[4/5] bg-surface-container-high">
+<img alt="Luxury Hotel" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNLUxQCKNZmvkAm3-fD8momqyW8FvMpZk6V54SGYvF9LInXFi7GWqJdJUqMbkFD9eTCuJ4kgIUI2hrtTlVITycZzCv1-HtR2nsPZ2rQ8IxrSr14gkKnZsskeseceoAFWHpxSSn6ox_qcw4MRbQUlgioXYzl6rcdsPjcZ9sZqOHtp-befBVIKMAeUv-crQxnukLIm98Q2UQZh64pFDKJ05mDusjzsHGJUEvsw02IqmbLl7BzmDOeNYQn4hGAGSbkIYQS7TIb5PnYizz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity z-15"></div>
+<div class="absolute bottom-8 left-8 z-20">
+<span class="text-primary text-[0.6rem] tracking-[0.3rem] font-bold uppercase font-montserrat mb-2 block">Hospitalidad</span>
+<h3 class="italic-display text-3xl mb-4">Hoteles &amp; Retreats</h3>
+<p class="text-zinc-400 text-sm font-light opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Acceso VIP a suites presidenciales y resorts privados en todo el mundo.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative overflow-hidden aspect-[4/5] bg-surface-container-high">
+<img alt="Private Jet" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy6GBnXjZ-LQvxhPKlG0Zu3MnT9UMp_9PLImyS_ho3JGOq9AYZoyIsKPln5lHj3qjpFdgtHaTcceqeE7WAwuIA1fW4kt04MKCJAjxJBm6JJlXosggLuukYqrLSOSKTGjU77bi-4Y1drng9pWJLzNUcBubIfPGOJVA83qLlQu0twlXOA0ykFv_SaYWCpYqkAj6T4WcMRNLupu3ovjr84DvstREunzCPnCGAzJ4z3G3OavbF9-XQwbjNkaOUQ8wSv0gOUm5z_3Iit1zx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity z-15"></div>
+<div class="absolute bottom-8 left-8 z-20">
+<span class="text-primary text-[0.6rem] tracking-[0.3rem] font-bold uppercase font-montserrat mb-2 block">Aviación</span>
+<h3 class="italic-display text-3xl mb-4">Movilidad Privada</h3>
+<p class="text-zinc-400 text-sm font-light opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Charter jets con tarifas preferenciales y acceso a salones privados exclusivos.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative overflow-hidden aspect-[4/5] bg-surface-container-high">
+<img alt="Fashion Show" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUH-tQmVddP6Pg1HpsUMI44bGCe1tv-eBjZuouvKdNgxufnB1iACV6hgKMNPVKr4b1vhAAvhYO7Cduy7nDYB1twBfHAWhu-7DUV8nb3iqqMz5p6ZC_VL_himCKhKVapbIUy_5gdK1_0u2H5v6c5YgjlsOTEsGIoOKPvl_BK0Zytkw6wvdIWHB3lg9dUOrXyWr3CbZ-kOn7VaOGHOH-JdOI9Lo0QFuA3z0NavA9Iy6I4_X5lMir4i6PjLjGmvcgSzci-3JrldFnnYwz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity z-15"></div>
+<div class="absolute bottom-8 left-8 z-20">
+<span class="text-primary text-[0.6rem] tracking-[0.3rem] font-bold uppercase font-montserrat mb-2 block">Curaduría</span>
+<h3 class="italic-display text-3xl mb-4">Alta Costura</h3>
+<p class="text-zinc-400 text-sm font-light opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Personal shoppers y acceso anticipado a colecciones de las casas más prestigiosas.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Exclusive Banner -->
+<section class="relative h-[60vh] w-full flex items-center justify-center overflow-hidden reveal">
+<img alt="Executive gala dinner background" class="absolute inset-0 w-full h-full object-cover brightness-[0.3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgna8qMpuJ3VKN8eEU3a-NgTdPh27zM_3pXF2cMyuP2zBRIm4pLXJMnUPMtRW_82EdVVVRxszKAfmfqw2yuGbQYCLTqXerJlJt33IyqEGwcZUmKvrzJFbARBv8eh_i18zHOHxHyhQaeqL0Oiphnd6lIzqlVRBpi7GMa80BLyD-eZ8zK1R17iYpsqKDc3VVV3OQq31Z4rZ9kQiKnRhVWmZ55nC-Y5-zvaeBNjLle9IT5YE_yKrxhzv-MRvszAzpQ4xbHzSL9DsE96vM"/>
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="relative z-10 text-center px-6">
+<h2 class="italic-display text-3xl md:text-5xl max-w-4xl leading-relaxed">"Cada beneficio fue diseñado para mujeres que no negocian su estándar."</h2>
+<div class="mt-8 w-24 h-[1px] bg-primary mx-auto"></div>
+</div>
+</section>
+<!-- Profiles of Power Preview -->
+<section class="py-32 bg-background reveal">
+<div class="max-w-7xl mx-auto px-12 text-center mb-20">
+<span class="text-primary text-xs font-bold tracking-[0.5rem] uppercase font-montserrat block mb-6">Membresía Activa</span>
+<h2 class="italic-display text-5xl md:text-6xl">Las mujeres que ya están adentro.</h2>
+</div>
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Profile 1 -->
+<div class="group flex flex-col items-center p-8 bg-surface-container-low rounded-[2px] border border-outline-variant/10 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(230,195,100,0.1)] transition-all duration-500 hover:-translate-y-2">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-2 border-primary/20 group-hover:border-primary transition-colors">
+<img alt="Confident professional" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSbhaYYhla7YLMjvSVfO6KwpVYnjQUObaQYwSOLINYVkicRzY3HXuTHWLVY2xImQPjZ6BwrR4LvZ9l08WgY6la-HjzH3uUHvDqP9OUoOen-t4m5doSkyCwq7AuWz-qjbowF_ne_3OJflHArW0QACCFXrVW3WIZikwY3ETWj_eAr7pXv0QaI1paYGntE2O26bDjKJaYaq8GSAtBForUtj_4MabudzEVzzgidHqqpfa1IG5PYEM_RrZ96H5dAp01JL43vGR54dYswxqy"/>
+</div>
+<h4 class="font-montserrat font-bold text-sm tracking-widest uppercase text-on-surface text-center mb-2">Valentina Rivas</h4>
+<p class="text-primary text-[0.7rem] font-bold uppercase tracking-wider text-center">Founder &amp; CEO, FinTech</p>
+<p class="text-zinc-500 text-[0.65rem] uppercase tracking-widest mt-2">Santiago</p>
+<div class="flex flex-wrap justify-center gap-2 mt-4">
+<span class="px-3 py-1 bg-white/5 rounded-full text-[0.5rem] tracking-widest uppercase font-bold text-zinc-400">Venture Capital</span>
+</div>
+</div>
+<!-- Profile 2 -->
+<div class="group flex flex-col items-center p-8 bg-surface-container-low rounded-[2px] border border-outline-variant/10 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(230,195,100,0.1)] transition-all duration-500 hover:-translate-y-2">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-2 border-primary/20 group-hover:border-primary transition-colors">
+<img alt="Elegant executive" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAebqg8OvfUqf3MJiOP6jZEO6zC3yPR2YqX7oGStrW93SUbbp2Gvo2IU_e7TBdReGRJzevBN0pe1C8DFCzt9dnxnb3TEsnaCRribKzaWrdhcTqeVA4iGGSgYi2rU_VKD8wCFRBVfL8GSquXN_uux2ShckWaPiSC9NoOUJ9xHF0I_5kKreKXBzjxB2w-fcbhBlUNmPgdXKiNGsBon6DxCDt2V-QzvdUZrXNvp21B2ycbxjTdVNZ1WiUiNnIipVRzB4GF_sJJf-fgvWsK"/>
+</div>
+<h4 class="font-montserrat font-bold text-sm tracking-widest uppercase text-on-surface text-center mb-2">Elena Castillo</h4>
+<p class="text-primary text-[0.7rem] font-bold uppercase tracking-wider text-center">Board Director, Real Estate</p>
+<p class="text-zinc-500 text-[0.65rem] uppercase tracking-widest mt-2">New York</p>
+<div class="flex flex-wrap justify-center gap-2 mt-4">
+<span class="px-3 py-1 bg-white/5 rounded-full text-[0.5rem] tracking-widest uppercase font-bold text-zinc-400">Investments</span>
+</div>
+</div>
+<!-- Profile 3 -->
+<div class="group flex flex-col items-center p-8 bg-surface-container-low rounded-[2px] border border-outline-variant/10 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(230,195,100,0.1)] transition-all duration-500 hover:-translate-y-2">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-2 border-primary/20 group-hover:border-primary transition-colors">
+<img alt="Powerful gaze" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSPNRozilOc68KWR3RHgwu5mIQRkp20bbYbwTFPUMsi87MxeFjhwfsxbfLXhbxvPpBMADMw5h8GnAmHvVfDxD1-vfolE3tkdl9e9mSgdXstMQkO_oEG2XXOrmxcHW66EfDU8n6VttrGYiCm00K05tScCYvl0X7DBwKAtETdXQtf7cRxjcnRog2MfZWBwps2agXwWl_jQQuzMnPiLtldApCjaoOhBWB6hNLVGvhTxepZeTJltqBJGHr-uh7rYHdHkGbjRRCos5OSF3U"/>
+</div>
+<h4 class="font-montserrat font-bold text-sm tracking-widest uppercase text-on-surface text-center mb-2">Sofia Martinez</h4>
+<p class="text-primary text-[0.7rem] font-bold uppercase tracking-wider text-center">Managing Partner, Law Firm</p>
+<p class="text-zinc-500 text-[0.65rem] uppercase tracking-widest mt-2">Miami</p>
+<div class="flex flex-wrap justify-center gap-2 mt-4">
+<span class="px-3 py-1 bg-white/5 rounded-full text-[0.5rem] tracking-widest uppercase font-bold text-zinc-400">Legal Strategy</span>
+</div>
+</div>
+<!-- Profile 4 -->
+<div class="group flex flex-col items-center p-8 bg-surface-container-low rounded-[2px] border border-outline-variant/10 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(230,195,100,0.1)] transition-all duration-500 hover:-translate-y-2">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-2 border-primary/20 group-hover:border-primary transition-colors">
+<img alt="Charismatic smile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHoviAtrihakghnb7Q9pSmMs7QPl9LzmUHdEJmv_ABlcUbzJ-HrjQ2IDHVt-hcbBg4-1lmGDw92fsAHlgDGspZ6RDovs0LGXOlGPBtQXnQrUJX_U8pJmpzfx7YmBzdn9mtxjPlxhXEFEx3JSa573tcoub1EXqqT1RZynUQqaQuReeJYfYc30GPaMk7fektEr_v-p75LcgC5D5em6uBg1szH6KfCloY588Cg6DMPtLOxZ5ldVdh-6ywUabioH_DMX2B4MerYjUvlshI"/>
+</div>
+<h4 class="font-montserrat font-bold text-sm tracking-widest uppercase text-on-surface text-center mb-2">Isabella Rossi</h4>
+<p class="text-primary text-[0.7rem] font-bold uppercase tracking-wider text-center">Chief Operating Officer, Tech</p>
+<p class="text-zinc-500 text-[0.65rem] uppercase tracking-widest mt-2">Global Hub</p>
+<div class="flex flex-wrap justify-center gap-2 mt-4">
+<span class="px-3 py-1 bg-white/5 rounded-full text-[0.5rem] tracking-widest uppercase font-bold text-zinc-400">Tech Innovation</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership Plans (Retained & Updated) -->
+<section class="py-32 bg-surface-container-lowest reveal">
+<div class="max-w-5xl mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Plan 1 -->
+<div class="bg-surface p-12 rounded-[2px] border border-outline-variant/10 relative reveal">
+<div class="mb-8">
+<h3 class="italic-display text-3xl mb-2">Regional</h3>
+<p class="text-primary font-bold text-sm tracking-widest uppercase font-montserrat">Membresía Anual</p>
+</div>
+<ul class="space-y-4 mb-12">
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+<span>Acceso a eventos en tu ciudad sede</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+<span>Directorio de beneficios locales</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="check">check</span>
+<span>Concierge 24/7</span>
+</li>
+</ul>
+<button class="w-full border border-primary text-primary py-4 rounded-[2px] font-bold tracking-widest uppercase hover:bg-primary/5 transition-all font-montserrat">Solicitar Aplicación</button>
+</div>
+<!-- Plan 2 -->
+<div class="bg-surface-container-high p-12 rounded-[2px] border border-primary/20 relative editorial-shadow transform md:-translate-y-8 reveal">
+<div class="absolute -top-4 right-8 bg-primary text-on-primary text-[0.6rem] px-3 py-1 font-bold tracking-[0.2rem] uppercase rounded-[2px] font-montserrat">MÁS EXCLUSIVA</div>
+<div class="mb-8">
+<h3 class="italic-display text-3xl mb-2">Founding Member</h3>
+<p class="text-primary font-bold text-sm tracking-widest uppercase font-montserrat">Membresía Global</p>
+</div>
+<ul class="space-y-4 mb-12">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="star">star</span>
+<span>Acceso VIP a Santiago, NYC y Miami</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="star">star</span>
+<span>Invitaciones a Cenas de Autor</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="star">star</span>
+<span>Global Concierge &amp; Private Travel</span>
+</li>
+</ul>
+<button class="w-full bg-primary text-on-primary py-4 rounded-[2px] font-bold tracking-widest uppercase hover:brightness-110 transition-all font-montserrat">Aplicar como Fundadora</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Carousel Section -->
+<section class="py-32 testimonial-carousel overflow-hidden reveal">
+<div class="max-w-4xl mx-auto px-12 relative h-[500px]">
+<div class="relative h-full flex items-center" id="testimonial-slider">
+<!-- Testimonial 1 -->
+<div class="testimonial-item opacity-100 transition-opacity duration-1000 flex flex-col items-center text-center absolute inset-0">
+<div class="w-[100px] h-[100px] rounded-full overflow-hidden border-2 border-primary mb-8">
+<img alt="CEO Fintech" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8nEirJ27eBgDiA8DSmq_MV7s2MAcm9c_py-hT-XOnBDsP3pxz112dPHGkkXjFKffpzSb2X9IMEFYyEpBq473IaziqGSK7dOxKE_BZ-3oRQfCVmz6OFIqpvGbTrQg8-gFvPsPUYvIUpIx3ixT59Y5E5AhsFpYe2rWvBFROl27scZtcb_RJ5-Prv164FiRTdjXHaWxsWRhuPN3QCQMxRsPuSgMf92_NoR-5Wodbob7bXgDaSSyuymQ7wWZm0qVuDgFfLktMUrL0NUd2"/>
+</div>
+<p class="italic-display text-2xl md:text-4xl text-on-surface leading-relaxed mb-8">"ÉLITEmanu no es solo una red de contactos, es un espacio de contención y estrategia donde las decisiones de alto nivel se sienten respaldadas."</p>
+<div class="flex items-center gap-4">
+<span class="text-primary font-bold tracking-widest uppercase font-montserrat text-xs">Victoria Valdés</span>
+<span class="text-primary opacity-30">•</span>
+<span class="text-zinc-500 font-bold tracking-widest uppercase font-montserrat text-[0.65rem]">CEO DE FINTECH LATAM</span>
+</div>
+</div>
+<!-- Testimonial 2 (Hidden Initially) -->
+<div class="testimonial-item opacity-0 transition-opacity duration-1000 flex flex-col items-center text-center absolute inset-0">
+<div class="w-[100px] h-[100px] rounded-full overflow-hidden border-2 border-primary mb-8">
+<img alt="Executive" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqhwxh9tfXsAXBAoCVzMcelBFNeMJ6VN4gYu3cDE7XLvhzRvnULitFqL71e5HrO7ysE_Xz1S58QOekhj7Ihid9OWs71L-iNo8LyeuHakGtxRqP-p6wZFuDuv5O5KfsXgx8in6CDYR6DwWRE5zg9UeIViVe1hbwG3QTQc8D9VFH4N6nH0Nz1DIx2AdKm3687nGkGVJrp74Oal--smkENNBne_zNqJsfgFaK6lnNfCmuwsmgO_1HoHqANXKVXjrz2hxq56BWCqYlyiG7"/>
+</div>
+<p class="italic-display text-2xl md:text-4xl text-on-surface leading-relaxed mb-8">"El acceso a las rondas de inversión en NYC fue el catalizador que nuestra empresa necesitaba. No hay otra red con este nivel de llegada."</p>
+<div class="flex items-center gap-4">
+<span class="text-primary font-bold tracking-widest uppercase font-montserrat text-xs">Adriana Costa</span>
+<span class="text-primary opacity-30">•</span>
+<span class="text-zinc-500 font-bold tracking-widest uppercase font-montserrat text-[0.65rem]">FOUNDER DE LOGISTICOS USA</span>
+</div>
+</div>
+<!-- Testimonial 3 (Hidden Initially) -->
+<div class="testimonial-item opacity-0 transition-opacity duration-1000 flex flex-col items-center text-center absolute inset-0">
+<div class="w-[100px] h-[100px] rounded-full overflow-hidden border-2 border-primary mb-8">
+<img alt="Director" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApB32mzAwTt2TPEidzPgvTK2pUl046CuFLhlQHUMmE3O_5307Gq8nTZr9kDPDX1e5LGP-WhYPyFT_4TNVa5goDdNJQ_D8W3UDva5Axa9ATneERFQHHZ8ej38hZI9FAnA-Ml0z92PgWxn1YjdmpqLrSLcYcCw9qsggXVIiB7rQsKO0_UHckg9-jX-blA0znJylj_Fl99XZ-2WQGAAu5FdslBCr60c5a5lD1KCBPhhh9ZeguFQk0etTzKfySn9KKu-u7sF8xWrT6-ZFP"/>
+</div>
+<p class="italic-display text-2xl md:text-4xl text-on-surface leading-relaxed mb-8">"Pertenecer a este círculo es pertenecer a la historia del liderazgo femenino. La calidad humana y profesional es simplemente inigualable."</p>
+<div class="flex items-center gap-4">
+<span class="text-primary font-bold tracking-widest uppercase font-montserrat text-xs">Mariana López</span>
+<span class="text-primary opacity-30">•</span>
+<span class="text-zinc-500 font-bold tracking-widest uppercase font-montserrat text-[0.65rem]">BOARD DIRECTOR AT RETAIL GROUP</span>
+</div>
+</div>
+</div>
+<!-- Slider Dots -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4">
+<button class="dot-btn w-2 h-2 rounded-full bg-primary"></button>
+<button class="dot-btn w-2 h-2 rounded-full bg-white/20"></button>
+<button class="dot-btn w-2 h-2 rounded-full bg-white/20"></button>
+</div>
+</div>
+</section>
+<!-- Cities Section (Retained) -->
+<section class="py-32 bg-surface-container-low reveal">
+<div class="max-w-7xl mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="relative aspect-[3/4] overflow-hidden group rounded-[2px] dark-overlay">
+<img alt="Santiago" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxNzpAAb68rBOJPtXlxJheU-3pE382npLV1zLpqjy429Bwy4PG9wO2sSKzwYC85mRULwl2SvipQ33qdN3mIEPkshMEOkFozT8pU1_VbtZ5wAXhDNs3WL_h1xcgFoC6HZsy-VIMCNTqKhTpKfR_xiu2lESPMHEj0X0rUry7xxYY2eTy4g-AwpB7r7tUqodg4K1DzZiXS8lysRC4wLeSz881WyDlyH5K0opQC-d2T0iHZ8Z5wur3Sf_eqxDc3NaqYfJ_jrEYCM-J3-7h"/>
+<div class="absolute bottom-10 left-10 z-20">
+<h3 class="italic-display text-4xl text-white">Santiago</h3>
+<div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-2"></div>
+</div>
+</div>
+<div class="relative aspect-[3/4] overflow-hidden group rounded-[2px] md:mt-12 dark-overlay">
+<img alt="New York" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbgw8bz800EAEGYw8QJWe6XYb6VpnfocrFquBivuWalm5vlbMHUuneMB9N8M4y54X-H_yEkRKQ3pjc7sDSV_2LkTK3WdOczsBVGS773KMHKnv7qurbfgzJpes0JfRm0LMf3RFAPtB9G__obOtOWwa1IVFS-abxpi16rZ_vI4Isuf-UocVJRsw70ZuG0igdQZ2NTN9cgWMBkLMmWrp8Rud9diVywMtaZLPw9OompgES7iKhWq5xsGfRPd78BpG773SH_bMvZq8OpREn"/>
+<div class="absolute bottom-10 left-10 z-20">
+<h3 class="italic-display text-4xl text-white">New York</h3>
+<div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-2"></div>
+</div>
+</div>
+<div class="relative aspect-[3/4] overflow-hidden group rounded-[2px] md:mt-24 dark-overlay">
+<img alt="Miami" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxgC3nygb7OlcyqxD7o5Cldf2_Q5RpOkqqIE_j-pbuplislDo-7zbpmrBAn_eN2ty5Y23VjYoVbnPZk0flHdOmuu2GKEvDy8B4q0dpiiORN9UV8sEgN8wXlvdyRgprFZImgJqGxhhKEMIYS4ll1MP4pSPiV5wiGdlNc7HkpRaVtXx1aHBgExHbsfBNSD6S1U5jDJt8noQefKK_9t_IJjUE2urOfOZaV67yWMyrCqSZcQ3VLFCfmCZraRjxxrhAsgERmm9eRveBZgm9"/>
+<div class="absolute bottom-10 left-10 z-20">
+<h3 class="italic-display text-4xl text-white">Miami</h3>
+<div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-2"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Retained) -->
+<footer class="bg-[#0a0a0a] w-full border-t border-zinc-900/50 pt-24 pb-12">
+<div class="flex flex-col items-center justify-center max-w-7xl mx-auto px-8 text-center">
+<div class="flex gap-8 mb-12 opacity-30 grayscale items-center">
+<span class="ornamental-logo">HERMÈS</span>
+<span class="ornamental-logo">CHANEL</span>
+<span class="ornamental-logo">RITZ-CARLTON</span>
+</div>
+<h2 class="text-4xl italic-display text-primary mb-8">ÉLITEmanu</h2>
+<div class="flex flex-wrap justify-center gap-12 mb-16">
+<a class="text-zinc-600 hover:text-primary transition-colors duration-300 text-[0.7rem] tracking-[0.2rem] uppercase font-bold font-montserrat" href="#">Privacidad</a>
+<a class="text-zinc-600 hover:text-primary transition-colors duration-300 text-[0.7rem] tracking-[0.2rem] uppercase font-bold font-montserrat" href="#">Términos</a>
+<a class="text-zinc-600 hover:text-primary transition-colors duration-300 text-[0.7rem] tracking-[0.2rem] uppercase font-bold font-montserrat" href="#">Contacto</a>
+<a class="text-zinc-600 hover:text-primary transition-colors duration-300 text-[0.7rem] tracking-[0.2rem] uppercase font-bold font-montserrat" href="#">Prensa</a>
+</div>
+<p class="text-zinc-700 text-[0.6rem] tracking-[0.3rem] uppercase font-body">© 2024 ÉLITEmanu. The Digital Atelier.</p>
+</div>
+</footer>
+<script>
+    // Reveal on scroll
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Custom Cursor
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    // Navbar Scroll Effect
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 80) {
+            nav.classList.add('nav-scrolled');
+            nav.classList.add('py-4');
+            nav.classList.remove('py-6');
+        } else {
+            nav.classList.remove('nav-scrolled');
+            nav.classList.remove('py-4');
+            nav.classList.add('py-6');
+        }
+    });
+
+    // Testimonial Carousel Logic
+    let currentIdx = 0;
+    const items = document.querySelectorAll('.testimonial-item');
+    const dots = document.querySelectorAll('.dot-btn');
+
+    function showTestimonial(idx) {
+        items.forEach((item, i) => {
+            item.style.opacity = i === idx ? '1' : '0';
+            dots[i].style.background = i === idx ? '#E6C364' : 'rgba(255,255,255,0.2)';
+        });
+    }
+
+    function nextTestimonial() {
+        currentIdx = (currentIdx + 1) % items.length;
+        showTestimonial(currentIdx);
+    }
+
+    setInterval(nextTestimonial, 5000);
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            currentIdx = idx;
+            showTestimonial(currentIdx);
+        });
+    });
+</script>
+</body></html>

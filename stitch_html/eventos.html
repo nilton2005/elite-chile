@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;700&amp;family=Manrope:wght@300;400;500;700&amp;family=Cormorant+Garamond:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#3a3939",
+              "outline-variant": "#4d4637",
+              "on-tertiary-container": "#41403a",
+              "surface-dim": "#131313",
+              "inverse-primary": "#755b00",
+              "on-primary-fixed": "#241a00",
+              "on-primary": "#3d2e00",
+              "on-error": "#690005",
+              "primary-fixed": "#ffe08f",
+              "tertiary": "#cbc6bf",
+              "on-background": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "error-container": "#93000a",
+              "on-tertiary": "#32302b",
+              "on-primary-fixed-variant": "#584400",
+              "error": "#ffb4ab",
+              "background": "#131313",
+              "surface": "#131313",
+              "surface-container-low": "#1c1b1b",
+              "tertiary-container": "#afaba4",
+              "primary": "#e6c364",
+              "surface-container-lowest": "#0e0e0e",
+              "on-tertiary-fixed": "#1d1c17",
+              "surface-container": "#201f1f",
+              "tertiary-fixed": "#e7e2da",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-surface-variant": "#d0c5b2",
+              "on-error-container": "#ffdad6",
+              "on-secondary-fixed": "#1b1c1c",
+              "secondary": "#c8c6c5",
+              "on-tertiary-fixed-variant": "#494741",
+              "secondary-container": "#474747",
+              "on-secondary-container": "#b6b5b4",
+              "surface-variant": "#353534",
+              "surface-tint": "#e6c364",
+              "inverse-surface": "#e5e2e1",
+              "tertiary-fixed-dim": "#cac6be",
+              "on-secondary-fixed-variant": "#474747",
+              "primary-container": "#c9a84c",
+              "on-primary-container": "#503d00",
+              "primary-fixed-dim": "#e6c364",
+              "on-surface": "#e5e2e1",
+              "outline": "#99907e",
+              "surface-container-highest": "#353534",
+              "on-secondary": "#303030",
+              "inverse-on-surface": "#313030",
+              "secondary-fixed": "#e4e2e1"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"],
+              "serif": ["Cormorant Garamond", "serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .editorial-shadow {
+            box-shadow: 0 40px 40px rgba(201,168,76,0.04);
+        }
+        .glass-nav {
+            background: rgba(14, 14, 14, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary/30 selection:text-primary">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 glass-nav flex justify-between items-center px-12 py-6 w-full shadow-[0_40px_40px_rgba(201,168,76,0.04)]">
+<div class="text-2xl font-light tracking-[0.2em] text-[#C9A84C] uppercase font-['Noto_Serif']">ELITE</div>
+<div class="hidden md:flex items-center gap-12 font-['Noto_Serif'] antialiased tracking-tight">
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors" href="#">The Collective</a>
+<a class="text-[#C9A84C] border-b border-[#C9A84C]/30 pb-1" href="#">Insights</a>
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors" href="#">Atelier</a>
+<a class="text-neutral-400 hover:text-neutral-100 transition-colors" href="#">Membership</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#C9A84C] flex items-center gap-2 px-6 py-2 border border-[#C9A84C]/20 hover:bg-[#C9A84C]/5 transition-all duration-300">
+<span class="font-['Noto_Serif'] text-sm uppercase tracking-widest">Inquire</span>
+</button>
+</div>
+</nav>
+<!-- Side Navigation Shell -->
+<aside class="h-screen w-72 fixed left-0 top-0 bg-[#0E0E0E] flex flex-col hidden lg:flex border-r border-neutral-800/20 z-40 pt-28">
+<div class="px-8 mb-10">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 bg-surface-container-high rounded-full overflow-hidden">
+<img alt="Member Executive Profile" data-alt="Sophisticated portrait of a professional woman with a minimalist background, soft high-end lighting, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Uhcu9GM72rchix1KFvpPEjx_J4vkwrfVjYgpSLFrowF6W_6nCSzbAxXK3sWPQPr2XEcNMOS2zn4YqX7RPRmNBffrCg8PP77hWYPsrFcrJ4cFQTBb-6kC324CQqti5cAHAXjPiqbGMyevx1apivYOKKdN5Pa_0Ce7ZtWWRLJknWBwmfKmu7NUIU1wfFdFj8QbmVuVc7RW418_2SX21dF9PoClUSEFJSoqE1KxQhm8k5E9fMl2nN9k0X7O6kj8v8SXX70uIv3jjoYL"/>
+</div>
+<div>
+<p class="font-['Noto_Serif'] text-sm text-[#C9A84C]">Victoria St. James</p>
+<p class="font-['Manrope'] tracking-wider uppercase text-[10px] text-neutral-500">Legacy Member</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col flex-1 gap-1">
+<a class="flex items-center gap-4 text-neutral-500 py-4 px-8 hover:text-neutral-200 hover:bg-neutral-800/30 transition-all font-['Manrope'] tracking-wider uppercase text-[10px]" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+                Curated Feed
+            </a>
+<a class="flex items-center gap-4 text-[#C9A84C] bg-[#C9A84C]/5 border-r-2 border-[#C9A84C] py-4 px-8 font-['Manrope'] tracking-wider uppercase text-[10px]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+                Executive Board
+            </a>
+<a class="flex items-center gap-4 text-neutral-500 py-4 px-8 hover:text-neutral-200 hover:bg-neutral-800/30 transition-all font-['Manrope'] tracking-wider uppercase text-[10px]" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+                Private Salon
+            </a>
+<a class="flex items-center gap-4 text-neutral-500 py-4 px-8 hover:text-neutral-200 hover:bg-neutral-800/30 transition-all font-['Manrope'] tracking-wider uppercase text-[10px]" href="#">
+<span class="material-symbols-outlined">public</span>
+                Global Summits
+            </a>
+<a class="flex items-center gap-4 text-neutral-500 py-4 px-8 hover:text-neutral-200 hover:bg-neutral-800/30 transition-all font-['Manrope'] tracking-wider uppercase text-[10px]" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+                The Archive
+            </a>
+</nav>
+<div class="p-8">
+<button class="w-full py-4 border border-outline-variant/20 text-[#C9A84C] font-['Manrope'] tracking-widest uppercase text-[10px] hover:bg-primary/5 transition-all">
+                Book Concierge
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:pl-72 pt-32 pb-20 px-6 md:px-12">
+<div class="max-w-7xl mx-auto">
+<!-- Editorial Header -->
+<header class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+<div class="max-w-2xl">
+<h1 class="text-5xl md:text-7xl font-serif text-on-surface mb-6 leading-tight">The Calendar of <span class="text-primary italic">Distinction</span></h1>
+<p class="text-on-surface-variant font-body text-lg max-w-lg leading-relaxed">
+                        Curated experiences designed for the visionary. Connect, influence, and evolve within our private circles.
+                    </p>
+</div>
+<!-- View Toggle -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="flex items-center gap-2 px-6 py-2 bg-surface-container-high text-primary rounded shadow-sm text-xs font-label uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+                        Calendar
+                    </button>
+<button class="flex items-center gap-2 px-6 py-2 text-on-surface-variant hover:text-on-surface transition-colors text-xs font-label uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">list_alt</span>
+                        List View
+                    </button>
+</div>
+</header>
+<!-- Featured Event: Bento Style Asymmetry -->
+<section class="mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden rounded-lg bg-surface-container-low group">
+<div class="lg:col-span-8 relative h-[500px] overflow-hidden">
+<img alt="Featured Gala" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="High-end editorial photograph of elegantly dressed executive women networking in a dim, gold-lit architectural space, cinematic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzCFUGhWUyoGmuOOCQWJ0M6s4GSa5sX5PFSHTtk_cElWv9VXTo7aeR7s2NvzxMvszo0acggf1xkV6vbG7r-664YkgnDbyQh0FeNy_s636W0x-AkpCULYlfkqBJ-77FvIVLwag0-G9p2yLCWwzdA0K9id_k815AU1WYQrRP9qnWzw1uXpL41AvrnLrKHZFynhVOChw8GISIVgGE-j8KdSQkSP-S_dt8qR9eOCFVeAetpv7MkFlNCAnYGq2mBGxytrQ0e21KNgBjQ1nu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-10 left-10">
+<span class="bg-primary text-on-primary px-4 py-1 text-[10px] font-label uppercase tracking-[0.2em] mb-4 inline-block">Signature Event</span>
+<h2 class="text-4xl md:text-5xl font-serif text-white max-w-md">The Luminary Gala: Autumn Equinox</h2>
+</div>
+</div>
+<div class="lg:col-span-4 p-12 flex flex-col justify-between border-l border-outline-variant/10">
+<div>
+<div class="flex items-center gap-4 text-primary mb-8">
+<span class="material-symbols-outlined">schedule</span>
+<span class="font-label text-xs uppercase tracking-widest">Oct 24 • 19:00 — 23:00</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                                An evening dedicated to legacy and lineage. Join fellow visionaries at The Glass Pavilion for a multi-sensory networking experience and keynote by Dame Helena Worth.
+                            </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                                    Dress Code: Noir Sophistication
+                                </li>
+<li class="flex items-center gap-3 text-sm text-on-surface">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                                    Valet &amp; Concierge Included
+                                </li>
+</ul>
+</div>
+<button class="w-full py-5 bg-primary text-on-primary font-label uppercase tracking-[0.3em] text-xs hover:brightness-110 transition-all active:scale-[0.98]">
+                            Request RSVP
+                        </button>
+</div>
+</div>
+</section>
+<!-- Grid Sections -->
+<div class="space-y-24">
+<!-- Upcoming Galas -->
+<section>
+<div class="flex items-center justify-between mb-10">
+<div class="flex items-center gap-4">
+<div class="w-1 h-8 bg-primary"></div>
+<h3 class="text-2xl font-serif">Upcoming Galas</h3>
+</div>
+<a class="text-primary font-label text-[10px] uppercase tracking-widest border-b border-primary/20 pb-1 hover:border-primary/60 transition-all" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container rounded group">
+<div class="aspect-[4/5] overflow-hidden mb-6 relative">
+<img alt="Parisian Soiree" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A grand ballroom with crystal chandeliers, long dining tables with gold accents, and a deep shadows, luxury event styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjXrHJ0Dnb_5EHNNJwl7Q_LkozavWSa0sz4sEME7RvhOIEDrk22BYnVZCnS5PPWVo6d01f8NGi0eOB_PmiPKLcTHW3RawZb2WAEF5B9POi-p7iSATwDJRp3y7CwuteAF6-ZKTCcuvKou9VUqR6hPeLIe2NLmfvv5msNAzbIeAh3UQxVDBBtg08EdsWw3Z3MhAcliWffiS0iY5R7TtdgChRU9b6HraE1V10oJwnRTLqo-FBynMf_6Jx_Qr6vfQYQkBZV4G2rQ7-UZ43"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md px-4 py-2 text-primary font-serif text-lg">12 Nov</div>
+</div>
+<div class="px-2 pb-6">
+<h4 class="text-xl font-serif mb-2 text-on-surface">Parisian Winter Soirée</h4>
+<p class="text-on-surface-variant text-sm font-body tracking-wide flex items-center gap-2 uppercase">
+<span class="material-symbols-outlined text-xs">location_on</span> Hotel Particulier, Paris
+                                </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container rounded group">
+<div class="aspect-[4/5] overflow-hidden mb-6 relative">
+<img alt="Crystal Ball" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of fine crystal glassware on a dark reflective surface with bokeh lights in the background, luxury dinner theme" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhcA-Vi8eytTPFmn_EJQEU4tEA5JBACV4OJJYLqOU2kVe1s5POaHoPGbYFcSdnZRxy6f8o8XsUeUrZ5FiFg5oQw4E6vTCpp4IyK-RPBvzL2a7-LUBfhOdHd0Az_wJI5sTEcGNw5sVFOp1S2mPpfmm6N6iB6bkvrLvJ343rk-zOxh1XbCNp2-ruodgZSkehnTVtzUJYyOChqVZXZzH5vxvGrGwiOoUytlbS7ZCzcEIHMNx4fdlkG_6u6x_eTyQLvdW6PThXl8Tf0ofb"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md px-4 py-2 text-primary font-serif text-lg">05 Dec</div>
+</div>
+<div class="px-2 pb-6">
+<h4 class="text-xl font-serif mb-2 text-on-surface">The Alchemist's Dinner</h4>
+<p class="text-on-surface-variant text-sm font-body tracking-wide flex items-center gap-2 uppercase">
+<span class="material-symbols-outlined text-xs">location_on</span> Private Residence, London
+                                </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container rounded group">
+<div class="aspect-[4/5] overflow-hidden mb-6 relative">
+<img alt="NYE Gala" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Golden fireworks bursting over a silhouetted city skyline at night, celebration theme, high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvgvxqNFC29RuWLs5WTLwV8LytIDdFdhHpuYbTxnpdIT2bCOnGclt34ddU7ONtx09UiHjW0YxDYEH0lUeVN0EkErUR71fwimWS1l4Dry00KtFz-aWsKntkjZIkuFhHHHjD2gKR1UuD29G0Zr1OzqQ6Q7LckNtvES7OxCEjiNCPfVDlGRwCz8azu_FgpNVZN8x8YvaVyHGZnp8m1yXlyggpjoFtoZgMlhm_H-4m6_2jMbbZm4rdZ19V2VojMnnSlPu9jTY5b_H8-_dK"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md px-4 py-2 text-primary font-serif text-lg">31 Dec</div>
+</div>
+<div class="px-2 pb-6">
+<h4 class="text-xl font-serif mb-2 text-on-surface">Founder's Midnight Toast</h4>
+<p class="text-on-surface-variant text-sm font-body tracking-wide flex items-center gap-2 uppercase">
+<span class="material-symbols-outlined text-xs">location_on</span> The Penthouse, NYC
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mentorship & Mixers: Horizontal Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Mentorship -->
+<section>
+<div class="flex items-center gap-4 mb-10">
+<div class="w-1 h-8 bg-primary"></div>
+<h3 class="text-2xl font-serif">Executive Mentorship</h3>
+</div>
+<div class="space-y-4">
+<!-- List Item 1 -->
+<div class="bg-surface-container-lowest p-6 flex items-center justify-between border-b border-outline-variant/10 group hover:bg-surface-container-low transition-all">
+<div class="flex gap-6 items-center">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high border border-primary/20">
+<img alt="Mentor" data-alt="Professional headshot of a woman of color in a power suit, executive presence, soft background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC271ohpndcnqPflSauOexjU0WzwnClclI5N1gJ2QHnxvean3tO1J4q1NvpGC3b8Fwmd1c9Rdl33GseVi1QN-hUq4vQ8mL3IqthoUpuxive1Y3UG9J2XgTGBC0nm81u-GplgwoJqIEWuKEmzOMbvDsGdsI-wsmsTZEkBoAprgBY1IYu2zY4h5P9OqRGdPpYgTAsH05f0X7xp4na7XrwwsXLlEN4hdLa9zJFddAL9FyzY5da2UJkc7F5NpSwFqnk8aAu0Odpr3bffViU"/>
+</div>
+<div>
+<h5 class="text-on-surface font-serif">Capital Allocation Strategy</h5>
+<p class="text-[10px] text-on-surface-variant font-label uppercase tracking-widest">With Sarah Chen • Tomorrow</p>
+</div>
+</div>
+<button class="text-primary font-label text-[10px] uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity">Reserve Slot</button>
+</div>
+<!-- List Item 2 -->
+<div class="bg-surface-container-lowest p-6 flex items-center justify-between border-b border-outline-variant/10 group hover:bg-surface-container-low transition-all">
+<div class="flex gap-6 items-center">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-high border border-primary/20">
+<img alt="Mentor" data-alt="Elegant businesswoman in minimalist attire, warm workspace lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDVqgGCdxPF0tfRaQzGJO8QsCCErqlJZ-IFJoVNndX4MZVgtgaSknm3Lxpp4FBxdzVTqB0tGmM44uni4tKzLOcn6MuVKE7RP2l6X8QkUoMgIA25VspJDwaCELS6jDLnXSvKvn48fniJ2bmKU3pqzYsVNJtDUYneww8_99MzJ_5Yz_jL0mIdk0jTqRoHmI4WFuCVMfk2FeTPOezC9cfIQGTFIU9ofMkX26XZFQAoLlG3LnB-oEj_L8_a0OnrOMPcSVVA6KqzIzBrrNP"/>
+</div>
+<div>
+<h5 class="text-on-surface font-serif">Governance &amp; Board Ethics</h5>
+<p class="text-[10px] text-on-surface-variant font-label uppercase tracking-widest">With Elena Rossi • Oct 28</p>
+</div>
+</div>
+<button class="text-primary font-label text-[10px] uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity">Reserve Slot</button>
+</div>
+</div>
+</section>
+<!-- Private Networking -->
+<section>
+<div class="flex items-center gap-4 mb-10">
+<div class="w-1 h-8 bg-primary"></div>
+<h3 class="text-2xl font-serif">Networking Mixers</h3>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-high aspect-square p-8 flex flex-col justify-end relative overflow-hidden group">
+<div class="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
+<img alt="Mixer" class="w-full h-full object-cover" data-alt="Abstract soft-focus photo of champagne bubbles rising in a tall flute, warm golden tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB35JBjdFfNhfDyA0s-D0DlZz9gVjBAncyWkRNZbNvlqqdvLJ9GQQT7QG8-XHLFqRgqZsekPAIRd9BFyAsR31TM17Hmw3vQYlE1sYV_-jw9cYkSb36FYHVd0mQfeIRfriDTnl-xJ1kazP3tS4EF6XBHXnZWgzyDuTC14s5B6gP5-t7Bm9m-Rm4Kw4HH1dTJCC1D0FAX0HzhROuou0seT0LHbHt7M9pEkUMQEydkJiyQ5eBn-F886AqWwfemMcgh-xMykyo9f3e2U9bk"/>
+</div>
+<span class="text-[10px] text-primary font-label uppercase tracking-widest mb-2 relative z-10">Lounge Session</span>
+<h5 class="text-on-surface font-serif relative z-10">The Cigar &amp; Spirits Circle</h5>
+</div>
+<div class="bg-surface-container-high aspect-square p-8 flex flex-col justify-end relative overflow-hidden group">
+<div class="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
+<img alt="Mixer" class="w-full h-full object-cover" data-alt="Modern rooftop bar at twilight with minimalist furniture and city lights, luxury lifestyle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiH1DrIG32LfyNc6rs7_ivrhZk84XnblilJf8hEdjul6bzPEH5SxXZzcQVQXBL_41vVrbZfrEd2e1UX_HARMsge28ff22hRZIBe53cAYL_oJTghLwRzRLrIvzduTwBYiLGXu1aQb01SLxEoxKVjhyMmN8_bn9MspJuas-qaSFwYDEHN0jtQaT0uuCQKgZdpNuY8Mx8Ld0_au1lAYxhFeEcygecWA0RiLS_toMtgqvItkbtUHliJl8VhAOvTZVaujq5TSfGXyttV2ad"/>
+</div>
+<span class="text-[10px] text-primary font-label uppercase tracking-widest mb-2 relative z-10">Creative Union</span>
+<h5 class="text-on-surface font-serif relative z-10">Art Basel Preview Tea</h5>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Footer Quote Area -->
+<footer class="mt-40 pt-20 border-t border-outline-variant/10 text-center">
+<blockquote class="max-w-3xl mx-auto">
+<p class="font-serif text-3xl text-on-surface leading-relaxed mb-8 italic">
+                        "The quality of our collective is defined by the depth of our encounters."
+                    </p>
+<cite class="font-label text-[10px] uppercase tracking-[0.4em] text-primary not-italic">— ELITE Curatorial Board</cite>
+</blockquote>
+</footer>
+</div>
+</main>
+<!-- Curator Drawer (Hidden by default, used for interaction reference) -->
+<div class="fixed top-0 right-0 h-full w-[450px] bg-surface-container-highest/95 backdrop-blur-xl z-[60] shadow-2xl translate-x-full transition-transform duration-500 hidden md:block" id="event-detail-drawer">
+<div class="p-12 h-full flex flex-col">
+<button class="self-end mb-12 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex-1 overflow-y-auto">
+<span class="text-primary font-label text-[10px] uppercase tracking-widest mb-4 inline-block">Deep Dive</span>
+<h3 class="text-4xl font-serif mb-8">The Legacy Protocol</h3>
+<div class="aspect-video mb-8 overflow-hidden rounded">
+<img alt="Detail" class="w-full h-full object-cover" data-alt="Extreme close up of a luxury watch and silk cuff, high fashion detail, dark mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAas6jXE39t8u_cpwLHSR0Ad8OdUS8MuB9LV5ty6l-gkb58Blag0GuobIBbKc8c0PfrcS3H2XUAclH4p_DBLzKOJcQqHojEH_vlRBBUVwLzURHkiBlDelut2IMrT0X6im59F3NKHRVqaMIrksdtpZWqy6saiNVHD4-bke4ViX_-6xfqokf9ttQqEDPY1qqfHg1AHDUjd97g41hRhwicbftYFH-7nRfuUpypBoFcF70UjtLwrmMU5L6SpeyBx6AjjW_WAcnWj2Sap7Id"/>
+</div>
+<div class="space-y-6 text-on-surface-variant leading-relaxed">
+<p>Experience an intimate masterclass in transgenerational wealth and legacy preservation. This session is restricted to Platinum Tier members only.</p>
+<div class="bg-surface-container p-6 border-l-2 border-primary">
+<p class="text-sm font-body text-on-surface italic">"Legacy is not what we leave for people, but what we leave in them."</p>
+</div>
+</div>
+</div>
+<button class="w-full py-5 bg-primary text-on-primary font-label uppercase tracking-[0.3em] text-xs mt-12">
+                Apply for Invite
+            </button>
+</div>
+</div>
+</body></html>

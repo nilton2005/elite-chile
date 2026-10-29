@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Atelier | Application Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;family=Manrope:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#494741",
+              "inverse-on-surface": "#313030",
+              "on-secondary-fixed": "#1b1c1c",
+              "on-error": "#690005",
+              "primary": "#e6c364",
+              "on-surface-variant": "#d0c5b2",
+              "secondary-container": "#474747",
+              "secondary-fixed-dim": "#c8c6c5",
+              "error": "#ffb4ab",
+              "outline": "#99907e",
+              "secondary": "#c8c6c5",
+              "on-primary-fixed-variant": "#584400",
+              "surface-container-high": "#2a2a2a",
+              "on-surface": "#e5e2e1",
+              "on-secondary-container": "#b6b5b4",
+              "on-tertiary": "#32302b",
+              "surface-container-highest": "#353534",
+              "on-primary-fixed": "#241a00",
+              "on-error-container": "#ffdad6",
+              "background": "#131313",
+              "surface": "#131313",
+              "surface-container": "#201f1f",
+              "primary-fixed-dim": "#e6c364",
+              "primary-container": "#c9a84c",
+              "on-tertiary-container": "#41403a",
+              "on-background": "#e5e2e1",
+              "surface-tint": "#e6c364",
+              "outline-variant": "#4d4637",
+              "surface-container-lowest": "#0e0e0e",
+              "inverse-surface": "#e5e2e1",
+              "inverse-primary": "#755b00",
+              "surface-bright": "#3a3939",
+              "on-primary-container": "#503d00",
+              "error-container": "#93000a",
+              "surface-dim": "#131313",
+              "primary-fixed": "#ffe08f",
+              "tertiary-fixed-dim": "#cac6be",
+              "surface-variant": "#353534",
+              "on-primary": "#3d2e00",
+              "tertiary-fixed": "#e7e2da",
+              "on-tertiary-fixed": "#1d1c17",
+              "on-secondary-fixed-variant": "#474747",
+              "on-secondary": "#303030",
+              "tertiary-container": "#afaba4",
+              "surface-container-low": "#1c1b1b",
+              "tertiary": "#cbc6bf",
+              "secondary-fixed": "#e4e2e1"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 1.25rem;
+        }
+        .glass-panel {
+            background: rgba(201, 168, 76, 0.05);
+            backdrop-filter: blur(24px);
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0E0E0E; }
+        ::-webkit-scrollbar-thumb { background: #4D4637; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col h-screen w-64 border-r border-[#4D4637]/15 bg-[#0E0E0E] dark:bg-neutral-950 z-50">
+<div class="px-8 py-10">
+<h1 class="font-['Noto_Serif'] italic text-xl text-[#C9A84C]">The Atelier</h1>
+<p class="font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium text-neutral-500 mt-1">Elite Admin Console</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-4 px-4 py-3 transition-colors duration-300 hover:bg-[#2A2A2A] text-neutral-500 hover:text-[#C9A84C]/80 font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 transition-colors duration-300 hover:bg-[#2A2A2A] text-neutral-500 hover:text-[#C9A84C]/80 font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+                Members
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 transition-colors duration-300 text-[#C9A84C] border-r-2 border-[#C9A84C] bg-[#C9A84C]/5 font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="assignment_ind">assignment_ind</span>
+                Applications
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 transition-colors duration-300 hover:bg-[#2A2A2A] text-neutral-500 hover:text-[#C9A84C]/80 font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+                Benefits
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 transition-colors duration-300 hover:bg-[#2A2A2A] text-neutral-500 hover:text-[#C9A84C]/80 font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+                Events
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 transition-colors duration-300 hover:bg-[#2A2A2A] text-neutral-500 hover:text-[#C9A84C]/80 font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="p-8">
+<button class="w-full bg-primary text-on-primary py-3 font-label text-[10px] tracking-widest uppercase font-bold hover:opacity-90 transition-all">
+                New Invitation
+            </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen flex flex-col">
+<!-- TopNavBar Shell -->
+<header class="flex justify-between items-center w-full px-8 py-4 bg-[#131313]/80 backdrop-blur-xl shadow-[0_40px_40px_rgba(201,168,76,0.04)] sticky top-0 z-40">
+<div class="flex items-center gap-8">
+<div class="relative group">
+<span class="absolute inset-y-0 left-3 flex items-center text-outline-variant">
+<span class="material-symbols-outlined text-sm" data-icon="search">search</span>
+</span>
+<input class="bg-surface-container-low border-none focus:ring-1 focus:ring-primary/20 text-xs w-64 pl-10 py-2 placeholder:text-neutral-600 font-body" placeholder="Search curated applications..." type="text"/>
+</div>
+<nav class="hidden md:flex gap-6">
+<a class="font-['Montserrat'] text-xs uppercase tracking-widest text-neutral-400 hover:text-[#F5F0E8] transition-all" href="#">Analytics</a>
+<a class="font-['Montserrat'] text-xs uppercase tracking-widest text-neutral-400 hover:text-[#F5F0E8] transition-all" href="#">Reports</a>
+<a class="font-['Montserrat'] text-xs uppercase tracking-widest text-neutral-400 hover:text-[#F5F0E8] transition-all" href="#">Audit Log</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-outline-variant cursor-pointer hover:text-primary transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-outline-variant cursor-pointer hover:text-primary transition-colors" data-icon="help_outline">help_outline</span>
+<div class="flex items-center gap-3 pl-6 border-l border-outline-variant/20">
+<div class="text-right">
+<p class="text-[10px] font-bold uppercase tracking-widest text-primary">Executive Admin</p>
+<p class="text-[9px] text-neutral-500 uppercase">Superuser Access</p>
+</div>
+<img alt="Admin User Avatar" class="w-10 h-10 rounded-full object-cover grayscale border border-primary/20" data-alt="Professional studio portrait of a man in a dark charcoal suit, high-end editorial lighting, dark background, serious expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu2cFJ3EbLrHjfH3fueciPUZ3gFRWD6PPPw1PXPI-X7zIZoaYfiTA50wiRBG7VAlW3pXtXOlma9pIgUpBIm8pAUzK8eDwGhr96UC3mzJr8fiU8QiLpmtaWql9Y_NfSqMmxhAkrkUaQuSLOqE_3CS-mfi9Y-1ECiZoUl3K1OZqQOmc1gQm7YdiZ_y9cG7BOy4hN1-pNk22u5s0_3xm34iTIQmW05sQIMoIvcyytD1UldKnr4jz5x5l-9b_J0mBWFuxpKuzIVLJZSWNj"/>
+</div>
+</div>
+</header>
+<!-- Page Hero Section -->
+<section class="px-12 pt-16 pb-8">
+<div class="flex justify-between items-end">
+<div>
+<h2 class="font-headline text-5xl font-bold tracking-tight text-on-surface">Membership Applications</h2>
+<p class="font-body text-neutral-500 mt-4 max-w-lg leading-relaxed">Reviewing the next generation of industry titans. Only 4% of applicants meet the Atelier's stringent criteria for professional excellence and visionary leadership.</p>
+</div>
+<div class="flex gap-4 pb-2">
+<div class="text-center px-6 py-2 border-r border-outline-variant/15">
+<p class="text-2xl font-headline text-primary">12</p>
+<p class="text-[10px] uppercase tracking-tighter text-neutral-500">Pending</p>
+</div>
+<div class="text-center px-6 py-2 border-r border-outline-variant/15">
+<p class="text-2xl font-headline text-on-surface">142</p>
+<p class="text-[10px] uppercase tracking-tighter text-neutral-500">Waitlist</p>
+</div>
+<div class="text-center px-6 py-2">
+<p class="text-2xl font-headline text-on-surface">8.4%</p>
+<p class="text-[10px] uppercase tracking-tighter text-neutral-500">Acceptance</p>
+</div>
+</div>
+</div>
+</section>
+<!-- High-Density Application Table -->
+<section class="px-12 pb-24 flex-1">
+<div class="bg-surface-container-low border border-outline-variant/10 overflow-hidden">
+<!-- Table Controls -->
+<div class="px-6 py-4 flex justify-between items-center border-b border-outline-variant/10 bg-surface-container-lowest/50">
+<div class="flex gap-6">
+<button class="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-primary group">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                            All Tiers
+                        </button>
+<button class="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-neutral-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="sort">sort</span>
+                            Newest First
+                        </button>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-neutral-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+<button class="p-2 text-neutral-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Applications List -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest">
+<th class="px-6 py-4 text-[10px] uppercase tracking-[0.2em] font-semibold text-neutral-500">Candidate</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-[0.2em] font-semibold text-neutral-500">Organization</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-[0.2em] font-semibold text-neutral-500">Digital Identity</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-[0.2em] font-semibold text-neutral-500">Submission Date</th>
+<th class="px-6 py-4 text-[10px] uppercase tracking-[0.2em] font-semibold text-neutral-500 text-right">Administrative Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<img alt="Candidate 1" class="w-10 h-10 rounded-sm object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close-up portrait of a professional woman with sharp features, minimalist aesthetic, neutral background, high-end photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJN0DF53cRWGI_TmYEm0b9EiioDnkQsdIz0_Sw1ZUvtDH12_UGO25GpQ9ngwUbBEMOnWKjWQlnfI--dWdaMFRtvOn2x-v5NwbbssWRrgUHuYG6ZPwQmS1FBKWmkI_I5qyec0FQt8jEyTD_wKogGXvu007Zf7B9u_Geo1A_ymqP2YM_jzcIwEdSG5HS8s9S57Z70BcZ3B1679weEB882D9Wn7COaaLjTbNJ8oOyZAYMNkWtdQ9v7tCwMqZw_TdhnR7dBLa6I42X6TCP"/>
+<div>
+<p class="font-headline text-sm font-semibold text-on-surface">Eleanor Sterling</p>
+<p class="text-[10px] text-primary uppercase tracking-wider">Founder &amp; CEO</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs font-body text-on-surface-variant tracking-wide">Aether Dynamics Int.</p>
+<p class="text-[9px] text-neutral-600 uppercase">Aerospace Tech</p>
+</td>
+<td class="px-6 py-5">
+<a class="inline-flex items-center gap-1.5 text-[10px] text-neutral-400 hover:text-primary transition-colors uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-xs" data-icon="link">link</span>
+                                        LinkedIn Profile
+                                    </a>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs font-body text-neutral-500">Oct 24, 2023</p>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="px-4 py-1.5 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest hover:brightness-110">Approve</button>
+<button class="px-4 py-1.5 border border-error/30 text-error text-[10px] font-bold uppercase tracking-widest hover:bg-error/10">Reject</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<img alt="Candidate 2" class="w-10 h-10 rounded-sm object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Editorial headshot of a creative director, moody lighting, wearing glasses, dark turtleneck, artistic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-nXH-PFmSnso5BBnwyyz1Rsr5jJiPGvLGYrCNzE-lVQYdMNXF3JeC19iRmel6VNvd3ip3DYKzVKmNMwqNtDdsmGrYrfUPcLhs1PsnHHHNuGiaCFY1ExZASE8GwMMht6ReWKL7AT1Wt3UjbDo-iDGYThutvVor1hFVL64BAF3t8PFtDOTCsKlW8uQ4xbR7e4HRcpXCv9a9AlhXcMNMzrGi7AFEusdvEsoDYORQYs2Jf_AEjSVvD6Cbvgg1PW-TuvRD0_wihg1Be_rW"/>
+<div>
+<p class="font-headline text-sm font-semibold text-on-surface">Julian Vane</p>
+<p class="text-[10px] text-primary uppercase tracking-wider">Managing Partner</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs font-body text-on-surface-variant tracking-wide">Vane &amp; Associates</p>
+<p class="text-[9px] text-neutral-600 uppercase">Hedge Fund Management</p>
+</td>
+<td class="px-6 py-5">
+<a class="inline-flex items-center gap-1.5 text-[10px] text-neutral-400 hover:text-primary transition-colors uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-xs" data-icon="link">link</span>
+                                        LinkedIn Profile
+                                    </a>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs font-body text-neutral-500">Oct 23, 2023</p>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="px-4 py-1.5 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest hover:brightness-110">Approve</button>
+<button class="px-4 py-1.5 border border-error/30 text-error text-[10px] font-bold uppercase tracking-widest hover:bg-error/10">Reject</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest flex items-center justify-center border border-primary/20">
+<span class="text-primary font-headline text-sm">MC</span>
+</div>
+<div>
+<p class="font-headline text-sm font-semibold text-on-surface">Marcus Chen</p>
+<p class="text-[10px] text-primary uppercase tracking-wider">Lead Architect</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs font-body text-on-surface-variant tracking-wide">Neo-Construct Studio</p>
+<p class="text-[9px] text-neutral-600 uppercase">Luxury Architecture</p>
+</td>
+<td class="px-6 py-5">
+<a class="inline-flex items-center gap-1.5 text-[10px] text-neutral-400 hover:text-primary transition-colors uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-xs" data-icon="link">link</span>
+                                        LinkedIn Profile
+                                    </a>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs font-body text-neutral-500">Oct 21, 2023</p>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="px-4 py-1.5 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest hover:brightness-110">Approve</button>
+<button class="px-4 py-1.5 border border-error/30 text-error text-[10px] font-bold uppercase tracking-widest hover:bg-error/10">Reject</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="group hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<img alt="Candidate 4" class="w-10 h-10 rounded-sm object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of a young woman in high-fashion minimalist attire, soft natural window light, clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDhwOxPr5AGbAh_ICxdbXMa-BdaVrAhjB8MoYhnZadXmgusZC-IiG8iXhO-IxOva2r8qZu3-F1L80XJBZmFTL-S0PiJXKME-Tu4PpC7Xfez2jkG7y6dNjQ07JsjqzlFoUZtqoJWmySLuqCViPaJtoAtBJA6f2dIAO-EUW9ZmHk05BxdBLawi5MaWtHEv1oXi_YMSHMhKTEciV-iPri-b2at7vGQs-H07mdQQMYtGe8KwSp-ek6OmCRW5fG3oj-vLMOc3lGgJNWnHHi"/>
+<div>
+<p class="font-headline text-sm font-semibold text-on-surface">Sienna Thorne</p>
+<p class="text-[10px] text-primary uppercase tracking-wider">Philanthropist</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs font-body text-on-surface-variant tracking-wide">Thorne Global Foundation</p>
+<p class="text-[9px] text-neutral-600 uppercase">Non-Profit / NGO</p>
+</td>
+<td class="px-6 py-5">
+<a class="inline-flex items-center gap-1.5 text-[10px] text-neutral-400 hover:text-primary transition-colors uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-xs" data-icon="link">link</span>
+                                        LinkedIn Profile
+                                    </a>
+</td>
+<td class="px-6 py-5">
+<p class="text-xs font-body text-neutral-500">Oct 20, 2023</p>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="px-4 py-1.5 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest hover:brightness-110">Approve</button>
+<button class="px-4 py-1.5 border border-error/30 text-error text-[10px] font-bold uppercase tracking-widest hover:bg-error/10">Reject</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-6 flex justify-between items-center border-t border-outline-variant/10 bg-surface-container-lowest/30">
+<p class="text-[10px] uppercase tracking-widest text-neutral-500">Showing <span class="text-on-surface">4</span> of <span class="text-on-surface">12</span> applications</p>
+<div class="flex gap-1">
+<button class="w-8 h-8 flex items-center justify-center text-neutral-600 hover:text-primary transition-colors disabled:opacity-20" disabled="">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-primary font-bold text-xs border border-primary/20">1</button>
+<button class="w-8 h-8 flex items-center justify-center text-neutral-400 font-bold text-xs hover:bg-surface-container-highest transition-colors">2</button>
+<button class="w-8 h-8 flex items-center justify-center text-neutral-400 font-bold text-xs hover:bg-surface-container-highest transition-colors">3</button>
+<button class="w-8 h-8 flex items-center justify-center text-neutral-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Contextual Support Section (Asymmetric Editorial Style) -->
+<section class="px-12 pb-16 grid grid-cols-12 gap-8">
+<div class="col-span-4 bg-surface-container-high p-8 flex flex-col justify-between">
+<div>
+<h4 class="font-headline text-2xl text-primary italic mb-4">The Selection Protocol</h4>
+<p class="text-xs text-neutral-400 leading-relaxed font-body">Our algorithm cross-references candidate LinkedIn profiles with current member networks to ensure high-cohesion community growth.</p>
+</div>
+<div class="pt-8 border-t border-outline-variant/10 mt-8">
+<a class="text-[10px] uppercase tracking-widest font-bold text-primary flex items-center gap-2" href="#">
+                        Read Guidelines
+                        <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="col-span-8 grid grid-cols-2 gap-8">
+<div class="bg-surface-container-lowest border border-outline-variant/10 p-6 flex items-start gap-4">
+<div class="p-3 bg-primary/5 rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h5 class="text-xs uppercase font-bold tracking-widest text-on-surface mb-2">Automated Vetting</h5>
+<p class="text-[10px] text-neutral-500 leading-normal">Initial digital identity verification is 98% complete for the current batch.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant/10 p-6 flex items-start gap-4">
+<div class="p-3 bg-primary/5 rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+</div>
+<div>
+<h5 class="text-xs uppercase font-bold tracking-widest text-on-surface mb-2">Heritage Review</h5>
+<p class="text-[10px] text-neutral-500 leading-normal">Legacy member referrals are prioritized for board-level review sessions.</p>
+</div>
+</div>
+<div class="col-span-2 relative overflow-hidden h-32">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent z-10"></div>
+<img alt="Office Background" class="absolute inset-0 w-full h-full object-cover grayscale opacity-20" data-alt="Wide angle shot of a minimalist luxury office interior, dark wood, glass, and gold accents, very sophisticated atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJHAmiMABRwIDRFsWbyPxMS56bKYbmmvDvEyWA6lLpWmduQDpVb_T_fYVaGASGjq-6bkZhUBGZPTymJ6uxiOdvikceAhfCyTMKgaxfXCmpNBllgQ7hD8YEXGw5y8uD9rEq7PaO_dga1rAQ4xKlH5NC5s2GBb8dVCJ_Z2rH5IjNYVjWBcFwVXROBxGS66Bxq7QjxWmMP0oHOfIsLUnjNizJ3lBzFmjUHEHRg16yZVxLU4tVLqfTIZYh8BAztR_SCxO1wuLauwTv0S9e"/>
+<div class="relative z-20 h-full flex flex-col justify-center px-12">
+<p class="text-[10px] uppercase tracking-[0.3em] text-primary font-bold">Consolidated Status</p>
+<h3 class="font-headline text-3xl mt-1">Batch #42 Active</h3>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Curator Drawer (Floating Hidden Initially) -->
+<div class="fixed inset-y-0 right-0 w-[480px] bg-surface-container-highest/95 backdrop-blur-2xl shadow-2xl z-50 transform translate-x-full transition-transform duration-700 ease-in-out border-l border-outline-variant/20 hidden">
+<div class="p-12 h-full flex flex-col">
+<div class="flex justify-between items-start mb-12">
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary">Detailed Dossier</span>
+<button class="text-neutral-500 hover:text-on-surface">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Dynamic Content would go here -->
+</div>
+</div>
+</body></html>

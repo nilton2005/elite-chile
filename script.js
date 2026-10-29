@@ -1,0 +1,1 @@
+const fs = require('fs'); const file = 'c:/Users/HP SUPPORT/Desktop/2026-1/Projects/WebElite/Front/src/app/page.tsx'; let c = fs.readFileSync(file, 'utf8'); if (c.includes('\\\')) { fs.writeFileSync(file, c.replace(/\\\/g, '\')); console.log('Replaced'); } else { console.log('Not found'); }

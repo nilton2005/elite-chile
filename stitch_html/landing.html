@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ÉLITEmanu | Exclusive Executive Community</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;600;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+
+        body {
+            background-color: #131313;
+            color: #E5E2E1;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .serif-display {
+            font-family: 'Noto Serif', serif;
+        }
+
+        .italic-display {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+
+        .editorial-shadow {
+            box-shadow: 0 40px 40px -15px rgba(201, 168, 76, 0.04);
+        }
+
+        .glass-panel {
+            background: rgba(25, 25, 25, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(230, 195, 100, 0.05);
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(to right, #E6C364, #FFE08F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#755b00",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-secondary-container": "#b6b5b4",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353534",
+                        "secondary-container": "#474747",
+                        "primary-fixed-dim": "#e6c364",
+                        "secondary-fixed": "#e4e2e1",
+                        "background": "#131313",
+                        "primary-fixed": "#ffe08f",
+                        "primary-container": "#c9a84c",
+                        "tertiary": "#cbc6bf",
+                        "on-tertiary-container": "#41403a",
+                        "secondary": "#c8c6c5",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary": "#303030",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-container": "#503d00",
+                        "tertiary-fixed": "#e7e2da",
+                        "surface-tint": "#e6c364",
+                        "on-tertiary-fixed": "#1d1c17",
+                        "on-primary-fixed": "#241a00",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline-variant": "#4d4637",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-container-low": "#1c1b1b",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary": "#32302b",
+                        "inverse-surface": "#e5e2e1",
+                        "primary": "#e6c364",
+                        "tertiary-fixed-dim": "#cac6be",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed-variant": "#584400",
+                        "outline": "#99907e",
+                        "tertiary-container": "#afaba4",
+                        "on-primary": "#3d2e00",
+                        "on-surface-variant": "#d0c5b2",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#474747",
+                        "surface-bright": "#3a3939",
+                        "surface-variant": "#353534",
+                        "on-tertiary-fixed-variant": "#494741"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav
+        class="bg-[#131313]/90 dark:bg-zinc-950/90 backdrop-blur-2xl text-[#C9A84C] dark:text-amber-500 docked full-width top-0 z-50 sticky shadow-[0_40px_40px_-15px_rgba(201,168,76,0.04)] flex justify-between items-center w-full px-12 py-6 max-w-[1920px] mx-auto">
+        <div class="flex items-center gap-2">
+            <span
+                class="text-2xl font-serif italic text-amber-500 dark:text-amber-500 tracking-tighter">ÉLITEmanu</span>
+        </div>
+        <div class="hidden md:flex gap-10 items-center">
+            <a class="text-amber-500 font-bold border-b border-amber-500/50 pb-1 text-[0.7rem] tracking-[0.1rem] uppercase"
+                href="#">Comunidad</a>
+            <a class="text-zinc-400 hover:text-amber-200 transition-colors text-[0.7rem] tracking-[0.1rem] uppercase"
+                href="#">Beneficios</a>
+            <a class="text-zinc-400 hover:text-amber-200 transition-colors text-[0.7rem] tracking-[0.1rem] uppercase"
+                href="#">Membresía</a>
+            <a class="text-zinc-400 hover:text-amber-200 transition-colors text-[0.7rem] tracking-[0.1rem] uppercase"
+                href="#">Sobre nosotras</a>
+        </div>
+        <button
+            class="bg-primary text-on-primary px-6 py-2.5 rounded-[4px] text-[0.7rem] tracking-[0.1rem] font-bold uppercase transition-all hover:brightness-110 active:scale-[0.99]">
+            Solicitar membresía
+        </button>
+    </nav>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[972px] w-full flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover grayscale-[30%] opacity-60"
+                    data-alt="Cinematic wide shot of luxury high-rise building terrace overlooking NYC skyline at dusk with warm golden lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDToLYRYBqwiRMs1qXJdHJkqhDbQSNoUv5z2O1WQolCgHqixy_h0ICocfBZ9c27Isi8LAPKTaI-TuftBBIY3qnirc7rbBdW-Ol-meM5AlUP1rMCCxNkKjcGVWS1Xf7Daz0vTr1rgSKniKUyFocdK2owFZQbA4uUZRLfxZJgllktLdld-CeQODBuhViPQXm4Tg5bDJsLJZgF3FVK9bmF7dyXgyb7oc3GVBg8HF3r4HAAB_gw9S728g7iVgLV2E6TwRjIs8eIznsyVFBJ" />
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+            </div>
+            <div class="container mx-auto px-12 z-10 grid grid-cols-1 md:grid-cols-12 gap-8">
+                <div class="md:col-span-8 flex flex-col items-start gap-8">
+                    <h1 class="italic-display text-6xl md:text-8xl leading-tight text-on-surface">
+                        La comunidad que <br /> <span class="gold-gradient-text">define el estándar.</span>
+                    </h1>
+                    <p
+                        class="font-light text-on-surface-variant max-w-xl text-lg md:text-xl leading-relaxed tracking-wide font-body">
+                        Red privada para mujeres ejecutivas en Santiago, Nueva York y Miami. Acceso exclusivo a círculos
+                        de influencia global.
+                    </p>
+                    <div class="flex flex-wrap gap-6 mt-4">
+                        <button
+                            class="bg-primary text-on-primary px-10 py-4 rounded-[4px] font-bold text-sm tracking-[0.15rem] uppercase hover:bg-primary/90 transition-all">
+                            Solicitar membresía
+                        </button>
+                        <button
+                            class="border border-primary/40 text-primary px-10 py-4 rounded-[4px] font-bold text-sm tracking-[0.15rem] uppercase hover:bg-primary/5 transition-all">
+                            Conoce los beneficios
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Social Proof Strip -->
+        <section class="bg-surface-container-lowest py-16">
+            <div class="max-w-7xl mx-auto px-8">
+                <p class="text-center text-[0.65rem] tracking-[0.25rem] font-bold text-outline-variant uppercase mb-12">
+                    BENEFICIOS EXCLUSIVOS EN COLABORACIÓN CON</p>
+                <div class="flex flex-wrap justify-between items-center gap-12 opacity-40 grayscale contrast-125">
+                    <span class="serif-display text-2xl">HERMÈS</span>
+                    <span class="serif-display text-2xl">EMIRATES</span>
+                    <span class="serif-display text-2xl">AMEX PLATINUM</span>
+                    <span class="serif-display text-2xl">RITZ-CARLTON</span>
+                    <span class="serif-display text-2xl">CHANEL</span>
+                </div>
+            </div>
+        </section>
+        <!-- About Section: Asymmetric -->
+        <section class="py-32 bg-background relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-6 relative">
+                    <div class="aspect-[4/5] bg-surface-container overflow-hidden rounded-[4px]">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Confident woman executive in a tailored black suit standing in a modern minimalist architectural space with dramatic lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1b2JCtn2hgOlVMtP_h2KhNLOCNiauauHsP6C1cjU6jaCFOJWN5RsUj_tJAN4B0CyUp91hTBsLZk-EAAhokNn67wmqAamPwPEToTWSGiZ9QxsUGwZXacVsE0uzReNMM7PLUA6YQVCyR5Yj_lpUOWyTFSysyI8JVw-hNNPSi94gjBL2NnN4dD_PjMfVF1wgbWND1hbFoIO9oUeKFvNUUMqhmkM-Gu3lXSnzuSfl1eGpDxEYPvCVPSA4awqdM3PNkGZ6V-RppKHW2F6S" />
+                    </div>
+                    <div
+                        class="absolute -bottom-8 -right-8 p-12 bg-surface-container-high border-l-4 border-primary rounded-[4px] shadow-2xl hidden md:block">
+                        <p class="serif-display text-4xl italic text-on-surface">"The power of proximity is the only
+                            real wealth."</p>
+                    </div>
+                </div>
+                <div class="md:col-span-6 space-y-12 pl-0 md:pl-12">
+                    <div class="space-y-4">
+                        <span class="text-primary text-sm font-bold tracking-[0.2rem] uppercase">Nuestra
+                            Filosofía</span>
+                        <h2 class="serif-display text-5xl md:text-6xl text-on-surface leading-tight">Más que una
+                            red.<br /><span class="italic text-primary-fixed-dim">Un círculo de poder.</span></h2>
+                    </div>
+                    <div class="space-y-10">
+                        <div class="flex gap-6 group">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-outline-variant/30 rounded-full group-hover:border-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary" data-icon="diamond">diamond</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg tracking-wide mb-2 uppercase text-on-surface">Exclusividad
+                                </h4>
+                                <p class="text-on-surface-variant font-light leading-relaxed">Solo 50 nuevas vacantes
+                                    por ciudad anualmente. Filtros rigurosos para asegurar la calidad del networking.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 group">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-outline-variant/30 rounded-full group-hover:border-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary" data-icon="hub">hub</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg tracking-wide mb-2 uppercase text-on-surface">Conexión</h4>
+                                <p class="text-on-surface-variant font-light leading-relaxed">Acceso directo a juntas
+                                    directivas y ecosistemas de inversión en los hubs financieros más relevantes.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 group">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-outline-variant/30 rounded-full group-hover:border-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary"
+                                    data-icon="auto_awesome">auto_awesome</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg tracking-wide mb-2 uppercase text-on-surface">Oportunidades
+                                </h4>
+                                <p class="text-on-surface-variant font-light leading-relaxed">Eventos privados en
+                                    galerías de arte, residencias históricas y retreats de alto impacto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Benefits Preview: Bento Grid -->
+        <section class="py-32 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex justify-between items-end mb-16">
+                    <div class="max-w-xl">
+                        <h2 class="serif-display text-5xl text-on-surface mb-6">El Privilegio de <span
+                                class="italic">Ser.</span></h2>
+                        <p class="text-on-surface-variant text-lg font-light">Accede a una curaduría de beneficios
+                            diseñados para el estilo de vida de la mujer líder.</p>
+                    </div>
+                    <a class="text-primary font-bold text-sm tracking-widest border-b border-primary/20 pb-2 hover:border-primary transition-all uppercase"
+                        href="#">Ver todos los convenios</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="md:col-span-2 group relative overflow-hidden rounded-[4px] aspect-[16/9] bg-surface-container-high">
+                        <img
+                            class="absolute inset-0 w-full h-full object-cover opNwEFBwj2X8g2slPOQKxC-ct-ZV-bn4jcb047ecwMV4Eqa2L6UUdxtqGJVkrW9J-HjKTEsUjLL5EJHO3jvUTOcbZ_in1vdSWW" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                        acity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Luxury hotel suite
+                        interior with elegant furniture and a view of a city park through floor to ceiling windows"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhOMa3faNu4JBRzqWdfeDZM6sHvw8tev8NcNpbWAInJ7VQtwlk9CW0r7uKLxxbKur_PoklA5ETy5YLQgKUGgnK-yGyjqo_YDtthR95Cy7e1vWqF_k9lidSduwlwCKF1fqh0fwpR-DM7TSLily-U1JRUJ7qMyV-ToSwTILQdI7TOSnn
+                        <div class="absolute bottom-8 left-8">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="material-symbols-outlined text-primary" data-icon="bed">bed</span>
+                                <span
+                                    class="text-primary text-[0.65rem] tracking-[0.2rem] font-bold uppercase">Hospitalidad</span>
+                            </div>
+                            <h3 class="serif-display text-3xl">Hoteles &amp; Retreats</h3>
+                            <p class="text-zinc-400 text-sm mt-2">124 beneficios exclusivos</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="group relative overflow-hidden rounded-[4px] aspect-square md:aspect-auto bg-surface-container-high">
+                        <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Modern private jet interior with cream leather seats and soft ambient lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOmh6Zdybs9ztoVvw7QqUCI9PKwrU7gya2LYC6-rylvsjH__FIlQ0eT-6uDv8cWCIHlEt2e0lh5pnLebViEhq-LUqNk7YNIm7UOHW1bKh85492XnbLqlli47OShb9OMMi1qVK6RfiOVAkodMEgQ7rqw737fSlWYgFfuLBCbQ8WaMqFRdWQz0IjaxRMa7O4ZeRuCwGEQZ-oYSuQZB8oKnkdWaKHmmEs5mHUY0BWU__DFeyW7ksJa34lXo7u-trVVfNJWfDr4x3GCG2y" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <span class="material-symbols-outlined text-primary mb-3" data-icon="flight">flight</span>
+                            <h3 class="serif-display text-2xl">Aviación Privada</h3>
+                            <p class="text-zinc-400 text-sm mt-1">Acuerdos preferenciales</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="group relative overflow-hidden rounded-[4px] aspect-square md:aspect-auto bg-surface-container-high">
+                        <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Luxury fashion boutique showroom with elegant clothing on brass hangers and marble floors"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkH7Chn0BxczJrWf8zQl4r-60mxX2oMYHRW4DLKr4omNM3Gu9ZBZ-NQiA9nAqhVw-ycPSzxYAeWQJQQXsrUTXBB77ngimC9JyLHsxox8RVXwqo1aC3tyBJutTAmxuKe5N003AYSQbdr0ZseVuSgfeMaVKRbxQWFGC9pJNJhEiOq1eu3O-q12HRxuzX0rVyK3NraU7GK6sslJqBppEyOixTk4kkO3nBbyMlinPCZPK3qrWL4K87d3Zx9qokeE-AsYrHlbPIcqI0S2lN" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8">
+                            <span class="material-symbols-outlined text-primary mb-3" data-icon="apparel">apparel</span>
+                            <h3 class="serif-display text-2xl">Alta Moda</h3>
+                            <p class="text-zinc-400 text-sm mt-1">Private Shopping</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Membership Process -->
+        <section class="py-32 bg-background border-t border-zinc-900/50">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="text-center mb-24">
+                    <span class="text-primary text-xs font-bold tracking-[0.3rem] uppercase">El Camino al Éxito</span>
+                    <h2 class="serif-display text-5xl mt-6">Protocolo de Admisión</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-outline-variant/10">
+                    <div
+                        class="p-16 text-center border-b md:border-b-0 md:border-r border-outline-variant/10 hover:bg-surface-container-low transition-colors group">
+                        <span
+                            class="serif-display text-6xl text-primary/10 group-hover:text-primary/20 transition-colors mb-4 block">01</span>
+                        <h3 class="font-bold text-lg tracking-widest uppercase mb-4">Solicita tu membresía</h3>
+                        <p class="text-on-surface-variant font-light">Completa nuestro formulario de perfil ejecutivo
+                            para iniciar el proceso de curaduría.</p>
+                    </div>
+                    <div
+                        class="p-16 text-center border-b md:border-b-0 md:border-r border-outline-variant/10 hover:bg-surface-container-low transition-colors group">
+                        <span
+                            class="serif-display text-6xl text-primary/10 group-hover:text-primary/20 transition-colors mb-4 block">02</span>
+                        <h3 class="font-bold text-lg tracking-widest uppercase mb-4">Revisamos tu perfil</h3>
+                        <p class="text-on-surface-variant font-light">Nuestro comité directivo evalúa la sinergia de tu
+                            trayectoria con la red actual.</p>
+                    </div>
+                    <div class="p-16 text-center hover:bg-surface-container-low transition-colors group">
+                        <span
+                            class="serif-display text-6xl text-primary/10 group-hover:text-primary/20 transition-colors mb-4 block">03</span>
+                        <h3 class="font-bold text-lg tracking-widest uppercase mb-4">Bienvenida al círculo</h3>
+                        <p class="text-on-surface-variant font-light">Recibe tu kit de bienvenida digital y acceso
+                            inmediato a los eventos exclusivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Membership Plans -->
+        <section class="py-32 bg-surface-container-lowest">
+            <div class="max-w-5xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Plan 1 -->
+                    <div class="bg-surface p-12 rounded-[4px] border border-outline-variant/10 relative">
+                        <div class="mb-8">
+                            <h3 class="serif-display text-3xl mb-2">Anual</h3>
+                            <p class="text-primary font-bold text-sm tracking-widest uppercase">Membresía Regional</p>
+                        </div>
+                        <ul class="space-y-4 mb-12">
+                            <li class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-sm"
+                                    data-icon="check">check</span>
+                                <span>Acceso a eventos en tu ciudad sede</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-sm"
+                                    data-icon="check">check</span>
+                                <span>Directorio de beneficios locales</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-primary text-sm"
+                                    data-icon="check">check</span>
+                                <span>Networking concierge 24/7</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full border border-primary text-primary py-4 rounded-[4px] font-bold tracking-widest uppercase hover:bg-primary/5 transition-all">Solicitar
+                            Aplicación</button>
+                    </div>
+                    <!-- Plan 2 -->
+                    <div
+                        class="bg-surface-container-high p-12 rounded-[4px] border border-primary/20 relative editorial-shadow transform md:-translate-y-8">
+                        <div
+                            class="absolute -top-4 right-8 bg-primary text-on-primary text-[0.6rem] px-3 py-1 font-bold tracking-[0.2rem] uppercase rounded-[2px]">
+                            MÁS EXCLUSIVA</div>
+                        <div class="mb-8">
+                            <h3 class="serif-display text-3xl mb-2">Founding Member</h3>
+                            <p class="text-primary font-bold text-sm tracking-widest uppercase">Membresía Global</p>
+                        </div>
+                        <ul class="space-y-4 mb-12">
+                            <li class="flex items-center gap-3 text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-sm" data-icon="star"
+                                    data-weight="fill">star</span>
+                                <span>Acceso VIP a Santiago, NYC y Miami</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-sm" data-icon="star"
+                                    data-weight="fill">star</span>
+                                <span>Asiento en el Círculo de Inversión</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-sm" data-icon="star"
+                                    data-weight="fill">star</span>
+                                <span>Invitaciones a Cenas de Autor exclusivas</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-on-surface">
+                                <span class="material-symbols-outlined text-primary text-sm" data-icon="star"
+                                    data-weight="fill">star</span>
+                                <span>Priority Concierge &amp; Travel Agent</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full bg-primary text-on-primary py-4 rounded-[4px] font-bold tracking-widest uppercase hover:brightness-110 transition-all">Aplicar
+                            como Fundadora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-32 bg-background">
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-5">
+                    <h2 class="serif-display text-5xl mb-8 italic">Testimonios <br /> de Liderazgo</h2>
+                    <p class="text-zinc-500 leading-loose">Escucha a quienes ya están transformando la industria desde
+                        nuestra red privada.</p>
+                </div>
+                <div class="md:col-span-7">
+                    <div class="glass-panel p-12 rounded-[4px] editorial-shadow">
+                        <div class="flex items-center gap-6 mb-8">
+                            <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-primary/20">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Close-up portrait of a professional woman with a warm smile in a high-end corporate setting with soft bokeh background"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-lszcKjEBShMT1maCo96pUlEzs3_I9ZdWtBB9_wSTR9PTuGhEva6jcCfVgoJ4hO6Vhorp7cQ9pvt0GBWPh_O5lVJ3yEpB6sRNdl3gpMODPSvnlMwyNarR1MUvnk9UxScxcSi3EVtCCS8QVj_EkMbYPn076LESSlzHl3dTevkaBbWY_oY63oyQ_xEeO3N4dH08cgq6n9O91JefV0Fp4mjuom4FIq3eKOTUNUT6PJdytVUUxf2eoCIAzgrKSGaxuzZZS6G-lSjz89Mg" />
+                            </div>
+                            <div>
+                                <h4 class="font-bold tracking-widest text-on-surface">VICTORIA VALDÉS</h4>
+                                <p class="text-primary text-[0.7rem] tracking-[0.1rem] uppercase">CEO de Fintech Latam
+                                </p>
+                            </div>
+                        </div>
+                        <p class="serif-display text-2xl text-on-surface-variant leading-relaxed">"ÉLITEmanu no es solo
+                            una red de contactos, es un espacio de contención y estrategia donde las decisiones de alto
+                            nivel se sienten respaldadas por iguales."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Cities Section -->
+        <section class="py-32 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="relative aspect-[3/4] overflow-hidden group rounded-[4px]">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
+                            data-alt="Modern architectural glass buildings in Santiago de Chile's financial district with the Andes mountains in the background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtxBXtf8z8jTrkr4S-M2qkrtenalttDEWKMD8OfkIYJkIr44gRdNC_0RWEAvn-b812ak9uB4cJXiqD2zCFavRa4tkPyaxcMq5KTp2NDT75bd7r-wtLH_jSAnURxiP4veOn_cNvrZ4qJxvC-cYJ1I29mzpX6Z_l9fl5ldQ1IRP_epvEw8tY1zuz1uF25JBoDMQbUJdnAiFQclTvOqIQtOYKmSFLWGLNQjEFVHZap1PLCKudIOptVyAWvQzqagQ5bO2kNsDb42X7CIEP" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+                        <div class="absolute bottom-10 left-10">
+                            <h3 class="serif-display text-4xl text-white">Santiago</h3>
+                            <div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative aspect-[3/4] overflow-hidden group rounded-[4px] md:mt-12">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
+                            data-alt="Aerial view of New York City Manhattan skyline at blue hour with city lights sparkling"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9glQabsQB1syHSP-uP-cUJ2xEctZjiFH4TlOne6XhC70PMhkDGuaNE54g-u6YaQr5pWdGii574pIQ9mh2bH2viYL9n0T4Z0sPRgVQ6Dy4NUILtiIiyrNd5GsoPgntSAgNXeoiPRffHgVtxwptE8_s_8AB_llWRsjph0KD2EOB-dJS4LDV4l55LPR0K1VMGy7PNde2DfXBsscdrr25i3ZDTK1Hl_xOJdHxdFGBzE52PBOVYcSpyy2waFd4wVTo1crbCG5mgrqhhL3z" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+                        <div class="absolute bottom-10 left-10">
+                            <h3 class="serif-display text-4xl text-white">New York</h3>
+                            <div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative aspect-[3/4] overflow-hidden group rounded-[4px] md:mt-24">
+                        <img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
+                            data-alt="Miami skyline with palm trees and ocean at sunset with vibrant orange and purple sky"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB90m01LtMntOnjvm3ABnIiuZARyk1uxzZyXYVQtnJtBnPetohSVYmAFFuQ1mnXXZsf62VnJNFrjnMDyCpBhBYbEsLikwQySb51X3jZGLSElu4WVcTh17MksJmF2xn4QDNyFf6JTan0P2HQRHY7syz4O1iEh610bxy5YkfPZrOBVPCbR-uFstupKiR9tYX_Cas8qCSmk3JsA1qJw_0vzPawqTYtwbJ-HXqS19v5QQFZYTzYCsUGUZZN4pN4shbzTAQyT9QGbvt1h_qu" />
+                        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all"></div>
+                        <div class="absolute bottom-10 left-10">
+                            <h3 class="serif-display text-4xl text-white">Miami</h3>
+                            <div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#131313] dark:bg-black w-full border-t border-zinc-900/50 pt-24 pb-12">
+        <div class="flex flex-col items-center justify-center max-w-7xl mx-auto px-8 text-center">
+            <h2 class="text-4xl font-serif text-amber-500 mb-8 italic">ÉLITEmanu</h2>
+            <div class="flex flex-wrap justify-center gap-12 mb-16">
+                <a class="text-zinc-600 hover:text-amber-200 transition-colors duration-300 text-[0.7rem] tracking-[0.2rem] uppercase font-bold"
+                    href="#">Privacidad</a>
+                <a class="text-zinc-600 hover:text-amber-200 transition-colors duration-300 text-[0.7rem] tracking-[0.2rem] uppercase font-bold"
+                    href="#">Términos</a>
+                <a class="text-zinc-600 hover:text-amber-200 transition-colors duration-300 text-[0.7rem] tracking-[0.2rem] uppercase font-bold"
+                    href="#">Contacto</a>
+                <a class="text-zinc-600 hover:text-amber-200 transition-colors duration-300 text-[0.7rem] tracking-[0.2rem] uppercase font-bold"
+                    href="#">Prensa</a>
+            </div>
+            <div class="flex gap-8 mb-16">
+                <a class="w-12 h-12 flex items-center justify-center border border-zinc-900 rounded-full hover:border-amber-500/30 transition-all group"
+                    href="#">
+                    <span class="material-symbols-outlined text-zinc-500 group-hover:text-amber-500"
+                        data-icon="share">share</span>
+                </a>
+                <a class="w-12 h-12 flex items-center justify-center border border-zinc-900 rounded-full hover:border-amber-500/30 transition-all group"
+                    href="#">
+                    <span class="material-symbols-outlined text-zinc-500 group-hover:text-amber-500"
+                        data-icon="public">public</span>
+                </a>
+                <a class="w-12 h-12 flex items-center justify-center border border-zinc-900 rounded-full hover:border-amber-500/30 transition-all group"
+                    href="#">
+                    <span class="material-symbols-outlined text-zinc-500 group-hover:text-amber-500"
+                        data-icon="mail">mail</span>
+                </a>
+            </div>
+            <p class="text-zinc-700 text-[0.6rem] tracking-[0.3rem] uppercase font-body">© 2024 ÉLITEmanu. The Digital
+                Atelier.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

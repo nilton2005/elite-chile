@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Member Profile | Victoria Valdés</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#494741",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-error": "#690005",
+                        "primary": "#e6c364",
+                        "on-surface-variant": "#d0c5b2",
+                        "secondary-container": "#474747",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "error": "#ffb4ab",
+                        "outline": "#99907e",
+                        "secondary": "#c8c6c5",
+                        "on-primary-fixed-variant": "#584400",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#b6b5b4",
+                        "on-tertiary": "#32302b",
+                        "surface-container-highest": "#353534",
+                        "on-primary-fixed": "#241a00",
+                        "on-error-container": "#ffdad6",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "primary-fixed-dim": "#e6c364",
+                        "primary-container": "#c9a84c",
+                        "on-tertiary-container": "#41403a",
+                        "on-background": "#e5e2e1",
+                        "surface-tint": "#e6c364",
+                        "outline-variant": "#4d4637",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-primary": "#755b00",
+                        "surface-bright": "#3a3939",
+                        "on-primary-container": "#503d00",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131313",
+                        "primary-fixed": "#ffe08f",
+                        "tertiary-fixed-dim": "#cac6be",
+                        "surface-variant": "#353534",
+                        "on-primary": "#3d2e00",
+                        "tertiary-fixed": "#e7e2da",
+                        "on-tertiary-fixed": "#1d1c17",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-secondary": "#303030",
+                        "tertiary-container": "#afaba4",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary": "#cbc6bf",
+                        "secondary-fixed": "#e4e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        .gold-signature {
+            border-left: 0.35rem solid #e6c364;
+        }
+        .glass-panel {
+            background: rgba(201, 168, 76, 0.05);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<!-- TopAppBar Navigation -->
+<header class="bg-[#131313] dark:bg-[#131313] font-['Noto_Serif'] antialiased tracking-tight docked full-width top-0 z-50 bg-[#0E0E0E] shadow-[0_40px_40px_-15px_rgba(201,168,76,0.04)] fixed w-full">
+<div class="flex justify-between items-center px-8 h-20 w-full">
+<div class="text-xl font-bold tracking-[0.2em] text-[#C9A84C] uppercase">ELITE CURATOR</div>
+<nav class="hidden md:flex items-center space-x-12">
+<a class="text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors duration-300 text-sm tracking-[0.1rem] uppercase" href="#">Dashboard</a>
+<a class="text-[#F5F0E8]/60 hover:text-[#C9A84C] transition-colors duration-300 text-sm tracking-[0.1rem] uppercase" href="#">Directory</a>
+<a class="text-[#C9A84C] font-semibold text-sm tracking-[0.1rem] uppercase" href="#">Profile</a>
+</nav>
+<div class="flex items-center space-x-6">
+<span class="material-symbols-outlined text-[#C9A84C] cursor-pointer hover:scale-95 duration-200" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-[#C9A84C] cursor-pointer hover:scale-95 duration-200" data-icon="settings">settings</span>
+<div class="h-10 w-10 overflow-hidden border border-outline-variant/20">
+<img alt="Executive Profile" class="w-full h-full object-cover" data-alt="Close-up professional portrait of an executive woman with confident expression, neutral tones, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByS4cz6_A57XrCFz5EaWPOvSFeybIIgpdQY49N9k7E2n_MZ8S4TnFb-8yX2_SkVEsXcFYUYhIgYu26fn8W1lSLOus9LhU3-HOhCGHvEI1UYvOv4toHANQaUsRle7BktVfDJ-Fe9OzUHOwaCyqUzR_cZ5FSzXub2iMOgZ_wkJX9QmAsAWeb6sBrRH59T0xr-05hjV6ix2xFqVRzHVmIVETt16fs5kg0AKeMsvpUP5QZJZVufCQbDjQfbT4CF0RIIo6DyHBTmQYbWDXT"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Sidebar Navigation -->
+<aside class="fixed left-0 top-0 hidden lg:flex flex-col h-full py-8 bg-[#0E0E0E] dark:bg-[#0E0E0E] font-['Manrope'] uppercase tracking-[0.1rem] text-[0.75rem] w-64 border-r border-[#4D4637]/15 z-40">
+<div class="px-8 mb-12 mt-20">
+<h2 class="font-['Noto_Serif'] text-lg text-[#C9A84C] mb-1">The Atelier</h2>
+<p class="text-[0.6rem] text-on-surface-variant/40 tracking-[0.2rem]">Premium Member Portal</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center py-3 text-[#F5F0E8]/40 hover:text-[#F5F0E8] hover:bg-[#2A2A2A] pl-8 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center py-3 text-[#F5F0E8]/40 hover:text-[#F5F0E8] hover:bg-[#2A2A2A] pl-8 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="group">group</span>
+<span>Directory</span>
+</a>
+<a class="flex items-center py-3 text-[#F5F0E8]/40 hover:text-[#F5F0E8] hover:bg-[#2A2A2A] pl-8 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="chat_bubble">chat_bubble</span>
+<span>Messaging</span>
+</a>
+<a class="flex items-center py-3 text-[#F5F0E8]/40 hover:text-[#F5F0E8] hover:bg-[#2A2A2A] pl-8 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="layers">layers</span>
+<span>Applications</span>
+</a>
+<a class="flex items-center py-3 text-[#C9A84C] border-l-2 border-[#C9A84C] bg-[#C9A84C]/5 pl-8 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span>Profile</span>
+</a>
+</nav>
+<div class="px-8 mt-auto space-y-4">
+<button class="w-full bg-primary py-3 text-on-primary font-bold tracking-widest flex items-center justify-center space-x-2 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+<span>New Message</span>
+</button>
+<div class="pt-8 border-t border-outline-variant/10">
+<a class="flex items-center py-2 text-[#F5F0E8]/40 hover:text-[#F5F0E8] transition-colors" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="help_outline">help_outline</span>
+<span>Support</span>
+</a>
+<a class="flex items-center py-2 text-[#F5F0E8]/40 hover:text-[#F5F0E8] transition-colors" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="lg:pl-64 pt-20 min-h-screen">
+<!-- Hero Section: Cover Image & Profile -->
+<section class="relative h-[614px] w-full overflow-hidden">
+<img alt="Luxury Workspace Cover" class="w-full h-full object-cover grayscale opacity-50" data-alt="Wide shot of a minimalist luxury corporate building exterior with glass reflections at sunset, architectural lines, warm golden hour lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALlNNwoGTGzB43Vr6gAmZVn8mh4oyHTBCYtnWLbMaYAgvuEgNTIL18zfPTMVdw0iqENBIJLOn-i-CCPOA75xyMFJgSunSACpXE2qfebBd66Va53wbHr6BlAu7FjW1O1HwrS_1tpeCWxle3V8jigZOP4S28XycJoffSkXBafFx3G2gYLDWXMakfCMvggcqFWVvLTb78-Ip07sAPRYSpq4YWxucBpogNuvhX4Dwj85C3AtthkKDzNa1_vTV87KlJsHApZYPuOlHHZJHh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 lg:p-16 flex flex-col lg:flex-row items-end justify-between editorial-grid">
+<div class="col-span-12 lg:col-span-7 flex flex-col md:flex-row items-end space-y-6 md:space-y-0 md:space-x-12">
+<!-- Profile Portrait Container -->
+<div class="w-64 h-80 flex-shrink-0 relative overflow-hidden shadow-2xl">
+<img alt="Victoria Valdés Portrait" class="w-full h-full object-cover" data-alt="Full portrait of Victoria Valdés, an executive woman in a tailored dark suit, minimalist jewelry, standing in a sophisticated modern lobby" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjQlLC6EMxNQqkNtN06Gfdd2IwBsLnSus10aOyad63LXUHjlHHI2nLOJ_7LLK8bH0pjw4-YloDVXv6SAzEv238FCSggwM10d4I0_FDyhqdl2FUHLoFWoPew5gu8w2pS1BmroK2-5aegEP3jcJ7KI6K_42wVg2pKCV5l22i2051AjXjTnN6PfAjWGSGm4GfaQzC5zHxhlMH6kJJy9KahM142lDYPBdqbnDgPXd9cu9C6OACvTBFrFCDTXaBt8BSV9sHIZTORTLuHsUW"/>
+<div class="absolute inset-0 border border-outline-variant/10"></div>
+</div>
+<div class="flex flex-col mb-4">
+<span class="font-label text-primary tracking-[0.4em] uppercase text-xs mb-4">Executive Member</span>
+<h1 class="font-headline text-6xl md:text-7xl font-bold text-on-surface leading-none tracking-tighter">Victoria Valdés</h1>
+<p class="font-headline italic text-on-surface-variant text-xl mt-4">Managing Partner, Valdés Global Capital</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Grid -->
+<section class="px-8 lg:px-16 py-16 editorial-grid">
+<!-- Left Column: Biography -->
+<div class="col-span-12 lg:col-span-7 space-y-16">
+<div class="space-y-8">
+<h3 class="font-label text-primary tracking-[0.2em] uppercase text-sm border-b border-outline-variant/10 pb-4 inline-block">The Curator's Perspective</h3>
+<p class="font-headline text-3xl leading-relaxed text-on-surface font-light">
+                        "Excellence is not a singular act, but a sequence of curated choices. In the world of high-stakes capital, the most valuable asset is clarity."
+                    </p>
+<div class="space-y-6 text-on-surface-variant leading-loose max-w-2xl text-lg">
+<p>With over two decades of experience navigating the complexities of international markets, Victoria Valdés has established herself as a pivotal figure in strategic investment and executive mentorship. Her approach blends rigorous analytical precision with an intuitive understanding of emerging luxury markets.</p>
+<p>Under her leadership, Valdés Global Capital has pivoted towards sustainable luxury assets, redefining what it means to invest with purpose and aesthetic integrity. She serves on the boards of three Fortune 500 companies and remains a passionate advocate for female leadership in the financial sector.</p>
+</div>
+</div>
+<!-- Industry Tags -->
+<div class="space-y-6">
+<h4 class="font-label text-on-surface-variant tracking-[0.1rem] uppercase text-xs">Primary Sectors</h4>
+<div class="flex flex-wrap gap-3">
+<span class="px-5 py-2 border border-outline-variant/20 text-on-surface text-sm uppercase tracking-wider font-medium hover:border-primary/50 transition-colors cursor-default">Venture Capital</span>
+<span class="px-5 py-2 border border-outline-variant/20 text-on-surface text-sm uppercase tracking-wider font-medium hover:border-primary/50 transition-colors cursor-default">Luxury Hospitality</span>
+<span class="px-5 py-2 border border-outline-variant/20 text-on-surface text-sm uppercase tracking-wider font-medium hover:border-primary/50 transition-colors cursor-default">FinTech Architecture</span>
+<span class="px-5 py-2 border border-outline-variant/20 text-on-surface text-sm uppercase tracking-wider font-medium hover:border-primary/50 transition-colors cursor-default">Art Acquisition</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Sidebar Actions & Details -->
+<div class="col-span-12 lg:col-span-5 space-y-12">
+<!-- CTA Box -->
+<div class="bg-surface-container-high p-10 gold-signature space-y-8">
+<div class="space-y-2">
+<h4 class="font-label text-on-surface tracking-[0.1rem] uppercase text-xs">Engagement Status</h4>
+<p class="text-primary font-medium tracking-wide flex items-center">
+<span class="w-2 h-2 rounded-full bg-primary mr-3 animate-pulse"></span>
+                            ACTIVE MEMBER / ACCEPTING INQUIRIES
+                        </p>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 font-bold tracking-[0.2em] uppercase text-sm hover:shadow-[0_0_20px_rgba(230,195,100,0.2)] transition-all">
+                        Send Message
+                    </button>
+<div class="flex justify-between items-center pt-4">
+<div class="flex space-x-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="share">share</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="bookmark">bookmark</span>
+</a>
+</div>
+<div class="flex space-x-4">
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 text-on-surface-variant hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant/30 text-on-surface-variant hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Bento Grid Style Info Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Available For -->
+<div class="bg-surface-container-low p-8 space-y-6 col-span-2">
+<h4 class="font-label text-primary tracking-[0.1rem] uppercase text-xs">Available for</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="psychology">psychology</span>
+<div>
+<p class="text-on-surface font-semibold text-sm">Mentorship</p>
+<p class="text-on-surface-variant text-xs mt-1">High-level executive coaching for founders.</p>
+</div>
+</div>
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="monetization_on">monetization_on</span>
+<div>
+<p class="text-on-surface font-semibold text-sm">Investing</p>
+<p class="text-on-surface-variant text-xs mt-1">Strategic capital for Seed &amp; Series A.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Statistics / Impact -->
+<div class="bg-surface-container-lowest p-6 border border-outline-variant/10">
+<p class="font-headline text-3xl font-bold text-primary">15+</p>
+<p class="font-label text-on-surface-variant text-[0.6rem] uppercase tracking-widest mt-2">Active Board Positions</p>
+</div>
+<div class="bg-surface-container-lowest p-6 border border-outline-variant/10">
+<p class="font-headline text-3xl font-bold text-primary">2.4B</p>
+<p class="font-label text-on-surface-variant text-[0.6rem] uppercase tracking-widest mt-2">Managed Portfolio (USD)</p>
+</div>
+</div>
+<!-- Location / Base -->
+<div class="space-y-4">
+<h4 class="font-label text-on-surface-variant tracking-[0.1rem] uppercase text-xs">Global Base</h4>
+<div class="relative h-48 w-full overflow-hidden">
+<img alt="Madrid Map Overlay" class="w-full h-full object-cover grayscale opacity-40" data-alt="Abstract aerial urban map texture with dark aesthetic and golden glowing pins representing office locations" data-location="Madrid, Spain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABObJtfGUkK3V2RzroNEatqCOcaPkyUkI9drt125Njh_66nCmvofwxfyIN3AACTfwTzs6FL8FllDm9-8wwLq6M1VfXuQnbdwxACvO9bInEK0lvAFRpkETY_cPeq8gpmph7A3ZEyc3kF4CCGOQaxSpXc1x4SS3UmbHY7OeTHsfJQe1OtGdtu796MWzXkdt7Z3mgtyJL-lb-EgtDiwyuB77Q8mif00IvCTc42twcgIe7hW-pPUumeAyASJ2W5bENxXNYn-Fwf4hAO2BW"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+<div class="absolute bottom-4 left-4 flex items-center bg-background/80 backdrop-blur px-4 py-2 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-sm mr-2" data-icon="location_on">location_on</span>
+<span class="text-xs uppercase tracking-widest font-bold">Madrid, Spain</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Signature -->
+<footer class="mt-20 border-t border-outline-variant/5 py-12 px-8 lg:px-16 flex flex-col md:flex-row justify-between items-center text-on-surface-variant/40">
+<div class="font-headline italic text-sm mb-6 md:mb-0">
+                Part of the 2024 Elite Curator Executive Directory
+            </div>
+<div class="font-label text-[0.6rem] uppercase tracking-[0.3rem]">
+                ELITE CURATOR © ALL RIGHTS RESERVED
+            </div>
+</footer>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#0E0E0E] py-4 px-6 flex justify-around items-center z-50">
+<span class="material-symbols-outlined text-[#F5F0E8]/40" data-icon="dashboard">dashboard</span>
+<span class="material-symbols-outlined text-[#F5F0E8]/40" data-icon="group">group</span>
+<div class="bg-primary/20 p-2 border border-primary/40">
+<span class="material-symbols-outlined text-[#C9A84C]" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+<span class="material-symbols-outlined text-[#F5F0E8]/40" data-icon="chat_bubble">chat_bubble</span>
+<span class="material-symbols-outlined text-[#F5F0E8]/40" data-icon="settings">settings</span>
+</nav>
+</body></html>

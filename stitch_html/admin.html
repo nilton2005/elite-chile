@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Atelier | Elite Admin Console</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-container": "#afaba4",
+                        "on-tertiary": "#32302b",
+                        "on-primary-fixed-variant": "#584400",
+                        "error": "#ffb4ab",
+                        "background": "#131313",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "primary": "#e6c364",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed": "#1d1c17",
+                        "primary-fixed": "#ffe08f",
+                        "surface-bright": "#3a3939",
+                        "outline-variant": "#4d4637",
+                        "on-tertiary-container": "#41403a",
+                        "surface-dim": "#131313",
+                        "inverse-primary": "#755b00",
+                        "on-primary-fixed": "#241a00",
+                        "on-primary": "#3d2e00",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "tertiary": "#cbc6bf",
+                        "on-background": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "outline": "#99907e",
+                        "on-primary-container": "#503d00",
+                        "primary-fixed-dim": "#e6c364",
+                        "secondary-fixed": "#e4e2e1",
+                        "surface-container-highest": "#353534",
+                        "on-secondary": "#303030",
+                        "inverse-on-surface": "#313030",
+                        "secondary-container": "#474747",
+                        "tertiary-fixed": "#e7e2da",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-surface-variant": "#d0c5b2",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "secondary": "#c8c6c5",
+                        "on-tertiary-fixed-variant": "#494741",
+                        "tertiary-fixed-dim": "#cac6be",
+                        "on-secondary-fixed-variant": "#474747",
+                        "primary-container": "#c9a84c",
+                        "on-secondary-container": "#b6b5b4",
+                        "surface-variant": "#353534",
+                        "surface-tint": "#e6c364",
+                        "inverse-surface": "#e5e2e1"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Montserrat", "sans-serif"],
+                        "serif-display": ["Cormorant Garamond", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+        .glass-card {
+            background: rgba(42, 42, 42, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(77, 70, 55, 0.15);
+        }
+        .sidebar-active-indicator {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #C9A84C;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-[#0E0E0E] dark:bg-neutral-950 border-r border-[#4D4637]/15 flex flex-col z-50">
+<div class="p-8 pb-12">
+<h1 class="font-['Noto_Serif'] italic text-xl text-[#C9A84C] tracking-tight">The Atelier</h1>
+<p class="font-['Montserrat'] tracking-widest uppercase text-[9px] font-medium text-neutral-500 mt-1">Elite Admin Console</p>
+</div>
+<nav class="flex-grow">
+<ul class="space-y-1">
+<li class="relative">
+<a class="flex items-center px-8 py-4 text-[#C9A84C] bg-[#C9A84C]/5 transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="dashboard">dashboard</span>
+<span class="font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium">Dashboard</span>
+<div class="sidebar-active-indicator"></div>
+</a>
+</li>
+<li>
+<a class="flex items-center px-8 py-4 text-neutral-500 hover:text-[#C9A84C]/80 hover:bg-[#2A2A2A] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="group">group</span>
+<span class="font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium">Members</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-8 py-4 text-neutral-500 hover:text-[#C9A84C]/80 hover:bg-[#2A2A2A] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="assignment_ind">assignment_ind</span>
+<span class="font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium">Applications</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-8 py-4 text-neutral-500 hover:text-[#C9A84C]/80 hover:bg-[#2A2A2A] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="star">star</span>
+<span class="font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium">Benefits</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-8 py-4 text-neutral-500 hover:text-[#C9A84C]/80 hover:bg-[#2A2A2A] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="calendar_today">calendar_today</span>
+<span class="font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium">Events</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-8 py-4 text-neutral-500 hover:text-[#C9A84C]/80 hover:bg-[#2A2A2A] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mr-4 text-lg" data-icon="settings">settings</span>
+<span class="font-['Montserrat'] tracking-widest uppercase text-[10px] font-medium">Settings</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="p-8">
+<button class="w-full py-3 bg-primary text-on-primary font-['Montserrat'] tracking-widest uppercase text-[10px] font-bold rounded-sm hover:opacity-90 transition-opacity">
+                New Invitation
+            </button>
+<div class="mt-8 flex items-center">
+<img alt="Executive Admin Profile" class="w-10 h-10 rounded-full border border-primary/20 object-cover" data-alt="Close-up portrait of a sophisticated middle-aged man in a dark tailored suit with subtle cinematic studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWndPU4ifxgNO5X9hsHl-74kDWH86tiKAEwgxGOA0E5d8qTU0Ja37AJJgh6uvEDawRgok1vNpwDQkVrd85mHGjsqoc1A8_rzHN7NRZ1n9x7Kxb13Or0ieO1WASuyQIREDP_mtccf2M66jv2ZIzLC9MoSfDuUvtWDMVkFNYaCGs_UkWxw_YgZaLiEx7-reulUW6oD2Ksg2rXNE5hH0ZOdZJY-9AxIjSMLNl2Yb8zhcyRR-AnflMend79qoFejtofkVtHgDI6TLpC8rZ"/>
+<div class="ml-3">
+<p class="text-[11px] font-semibold text-on-surface">Julian Vance</p>
+<p class="text-[9px] text-neutral-500 uppercase tracking-tighter">Executive Curator</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<main class="ml-64 min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-12 py-6 bg-[#131313]/80 backdrop-blur-xl shadow-[0_40px_40px_rgba(201,168,76,0.04)]">
+<div class="flex items-center space-x-6">
+<nav class="flex text-[10px] font-['Montserrat'] tracking-widest uppercase text-neutral-500 space-x-4">
+<a class="hover:text-primary transition-colors" href="#">Admin</a>
+<span>/</span>
+<a class="text-primary font-semibold border-b border-primary pb-1" href="#">Analytics</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Audit Log</a>
+</nav>
+</div>
+<div class="flex items-center space-x-8">
+<div class="relative group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-neutral-500 group-focus-within:text-primary transition-colors" data-icon="search">search</span>
+<input class="bg-surface-container-high/50 border-none rounded-sm pl-10 pr-4 py-2 text-xs font-body focus:ring-1 focus:ring-primary/20 w-64 transition-all" placeholder="Search archives..." type="text"/>
+</div>
+<div class="flex items-center space-x-4 text-neutral-400">
+<button class="hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="p-12 space-y-12 max-w-[1600px]">
+<!-- Page Header -->
+<section class="flex justify-between items-end">
+<div>
+<h2 class="font-serif-display text-5xl font-light text-on-surface tracking-tight">Executive Dashboard</h2>
+<p class="text-neutral-500 mt-2 font-body max-w-md italic">A curated perspective of your membership ecosystem and strategic engagement metrics.</p>
+</div>
+<div class="flex space-x-4">
+<button class="px-6 py-2 border border-outline-variant/30 text-[10px] font-['Montserrat'] uppercase tracking-widest hover:bg-surface-container transition-colors">Generate Report</button>
+<button class="px-6 py-2 bg-primary text-on-primary text-[10px] font-['Montserrat'] uppercase tracking-widest font-bold">Export Data</button>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container-low p-8 border-l-2 border-primary/30 relative overflow-hidden group">
+<p class="font-['Montserrat'] text-[9px] uppercase tracking-[0.2em] text-neutral-500">Total Members</p>
+<h3 class="font-serif-display text-4xl mt-3 text-on-surface">1,240</h3>
+<div class="mt-4 flex items-center text-[10px] text-primary">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="trending_up">trending_up</span>
+<span>+12% vs last month</span>
+</div>
+<div class="absolute right-[-10px] bottom-[-10px] opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="group">group</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-l-2 border-primary/30 relative overflow-hidden group">
+<p class="font-['Montserrat'] text-[9px] uppercase tracking-[0.2em] text-neutral-500">Pending Applications</p>
+<h3 class="font-serif-display text-4xl mt-3 text-on-surface">42</h3>
+<div class="mt-4 flex items-center text-[10px] text-error">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="hourglass_empty">hourglass_empty</span>
+<span>Action required</span>
+</div>
+<div class="absolute right-[-10px] bottom-[-10px] opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="assignment_ind">assignment_ind</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-l-2 border-primary/30 relative overflow-hidden group">
+<p class="font-['Montserrat'] text-[9px] uppercase tracking-[0.2em] text-neutral-500">Monthly Revenue</p>
+<h3 class="font-serif-display text-4xl mt-3 text-on-surface">€124,500</h3>
+<div class="mt-4 flex items-center text-[10px] text-primary">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="payments">payments</span>
+<span>Record high</span>
+</div>
+<div class="absolute right-[-10px] bottom-[-10px] opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="euro">euro</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-l-2 border-primary/30 relative overflow-hidden group">
+<p class="font-['Montserrat'] text-[9px] uppercase tracking-[0.2em] text-neutral-500">Active Benefits</p>
+<h3 class="font-serif-display text-4xl mt-3 text-on-surface">85</h3>
+<div class="mt-4 flex items-center text-[10px] text-neutral-400">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="star">star</span>
+<span>across 12 categories</span>
+</div>
+<div class="absolute right-[-10px] bottom-[-10px] opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="workspace_premium">workspace_premium</span>
+</div>
+</div>
+</section>
+<!-- Main Data Section -->
+<section class="grid grid-cols-12 gap-8">
+<!-- Recent Applications Table -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest border border-outline-variant/5">
+<div class="p-8 border-b border-outline-variant/10 flex justify-between items-center">
+<h4 class="font-serif-display text-2xl">Recent Membership Applications</h4>
+<button class="text-[9px] font-['Montserrat'] uppercase tracking-widest text-primary hover:underline">View All Applicants</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-[9px] font-['Montserrat'] uppercase tracking-widest text-neutral-500 border-b border-outline-variant/5">
+<th class="px-8 py-6 font-medium">Member Name</th>
+<th class="px-6 py-6 font-medium">Company / Position</th>
+<th class="px-6 py-6 font-medium">Location</th>
+<th class="px-6 py-6 font-medium">Status</th>
+<th class="px-8 py-6 font-medium text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/5">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-container-high transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center">
+<div class="w-10 h-10 bg-neutral-800 flex items-center justify-center rounded-sm overflow-hidden">
+<img alt="Applicant 1" class="w-full h-full object-cover" data-alt="Portrait of a professional woman with confident expression, neutral background, editorial corporate lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXLyNU2iQrISHBhg_VnwynaNe2K7h90NjQaUsb5IrDuqQ9RlF1U1jh9elijuBTceQHsfeOyRsAx4-m7bNS8uaqtZ7z1FEQmTJvxYFe95j-aO5jZ0C3go8p8jpbE5Caf2rgEd-RAb2M123FpSPeVg9s_dSb25GQctDui74ilaqLHnf8A2kD8VgTVAWLjTvWD1cLuw9LL5V00g_t_SJKLw1gLsKGr67_VnLJhRrh873wt1wHdwBekO5VGc776W5RF3Vv73YxDAENfjCi"/>
+</div>
+<div class="ml-4">
+<p class="text-xs font-semibold text-on-surface">Elena Rossi</p>
+<p class="text-[10px] text-neutral-500">Oct 24, 2023</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<p class="text-[11px] text-on-surface">Lumina Creative</p>
+<p class="text-[10px] text-neutral-500 italic">Chief Design Officer</p>
+</td>
+<td class="px-6 py-6">
+<p class="text-[11px] text-on-surface">Milan, Italy</p>
+</td>
+<td class="px-6 py-6">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[9px] font-bold uppercase tracking-wider rounded-full">Pending</span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end space-x-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+</button>
+<button class="text-error hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="cancel">cancel</span>
+</button>
+<button class="text-neutral-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="visibility">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-container-high transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center">
+<div class="w-10 h-10 bg-neutral-800 flex items-center justify-center rounded-sm overflow-hidden">
+<img alt="Applicant 2" class="w-full h-full object-cover" data-alt="Modern professional male portrait in a charcoal turtleneck, minimalist studio background, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkectuaDLViingrAwPHEDbCIlHrBDJti69TadDjZO3YXsPJGEBQFPb2gmTw3thOSI4Y0dnjElBirrJSQJ2r7G51yqVz1YodDxBncJY3RaalGjrwgbooRBB8uoE74YDUDsOFm0NyrURR0VJEy_EoxPP3_BFLkD98vHielZ0dtq1xE8X2DoR7OfP3AsE6MBruH6WtHN4ZLXA7rqvd-74xwsGQCHFJz7ie1bGmpfRLpVuvPEiuxkFuJwp8nQWxgDm-Ouira6HQ-BJpcfk"/>
+</div>
+<div class="ml-4">
+<p class="text-xs font-semibold text-on-surface">Marcus Thorne</p>
+<p class="text-[10px] text-neutral-500">Oct 22, 2023</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<p class="text-[11px] text-on-surface">Vanguard Equity</p>
+<p class="text-[10px] text-neutral-500 italic">Managing Partner</p>
+</td>
+<td class="px-6 py-6">
+<p class="text-[11px] text-on-surface">London, UK</p>
+</td>
+<td class="px-6 py-6">
+<span class="px-3 py-1 bg-green-500/10 text-green-500 text-[9px] font-bold uppercase tracking-wider rounded-full">Approved</span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end space-x-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-neutral-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="visibility">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-container-high transition-colors">
+<td class="px-8 py-6">
+<div class="flex items-center">
+<div class="w-10 h-10 bg-neutral-800 flex items-center justify-center rounded-sm overflow-hidden">
+<img alt="Applicant 3" class="w-full h-full object-cover" data-alt="Portrait of an elegant woman with subtle jewelry, natural lighting, luxury fashion editorial aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC51kjA1GTAEy9tXI5Ns-X7q1TKk7vUyb28jLad1hI4Wx4-K4tlgaI22-LZ_rN8sc13ExJNUWqvU1s_SFBZMCXByrM4BSmK-yaIBLLQUaPRuyE47fIXzcET9cvAF3ri9eIpyGyFpkjZmJesxToAZhToDUqEuSDc4fAitlb4ksDGK500Qt5oc0cS2T8N3Qqr6DUxHuddtMw5DF3ZPcPPNDDwXLR--XvPc6A9p2msowP3U4Y_lbWE8LRtxAIRfSdaX_ogB30bAk82JdxA"/>
+</div>
+<div class="ml-4">
+<p class="text-xs font-semibold text-on-surface">Sophia Chen</p>
+<p class="text-[10px] text-neutral-500">Oct 20, 2023</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<p class="text-[11px] text-on-surface">Atlas Global</p>
+<p class="text-[10px] text-neutral-500 italic">Operations Director</p>
+</td>
+<td class="px-6 py-6">
+<p class="text-[11px] text-on-surface">Singapore</p>
+</td>
+<td class="px-6 py-6">
+<span class="px-3 py-1 bg-primary/10 text-primary text-[9px] font-bold uppercase tracking-wider rounded-full">Pending</span>
+</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end space-x-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="text-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+</button>
+<button class="text-error hover:text-white transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="cancel">cancel</span>
+</button>
+<button class="text-neutral-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="visibility">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Popular Benefits Section -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<div class="bg-surface-container-lowest p-8 border border-outline-variant/5">
+<h4 class="font-serif-display text-2xl mb-8">Top Benefits Usage</h4>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="flight_takeoff">flight_takeoff</span>
+</div>
+<div class="ml-4">
+<p class="text-xs font-semibold">Private Jet Concierge</p>
+<p class="text-[9px] text-neutral-500 uppercase">Travel</p>
+</div>
+</div>
+<p class="text-xs font-bold text-primary">82%</p>
+</div>
+<div class="w-full h-[2px] bg-neutral-800">
+<div class="h-full bg-primary" style="width: 82%"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="restaurant">restaurant</span>
+</div>
+<div class="ml-4">
+<p class="text-xs font-semibold">Michelin Priority Booking</p>
+<p class="text-[9px] text-neutral-500 uppercase">Lifestyle</p>
+</div>
+</div>
+<p class="text-xs font-bold text-primary">64%</p>
+</div>
+<div class="w-full h-[2px] bg-neutral-800">
+<div class="h-full bg-primary" style="width: 64%"></div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="health_and_safety">health_and_safety</span>
+</div>
+<div class="ml-4">
+<p class="text-xs font-semibold">Global Health Concierge</p>
+<p class="text-[9px] text-neutral-500 uppercase">Wellness</p>
+</div>
+</div>
+<p class="text-xs font-bold text-primary">48%</p>
+</div>
+<div class="w-full h-[2px] bg-neutral-800">
+<div class="h-full bg-primary" style="width: 48%"></div>
+</div>
+</div>
+<button class="w-full mt-10 py-3 border border-outline-variant/30 font-['Montserrat'] tracking-widest uppercase text-[9px] font-medium hover:bg-surface-container transition-colors">
+                            Manage All Benefits
+                        </button>
+</div>
+<!-- Upcoming Events Card -->
+<div class="bg-primary/5 p-8 border border-primary/20 relative overflow-hidden">
+<h4 class="font-serif-display text-xl mb-4 text-primary">Next Elite Event</h4>
+<div class="space-y-4">
+<div>
+<p class="text-[10px] font-['Montserrat'] text-primary/70 uppercase tracking-widest">Paris Fashion Week Gala</p>
+<p class="text-xs mt-1">October 28th, 2023 • Hôtel de Crillon</p>
+</div>
+<div class="flex items-center text-[10px] text-neutral-400">
+<span class="material-symbols-outlined text-xs mr-2" data-icon="group">group</span>
+<span>142 Members RSVP'd</span>
+</div>
+</div>
+<div class="absolute right-[-20px] top-[-20px] opacity-10">
+<span class="material-symbols-outlined text-8xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Signature -->
+<footer class="mt-auto p-12 border-t border-outline-variant/5 flex justify-between items-center text-neutral-500">
+<div class="text-[10px] font-['Montserrat'] uppercase tracking-widest">
+                © 2023 ÉLITEmanu. All Rights Reserved.
+            </div>
+<div class="flex space-x-8 text-[10px] font-['Montserrat'] uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Security</a>
+</div>
+</footer>
+</main>
+<!-- Contextual FAB (Only for Dashboard/Home) -->
+<button class="fixed bottom-12 right-12 w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-105 transition-transform group z-50">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-90 transition-transform" data-icon="add">add</span>
+<div class="absolute right-16 bg-surface-container-high px-4 py-2 rounded-sm text-[10px] font-['Montserrat'] uppercase tracking-widest border border-outline-variant/20 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+            Quick Action
+        </div>
+</button>
+</body></html>
